@@ -172,6 +172,67 @@
     text-decoration: none;
     font-weight: 700;
   }
+  .exam-sheet {
+    margin-top: 28px;
+    padding: 24px;
+    border-radius: 24px;
+    background: #ffffff;
+    box-shadow: var(--shadow);
+  }
+  .exam-sheet h2,
+  .exam-part h3 {
+    margin: 0 0 12px;
+    font-family: Georgia, "Times New Roman", serif;
+    color: var(--brand-dark);
+  }
+  .exam-meta {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px 20px;
+    margin: 18px 0 22px;
+  }
+  .line-field {
+    padding-bottom: 8px;
+    border-bottom: 2px solid #eadca8;
+    color: var(--muted);
+    font-weight: 600;
+  }
+  .exam-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+  }
+  .exam-part {
+    padding: 20px;
+    border-radius: 20px;
+    border: 1px solid rgba(212, 175, 55, 0.18);
+    background: linear-gradient(180deg, #fffdfa 0%, #fff7e7 100%);
+  }
+  .part-chip {
+    display: inline-block;
+    margin-bottom: 12px;
+    padding: 8px 12px;
+    border-radius: 999px;
+    background: #f8edd0;
+    color: var(--brand-dark);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  .exam-part p,
+  .exam-part ol,
+  .exam-part ul {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .exam-part ol,
+  .exam-part ul {
+    padding-left: 20px;
+  }
+  .exam-part li + li {
+    margin-top: 8px;
+  }
   .final-panel {
     background: linear-gradient(135deg, rgba(20, 26, 31, 0.92), rgba(53, 43, 12, 0.88));
     color: #ffffff;
@@ -188,7 +249,9 @@
   @media (max-width: 900px) {
     .intro,
     .criteria-grid,
-    .visual-strip { grid-template-columns: 1fr; }
+    .visual-strip,
+    .exam-grid,
+    .exam-meta { grid-template-columns: 1fr; }
     .hero { padding: 28px; min-height: auto; }
     .hero-copy { text-align: left; }
     .hero h1, .hero p { margin-left: 0; margin-right: 0; }
@@ -267,6 +330,64 @@
           </tr>
         </tbody>
       </table>
+    </section>
+
+    <section class="exam-sheet">
+      <h2>Student Evaluation Format</h2>
+      <p>This module includes a student-facing evaluation structure similar to a final exam, but focused on oral interaction and service simulation.</p>
+      <div class="exam-meta">
+        <div class="line-field">Student Name: ____________________________________</div>
+        <div class="line-field">Date: ____________________________________</div>
+        <div class="line-field">Course: English A1 for Waiters - Module 2</div>
+        <div class="line-field">Teacher: ____________________________________</div>
+        <div class="line-field">Score: __________ / 100</div>
+      </div>
+      <div class="exam-grid">
+        <div class="exam-part">
+          <span class="part-chip">Part 1 - Reading (25 points)</span>
+          <h3>Order Taking and Suggestions</h3>
+          <ol>
+            <li>Read a service dialogue and answer comprehension questions.</li>
+            <li>Identify the recommended dish and the special of the day.</li>
+            <li>Match recommendation expressions with their function.</li>
+            <li>Read a group order and extract food and drink details.</li>
+          </ol>
+        </div>
+        <div class="exam-part">
+          <span class="part-chip">Part 2 - Writing (25 points)</span>
+          <h3>Restaurant Interaction</h3>
+          <ol>
+            <li>Complete a dialogue about taking an order.</li>
+            <li>Write two recommendations using <strong>I recommend...</strong></li>
+            <li>Write one apology and one solution for a restaurant problem.</li>
+            <li>Create a short group-order script.</li>
+          </ol>
+        </div>
+        <div class="exam-part">
+          <span class="part-chip">Part 3 - Listening (25 points)</span>
+          <h3>Service Comprehension</h3>
+          <ol>
+            <li>Listen and identify the food, drink, and recommendation.</li>
+            <li>Choose the correct answer about a problem or solution.</li>
+            <li>Write short details from a group-service dialogue.</li>
+          </ol>
+          <div class="audio-slot">
+            <strong>Audio space for Listening Exam</strong>
+            <p>Reserved for order-taking, recommendation, or problem-solving audio prompts.</p>
+            <div class="audio-placeholder"></div>
+          </div>
+        </div>
+        <div class="exam-part">
+          <span class="part-chip">Part 4 - Speaking (25 points)</span>
+          <h3>Integrated Role Play</h3>
+          <ul>
+            <li>Receive a guest and offer a table.</li>
+            <li>Take a food and drink order.</li>
+            <li>Recommend one dish.</li>
+            <li>Respond to one simple problem politely.</li>
+          </ul>
+        </div>
+      </div>
     </section>
 
     <section class="criteria-grid">

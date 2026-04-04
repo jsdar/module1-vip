@@ -172,6 +172,67 @@
     text-decoration: none;
     font-weight: 700;
   }
+  .exam-sheet {
+    margin-top: 28px;
+    padding: 24px;
+    border-radius: 24px;
+    background: #ffffff;
+    box-shadow: var(--shadow);
+  }
+  .exam-sheet h2,
+  .exam-part h3 {
+    margin: 0 0 12px;
+    font-family: Georgia, "Times New Roman", serif;
+    color: var(--brand-dark);
+  }
+  .exam-meta {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px 20px;
+    margin: 18px 0 22px;
+  }
+  .line-field {
+    padding-bottom: 8px;
+    border-bottom: 2px solid #efcfbf;
+    color: var(--muted);
+    font-weight: 600;
+  }
+  .exam-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+  }
+  .exam-part {
+    padding: 20px;
+    border-radius: 20px;
+    border: 1px solid rgba(211, 84, 0, 0.16);
+    background: linear-gradient(180deg, #fffdfc 0%, #fff3ea 100%);
+  }
+  .part-chip {
+    display: inline-block;
+    margin-bottom: 12px;
+    padding: 8px 12px;
+    border-radius: 999px;
+    background: #fce8dc;
+    color: var(--brand-dark);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  .exam-part p,
+  .exam-part ol,
+  .exam-part ul {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .exam-part ol,
+  .exam-part ul {
+    padding-left: 20px;
+  }
+  .exam-part li + li {
+    margin-top: 8px;
+  }
   .final-panel {
     background: linear-gradient(135deg, rgba(30, 30, 50, 0.92), rgba(109, 47, 5, 0.9));
     color: #ffffff;
@@ -188,7 +249,9 @@
   @media (max-width: 900px) {
     .intro,
     .criteria-grid,
-    .visual-strip { grid-template-columns: 1fr; }
+    .visual-strip,
+    .exam-grid,
+    .exam-meta { grid-template-columns: 1fr; }
     .hero { padding: 28px; min-height: auto; }
     .hero-copy { text-align: left; }
     .hero h1, .hero p { margin-left: 0; margin-right: 0; }
@@ -267,6 +330,61 @@
           </tr>
         </tbody>
       </table>
+    </section>
+
+    <section class="exam-sheet">
+      <h2>Student Evaluation Format</h2>
+      <p>This module also presents a student-facing exam layout similar to the PDF, but adapted to listening comprehension and final integrated evaluation.</p>
+      <div class="exam-meta">
+        <div class="line-field">Student Name: ____________________________________</div>
+        <div class="line-field">Date: ____________________________________</div>
+        <div class="line-field">Course: English A1 for Waiters - Module 3</div>
+        <div class="line-field">Teacher: ____________________________________</div>
+        <div class="line-field">Score: __________ / 100</div>
+      </div>
+      <div class="exam-grid">
+        <div class="exam-part">
+          <span class="part-chip">Part 1 - Reading (25 points)</span>
+          <h3>Listening Support Texts</h3>
+          <ol>
+            <li>Read a short service transcript and answer comprehension questions.</li>
+            <li>Identify the request, the confirmation phrase, and the solution.</li>
+            <li>Match active listening expressions with their purpose.</li>
+          </ol>
+        </div>
+        <div class="exam-part">
+          <span class="part-chip">Part 2 - Writing (25 points)</span>
+          <h3>Confirmation and Response</h3>
+          <ol>
+            <li>Write two confirmation sentences using <strong>So you would like...</strong></li>
+            <li>Write one polite clarification question.</li>
+            <li>Write a short reflection about a listening task or simulation.</li>
+          </ol>
+        </div>
+        <div class="exam-part">
+          <span class="part-chip">Part 3 - Listening (25 points)</span>
+          <h3>Orders and Requests</h3>
+          <ol>
+            <li>Listen and note the food, drink, and special request.</li>
+            <li>Identify whether the service response is correct or incorrect.</li>
+            <li>Write True or False about a practical listening scenario.</li>
+          </ol>
+          <div class="audio-slot">
+            <strong>Audio space for Listening Exam</strong>
+            <p>Reserved for accent-based prompts, request recordings, or evaluation audio.</p>
+            <div class="audio-placeholder"></div>
+          </div>
+        </div>
+        <div class="exam-part">
+          <span class="part-chip">Part 4 - Speaking (25 points)</span>
+          <h3>Individual Practical Task</h3>
+          <ul>
+            <li>Listen to one customer request.</li>
+            <li>Repeat the key information correctly.</li>
+            <li>Respond as the waiter using one confirmation phrase and one polite expression.</li>
+          </ul>
+        </div>
+      </div>
     </section>
 
     <section class="criteria-grid">

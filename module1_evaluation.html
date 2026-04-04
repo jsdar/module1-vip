@@ -201,6 +201,67 @@
     text-decoration: none;
     font-weight: 700;
   }
+  .exam-sheet {
+    margin-top: 28px;
+    padding: 24px;
+    border-radius: 24px;
+    background: #ffffff;
+    box-shadow: var(--shadow);
+  }
+  .exam-sheet h2,
+  .exam-part h3 {
+    margin: 0 0 12px;
+    font-family: Georgia, "Times New Roman", serif;
+    color: var(--brand);
+  }
+  .exam-meta {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px 20px;
+    margin: 18px 0 22px;
+  }
+  .line-field {
+    padding-bottom: 8px;
+    border-bottom: 2px solid #dce7df;
+    color: var(--muted);
+    font-weight: 600;
+  }
+  .exam-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+  }
+  .exam-part {
+    padding: 20px;
+    border-radius: 20px;
+    border: 1px solid var(--line);
+    background: linear-gradient(180deg, #ffffff 0%, #f7fbf8 100%);
+  }
+  .part-chip {
+    display: inline-block;
+    margin-bottom: 12px;
+    padding: 8px 12px;
+    border-radius: 999px;
+    background: #eaf3ed;
+    color: var(--brand);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  .exam-part p,
+  .exam-part ol,
+  .exam-part ul {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .exam-part ol,
+  .exam-part ul {
+    padding-left: 20px;
+  }
+  .exam-part li + li {
+    margin-top: 8px;
+  }
   .final-panel {
     background: linear-gradient(135deg, #1e5631, #2c7242);
     color: #ffffff;
@@ -226,7 +287,9 @@
   @media (max-width: 900px) {
     .intro,
     .criteria-grid,
-    .visual-strip {
+    .visual-strip,
+    .exam-grid,
+    .exam-meta {
       grid-template-columns: 1fr;
     }
     .hero {
@@ -306,6 +369,63 @@
           </tr>
         </tbody>
       </table>
+    </section>
+
+    <section class="exam-sheet">
+      <h2>Student Evaluation Format</h2>
+      <p>This module also includes a student-facing exam format like the final test PDF, adapted to Module 1 content.</p>
+      <div class="exam-meta">
+        <div class="line-field">Student Name: ____________________________________</div>
+        <div class="line-field">Date: ____________________________________</div>
+        <div class="line-field">Course: English A1 for Waiters - Module 1</div>
+        <div class="line-field">Teacher: ____________________________________</div>
+        <div class="line-field">Score: __________ / 100</div>
+      </div>
+      <div class="exam-grid">
+        <div class="exam-part">
+          <span class="part-chip">Part 1 - Reading (25 points)</span>
+          <h3>Greetings and Basic Service</h3>
+          <ol>
+            <li>Read a short dialogue and identify the waiter&apos;s first expression.</li>
+            <li>Choose the correct answer about reservation, menu, and drink.</li>
+            <li>Match polite expressions with their meaning.</li>
+            <li>Read a mini menu and answer 5 short questions.</li>
+          </ol>
+        </div>
+        <div class="exam-part">
+          <span class="part-chip">Part 2 - Writing (25 points)</span>
+          <h3>Courtesy and Vocabulary</h3>
+          <ol>
+            <li>Complete a short dialogue using a word bank.</li>
+            <li>Write 5 polite expressions a waiter can use.</li>
+            <li>Write a short restaurant dialogue with greeting, menu, drink, and thank-you.</li>
+          </ol>
+        </div>
+        <div class="exam-part">
+          <span class="part-chip">Part 3 - Listening (25 points)</span>
+          <h3>Comprehension of Service Steps</h3>
+          <ol>
+            <li>Listen and complete key expressions.</li>
+            <li>Choose the correct food or drink from the audio.</li>
+            <li>Mark True or False about the service situation.</li>
+          </ol>
+          <div class="audio-slot">
+            <strong>Audio space for Listening Exam</strong>
+            <p>Reserved for the student listening prompt or teacher recording.</p>
+            <div class="audio-placeholder"></div>
+          </div>
+        </div>
+        <div class="exam-part">
+          <span class="part-chip">Part 4 - Speaking (25 points)</span>
+          <h3>Simple Role Play</h3>
+          <ul>
+            <li>Greet the guest.</li>
+            <li>Offer a table and the menu.</li>
+            <li>Ask for a drink.</li>
+            <li>Take one simple order and say thank you politely.</li>
+          </ul>
+        </div>
+      </div>
     </section>
 
     <section class="criteria-grid">
