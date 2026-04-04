@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Module 1: Extra Practice Page</title>
+<style>
+  :root {
+    --bg: #eef3ef;
+    --surface: #ffffff;
+    --surface-soft: #f6faf7;
+    --line: #dfeae3;
+    --text: #17352a;
+    --muted: #557567;
+    --brand: #1e5631;
+    --brand-dark: #163728;
+    --shadow: 0 10px 28px rgba(20, 44, 32, 0.08);
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    line-height: 1.6;
+  }
+  .wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 28px;
+  }
+  .hero {
+    border-radius: 28px;
+    padding: 40px;
+    min-height: 300px;
+    color: #ffffff;
+    background:
+      linear-gradient(135deg, rgba(22, 55, 40, 0.92), rgba(44, 114, 66, 0.82)),
+      radial-gradient(circle at top right, rgba(255, 255, 255, 0.22), transparent 36%);
+    box-shadow: 0 18px 48px rgba(18, 40, 29, 0.18);
+  }
+  .logo {
+    width: 100px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.12);
+    padding: 10px;
+    display: inline-block;
+  }
+  .badge {
+    display: inline-block;
+    padding: 10px 18px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.16);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+  }
+  .hero h1 {
+    margin: 20px 0 12px;
+    max-width: 780px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(32px, 5.5vw, 54px);
+    font-style: italic;
+    line-height: 1.06;
+  }
+  .hero p {
+    max-width: 700px;
+    margin: 0;
+    font-size: 19px;
+    color: #edf5ef;
+  }
+  .page-switcher,
+  .lesson-grid,
+  .intro {
+    display: grid;
+    gap: 20px;
+  }
+  .intro {
+    grid-template-columns: 1fr 1fr;
+    margin-top: 28px;
+  }
+  .page-switcher {
+    margin-top: 24px;
+    padding: 18px 22px;
+    border-radius: 22px;
+    background: var(--brand-dark);
+    color: #f4faf5;
+    box-shadow: 0 16px 34px rgba(20, 55, 40, 0.16);
+    grid-template-columns: 1fr auto;
+    align-items: center;
+  }
+  .page-switcher strong {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 2px;
+  }
+  .page-switcher p {
+    margin: 0;
+    color: #cfe2d3;
+  }
+  .page-actions {
+    display: flex;
+    gap: 12px;
+  }
+  .page-link,
+  .page-link-disabled {
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    text-decoration: none;
+  }
+  .page-link {
+    color: var(--brand-dark);
+    background: #ffffff;
+    box-shadow: 0 12px 26px rgba(0, 0, 0, 0.16);
+  }
+  .page-link-disabled {
+    background: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.45);
+    cursor: default;
+  }
+  .panel,
+  .lesson-card {
+    background: var(--surface);
+    border-radius: 24px;
+    box-shadow: var(--shadow);
+  }
+  .panel {
+    padding: 24px;
+  }
+  .panel h3,
+  .lesson-card h2 {
+    margin: 0 0 10px;
+    font-family: Georgia, "Times New Roman", serif;
+    color: var(--brand);
+  }
+  .lessons {
+    margin-top: 28px;
+    display: grid;
+    gap: 22px;
+  }
+  .lesson-card {
+    padding: 26px;
+  }
+  .lesson-head {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+  .lesson-no {
+    background: var(--brand);
+    color: #ffffff;
+    padding: 8px 14px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 700;
+  }
+  .meta {
+    margin: 10px 0 18px;
+    color: #486457;
+    font-weight: 600;
+  }
+  .lesson-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .exercise-stack {
+    display: grid;
+    gap: 12px;
+  }
+  .block {
+    background: var(--surface-soft);
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    padding: 18px;
+  }
+  .block p,
+  .block ol {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .block ol {
+    padding-left: 20px;
+  }
+  .label {
+    display: inline-block;
+    margin-bottom: 10px;
+    color: var(--brand);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.3px;
+    text-transform: uppercase;
+  }
+  .gridbox {
+    font-family: "Courier New", monospace;
+    background: var(--brand-dark);
+    color: #f4faf5;
+    border-radius: 14px;
+    padding: 14px;
+    letter-spacing: 2px;
+    line-height: 1.8;
+    overflow: auto;
+  }
+  .audio-slot {
+    min-height: 96px;
+    border: 2px dashed #bfd3c3;
+    border-radius: 18px;
+    padding: 16px;
+    background: #fbfdfb;
+  }
+  .audio-slot strong {
+    display: block;
+    margin-bottom: 6px;
+    color: var(--brand);
+  }
+  .audio-slot p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 14px;
+  }
+  .audio-placeholder {
+    height: 14px;
+    margin-top: 16px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, rgba(30, 86, 49, 0.18), rgba(30, 86, 49, 0.06));
+  }
+  .footer-nav {
+    margin-top: 28px;
+    margin-bottom: 12px;
+  }
+  @media (max-width: 900px) {
+    .intro,
+    .lesson-grid,
+    .page-switcher {
+      grid-template-columns: 1fr;
+    }
+    .hero {
+      padding: 28px;
+      min-height: auto;
+    }
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="hero">
+      <img class="logo" src="https://res.cloudinary.com/du4lciu5v/image/upload/q_auto/f_auto/v1775258231/UEA_logo_jpwwmc.png" alt="UEA logo">
+      <div style="margin-top: 18px;">
+        <span class="badge">Module 1 &bull; Extra Practice</span>
+        <h1>Page 2: More Simple Exercises</h1>
+        <p>This second page continues the workbook with short activities in the same style, plus audio-ready areas under each exercise.</p>
+      </div>
+    </section>
+
+    <section class="intro">
+      <div class="panel">
+        <h3>How to use this page</h3>
+        <p>Students can solve these extra tasks after finishing page 1. The activities stay brief, visual and iframe-friendly so you can keep the same classroom flow.</p>
+      </div>
+      <div class="panel">
+        <h3>Included practice</h3>
+        <p>Each lesson adds one quick fill-in activity and one mini word search. Every exercise also has an empty block ready for audio insertion.</p>
+      </div>
+    </section>
+
+    <section class="page-switcher" aria-label="Page navigation">
+      <div>
+        <strong>Page 2 of 2</strong>
+        <p>Use the left arrow to return to the first page.</p>
+      </div>
+      <div class="page-actions">
+        <a class="page-link" href="module1_vip_workbook.html" aria-label="Return to page 1">&larr;</a>
+        <span class="page-link-disabled" aria-hidden="true">&rarr;</span>
+      </div>
+    </section>
+
+    <div class="lessons">
+      <section class="lesson-card">
+        <div class="lesson-head">
+          <div class="lesson-no">Lesson 1</div>
+          <h2>Extra Practice: Greetings and Courtesy</h2>
+        </div>
+        <div class="meta">Short practice to reinforce greetings and polite expressions.</div>
+        <div class="lesson-grid">
+          <div class="exercise-stack">
+            <div class="block">
+              <div class="label">Quick Practice</div>
+              <ol>
+                <li>Good ______. Welcome to the restaurant.</li>
+                <li>My name ______ Sofia.</li>
+                <li>Please, come to your ______.</li>
+                <li>Thank ______ for coming.</li>
+              </ol>
+              <p><strong>Word bank:</strong> evening, is, table, you</p>
+            </div>
+            <div class="audio-slot">
+              <strong>Audio space for Quick Practice</strong>
+              <p>Reserved area for a greeting model or listening prompt.</p>
+              <div class="audio-placeholder"></div>
+            </div>
+          </div>
+          <div class="exercise-stack">
+            <div class="block">
+              <div class="label">Mini Word Search</div>
+              <p><strong>Find:</strong> HELLO - MENU - PLEASE - SMILE</p>
+              <div class="gridbox">H E L L O X X<br>M E N U X X X<br>P L E A S E X<br>S M I L E X X</div>
+            </div>
+            <div class="audio-slot">
+              <strong>Audio space for Mini Word Search</strong>
+              <p>Use this box for pronunciation or instructions.</p>
+              <div class="audio-placeholder"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="lesson-card">
+        <div class="lesson-head">
+          <div class="lesson-no">Lesson 2</div>
+          <h2>Extra Practice: Restaurant Protocol</h2>
+        </div>
+        <div class="meta">Students review the sequence of service with simple blanks.</div>
+        <div class="lesson-grid">
+          <div class="exercise-stack">
+            <div class="block">
+              <div class="label">Quick Practice</div>
+              <ol>
+                <li>The waiter brings the ______.</li>
+                <li>The customer reads the ______.</li>
+                <li>At the end, the customer pays the ______.</li>
+                <li>The waiter takes the ______.</li>
+              </ol>
+              <p><strong>Word bank:</strong> food, menu, bill, order</p>
+            </div>
+            <div class="audio-slot">
+              <strong>Audio space for Quick Practice</strong>
+              <p>Ready for a service-sequence explanation or dictation.</p>
+              <div class="audio-placeholder"></div>
+            </div>
+          </div>
+          <div class="exercise-stack">
+            <div class="block">
+              <div class="label">Mini Word Search</div>
+              <p><strong>Find:</strong> TRAY - BILL - TABLE - ORDER</p>
+              <div class="gridbox">T R A Y X X X<br>B I L L X X X<br>T A B L E X X<br>O R D E R X X</div>
+            </div>
+            <div class="audio-slot">
+              <strong>Audio space for Mini Word Search</strong>
+              <p>Leave this area open for your future audio upload.</p>
+              <div class="audio-placeholder"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="lesson-card">
+        <div class="lesson-head">
+          <div class="lesson-no">Lesson 3</div>
+          <h2>Extra Practice: Intercultural Communication</h2>
+        </div>
+        <div class="meta">The exercises keep English simple and practical for international guests.</div>
+        <div class="lesson-grid">
+          <div class="exercise-stack">
+            <div class="block">
+              <div class="label">Quick Practice</div>
+              <ol>
+                <li>Guests speak different ______.</li>
+                <li>English helps ______.</li>
+                <li>Do you need ______?</li>
+                <li>Water, ______?</li>
+              </ol>
+              <p><strong>Word bank:</strong> languages, communication, help, please</p>
+            </div>
+            <div class="audio-slot">
+              <strong>Audio space for Quick Practice</strong>
+              <p>Ideal for a short listening exercise with guest-service phrases.</p>
+              <div class="audio-placeholder"></div>
+            </div>
+          </div>
+          <div class="exercise-stack">
+            <div class="block">
+              <div class="label">Mini Word Search</div>
+              <p><strong>Find:</strong> GUEST - HELP - WATER - ENGLISH</p>
+              <div class="gridbox">G U E S T X X<br>H E L P X X X<br>W A T E R X X<br>E N G L I S H</div>
+            </div>
+            <div class="audio-slot">
+              <strong>Audio space for Mini Word Search</strong>
+              <p>Another reserved area for instructions or pronunciation support.</p>
+              <div class="audio-placeholder"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="lesson-card">
+        <div class="lesson-head">
+          <div class="lesson-no">Lesson 4</div>
+          <h2>Extra Practice: Complaints and Diets</h2>
+        </div>
+        <div class="meta">Students practice polite apologies and basic dietary requests.</div>
+        <div class="lesson-grid">
+          <div class="exercise-stack">
+            <div class="block">
+              <div class="label">Quick Practice</div>
+              <ol>
+                <li>I am ______ for the problem.</li>
+                <li>The soup is ______.</li>
+                <li>No ______, please.</li>
+                <li>The waiter can ______.</li>
+              </ol>
+              <p><strong>Word bank:</strong> sorry, cold, sugar, help</p>
+            </div>
+            <div class="audio-slot">
+              <strong>Audio space for Quick Practice</strong>
+              <p>Reserved for polite-response audio or guided repetition.</p>
+              <div class="audio-placeholder"></div>
+            </div>
+          </div>
+          <div class="exercise-stack">
+            <div class="block">
+              <div class="label">Mini Word Search</div>
+              <p><strong>Find:</strong> SORRY - GLUTEN - DIET - HELP</p>
+              <div class="gridbox">S O R R Y X X<br>G L U T E N X<br>D I E T X X X<br>H E L P X X X</div>
+            </div>
+            <div class="audio-slot">
+              <strong>Audio space for Mini Word Search</strong>
+              <p>This space is open for a future classroom audio file.</p>
+              <div class="audio-placeholder"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="lesson-card">
+        <div class="lesson-head">
+          <div class="lesson-no">Lesson 5</div>
+          <h2>Extra Practice: Menu and Food Description</h2>
+        </div>
+        <div class="meta">Students reinforce simple adjectives and food vocabulary.</div>
+        <div class="lesson-grid">
+          <div class="exercise-stack">
+            <div class="block">
+              <div class="label">Quick Practice</div>
+              <ol>
+                <li>This is chicken and ______.</li>
+                <li>The soup is very ______.</li>
+                <li>The food is ______.</li>
+                <li>The guest reads the ______.</li>
+              </ol>
+              <p><strong>Word bank:</strong> rice, hot, delicious, menu</p>
+            </div>
+            <div class="audio-slot">
+              <strong>Audio space for Quick Practice</strong>
+              <p>Ready for an audio track about menu descriptions.</p>
+              <div class="audio-placeholder"></div>
+            </div>
+          </div>
+          <div class="exercise-stack">
+            <div class="block">
+              <div class="label">Mini Word Search</div>
+              <p><strong>Find:</strong> SOUP - MENU - HOT - RICE</p>
+              <div class="gridbox">S O U P X X X<br>M E N U X X X<br>H O T X X X X<br>R I C E X X X</div>
+            </div>
+            <div class="audio-slot">
+              <strong>Audio space for Mini Word Search</strong>
+              <p>You can place a pronunciation or vocabulary audio here later.</p>
+              <div class="audio-placeholder"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <section class="page-switcher footer-nav" aria-label="Return navigation">
+      <div>
+        <strong>Back to page 1</strong>
+        <p>Return to the main workbook whenever you want.</p>
+      </div>
+      <div class="page-actions">
+        <a class="page-link" href="module1_vip_workbook.html" aria-label="Return to page 1">&larr;</a>
+        <span class="page-link-disabled" aria-hidden="true">&rarr;</span>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

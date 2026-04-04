@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Module 3: Applied Listening Comprehension and Comprehensive Evaluation</title>
+<style>
+  :root {
+    --bg: #fffaf6;
+    --surface: #ffffff;
+    --surface-soft: #fff4ec;
+    --line: #f1d1bf;
+    --text: #39261c;
+    --muted: #7b6357;
+    --ink: #2d3748;
+    --brand: #d35400;
+    --brand-dark: #9a3e00;
+    --brand-deep: #6d2f05;
+    --shadow: 0 18px 40px rgba(127, 57, 16, 0.08);
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background:
+      radial-gradient(circle at top right, rgba(211, 84, 0, 0.1), transparent 26%),
+      linear-gradient(180deg, #ffffff 0%, #fffaf6 100%);
+    color: var(--text);
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    line-height: 1.6;
+  }
+  .wrap {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 24px;
+  }
+  .hero {
+    position: relative;
+    overflow: hidden;
+    min-height: 520px;
+    padding: 40px 50px;
+    border-radius: 30px;
+    background-image: url("https://res.cloudinary.com/du4lciu5v/image/upload/q_auto/f_auto/v1775338821/Topico_imagen3_lr2kac.png");
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.2);
+  }
+  .hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(30, 30, 50, 0.7) 0%, rgba(30, 30, 50, 0.3) 100%);
+  }
+  .hero-top,
+  .hero-copy {
+    position: relative;
+    z-index: 2;
+  }
+  .hero-top {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .logo {
+    width: 130px;
+    filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.5));
+  }
+  .badge {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 8px;
+    background: var(--brand);
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    box-shadow: 0 8px 20px rgba(211, 84, 0, 0.4);
+  }
+  .hero-copy {
+    position: relative;
+    z-index: 2;
+    text-align: right;
+    margin-top: 30px;
+  }
+  .hero h1 {
+    margin: 25px 0 15px auto;
+    max-width: 850px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(38px, 6vw, 62px);
+    line-height: 1.1;
+    font-weight: 700;
+    color: #ffffff;
+    text-shadow: 2px 4px 15px rgba(0, 0, 0, 0.6);
+  }
+  .hero p {
+    margin: 15px 0 0 auto;
+    max-width: 650px;
+    font-size: 22px;
+    line-height: 1.5;
+    color: #edf2f7;
+    font-weight: 300;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  }
+  .topic-panel {
+    margin-top: 40px;
+    padding: 45px;
+    border-radius: 24px;
+    background: var(--surface);
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.03);
+  }
+  .topic-panel h2,
+  .section-card h2,
+  .final h2 {
+    margin: 0 0 16px;
+    font-family: Georgia, "Times New Roman", serif;
+  }
+  .topic-panel h2 {
+    font-size: 32px;
+    color: var(--ink);
+    border-left: 5px solid var(--brand);
+    padding-left: 20px;
+  }
+  .mode-chip {
+    display: inline-block;
+    background: #f7fafc;
+    padding: 8px 16px;
+    border-radius: 6px;
+    border: 1px solid #e2e8f0;
+    margin-bottom: 30px;
+    font-size: 14px;
+    color: #718096;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  .topic-panel ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    color: #4a5568;
+    line-height: 2.2;
+    font-size: 18px;
+  }
+  .topic-panel li {
+    margin-bottom: 12px;
+    display: flex;
+    align-items: baseline;
+    gap: 15px;
+  }
+  .topic-panel li::before {
+    content: "\25A0";
+    color: var(--brand);
+    font-size: 12px;
+  }
+  .intro {
+    margin-top: 28px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  .panel,
+  .section-card {
+    background: var(--surface);
+    border-radius: 24px;
+    box-shadow: var(--shadow);
+    border: 1px solid rgba(211, 84, 0, 0.12);
+  }
+  .panel {
+    padding: 24px;
+  }
+  .panel h3 {
+    margin: 0 0 10px;
+    color: var(--ink);
+    font-family: Georgia, "Times New Roman", serif;
+  }
+  .panel p,
+  .panel ul {
+    margin: 0;
+    color: var(--muted);
+  }
+  .panel ul {
+    padding-left: 18px;
+  }
+  .sections {
+    margin-top: 28px;
+    display: grid;
+    gap: 22px;
+  }
+  .section-card {
+    padding: 28px;
+  }
+  .section-head {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+  .section-no {
+    background: linear-gradient(135deg, #d35400, #b54900);
+    color: #ffffff;
+    padding: 8px 14px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 0.6px;
+    box-shadow: 0 10px 20px rgba(211, 84, 0, 0.25);
+  }
+  .section-card h2 {
+    color: var(--ink);
+  }
+  .meta {
+    margin: 10px 0 18px;
+    color: var(--muted);
+    font-weight: 600;
+  }
+  .section-grid {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 20px;
+  }
+  .col {
+    min-width: 0;
+  }
+  .stack {
+    display: grid;
+    gap: 12px;
+  }
+  .block {
+    background: linear-gradient(180deg, #fffdfc 0%, #fff3ea 100%);
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    padding: 18px;
+  }
+  .block p,
+  .block ol,
+  .block ul {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .block ol,
+  .block ul {
+    padding-left: 20px;
+  }
+  .block li + li {
+    margin-top: 8px;
+  }
+  .label {
+    display: inline-block;
+    margin-bottom: 10px;
+    padding: 7px 12px;
+    border-radius: 999px;
+    background: rgba(211, 84, 0, 0.12);
+    color: var(--brand-dark);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.3px;
+    text-transform: uppercase;
+  }
+  .chips {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .chips span {
+    background: #fce8dc;
+    color: var(--brand-deep);
+    border: 1px solid rgba(211, 84, 0, 0.2);
+    border-radius: 999px;
+    padding: 8px 12px;
+    font-size: 13px;
+    font-weight: 700;
+  }
+  .audio-slot {
+    min-height: 96px;
+    border: 2px dashed rgba(211, 84, 0, 0.4);
+    border-radius: 18px;
+    padding: 16px;
+    background: linear-gradient(180deg, #fffdfa 0%, #fff1e6 100%);
+  }
+  .audio-slot strong {
+    display: block;
+    margin-bottom: 6px;
+    color: var(--brand-dark);
+  }
+  .audio-slot p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 14px;
+  }
+  .audio-placeholder {
+    height: 14px;
+    margin-top: 16px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, rgba(211, 84, 0, 0.34), rgba(211, 84, 0, 0.08));
+  }
+  .visual-strip {
+    margin-top: 28px;
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 20px;
+  }
+  .image-card,
+  .practice-bank {
+    background: var(--surface);
+    border-radius: 24px;
+    box-shadow: var(--shadow);
+  }
+  .image-card {
+    overflow: hidden;
+    min-height: 320px;
+  }
+  .image-card img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+  }
+  .highlight-card {
+    border: 1px solid rgba(211, 84, 0, 0.12);
+    background: linear-gradient(135deg, #fff8f3, #ffffff);
+  }
+  .highlight-card h3,
+  .practice-bank h2,
+  .micro-card h3 {
+    margin: 0 0 10px;
+    font-family: Georgia, "Times New Roman", serif;
+    color: var(--brand-dark);
+  }
+  .practice-bank {
+    margin-top: 28px;
+    padding: 26px;
+    border: 1px solid rgba(211, 84, 0, 0.12);
+  }
+  .practice-bank p {
+    margin: 0 0 16px;
+    color: var(--muted);
+  }
+  .bank-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+  }
+  .micro-card {
+    background: linear-gradient(180deg, #fffdfc 0%, #fff3ea 100%);
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    padding: 18px;
+  }
+  .micro-card ol,
+  .micro-card ul {
+    margin: 0;
+    padding-left: 20px;
+  }
+  .micro-card li + li {
+    margin-top: 8px;
+  }
+  .micro-card .audio-slot {
+    margin-top: 14px;
+  }
+  .evaluation-panel {
+    margin-top: 28px;
+    padding: 24px;
+    border-radius: 24px;
+    background: var(--surface);
+    border: 1px solid rgba(211, 84, 0, 0.12);
+    box-shadow: var(--shadow);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    flex-wrap: wrap;
+  }
+  .action-link {
+    display: inline-block;
+    padding: 12px 20px;
+    border-radius: 10px;
+    background: var(--brand);
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+  }
+  .final {
+    margin-top: 28px;
+    padding: 30px;
+    border-radius: 26px;
+    background:
+      linear-gradient(135deg, rgba(30, 30, 50, 0.92), rgba(109, 47, 5, 0.9)),
+      linear-gradient(135deg, #d35400, #6d2f05);
+    color: #ffffff;
+    box-shadow: 0 18px 34px rgba(101, 42, 11, 0.2);
+  }
+  .final h2 {
+    color: #ffffff;
+  }
+  .steps {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 14px;
+  }
+  .steps span {
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    padding: 10px 14px;
+    border-radius: 14px;
+    font-weight: 700;
+  }
+  @media (max-width: 900px) {
+    .hero {
+      padding: 28px;
+      min-height: auto;
+    }
+    .hero-copy {
+      text-align: left;
+    }
+    .hero h1,
+    .hero p {
+      margin-left: 0;
+      margin-right: 0;
+    }
+    .topic-panel {
+      padding: 28px;
+    }
+    .intro,
+    .section-grid,
+    .visual-strip {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="hero">
+      <div class="hero-top">
+        <img class="logo" src="https://res.cloudinary.com/du4lciu5v/image/upload/q_auto/f_auto/v1775258231/UEA_logo_jpwwmc.png" alt="UEA logo">
+        <span class="badge">UEA-EC-2026-044 &bull; Vinculacion con la Colectividad</span>
+      </div>
+      <div class="hero-copy">
+        <h1>Module 3: Applied Listening Comprehension and Comprehensive Evaluation</h1>
+        <p>Strengthening attentive listening, integrated food service performance, and final oral evaluation in authentic hospitality contexts.</p>
+      </div>
+    </section>
+
+    <section class="topic-panel">
+      <h2>Topic 1.3 Applied Listening Comprehension and Comprehensive Evaluation - 15h</h2>
+      <div class="mode-chip">Mode: Virtual synchronous with asynchronous support</div>
+      <ul>
+        <li><span><strong>Subtopic 1.3.1:</strong> Listening comprehension of orders and requests with different accents.</span></li>
+        <li><span><strong>Subtopic 1.3.2:</strong> Active listening in real-life settings.</span></li>
+        <li><span><strong>Subtopic 1.3.3:</strong> Integration of skills in the final food service simulation.</span></li>
+        <li><span><strong>Subtopic 1.3.4:</strong> Individual practical assessment.</span></li>
+        <li><span><strong>Subtopic 1.3.5:</strong> Feedback and instructional closure.</span></li>
+      </ul>
+    </section>
+
+    <section class="intro">
+      <div class="panel">
+        <h3>How this page is organized</h3>
+        <p>This Module 3 page follows the same clean workbook structure you have been using. Each subtopic is presented in a separate section with practical tasks, instructor guidance, and audio-ready space.</p>
+      </div>
+      <div class="panel">
+        <h3>Evaluation focus</h3>
+        <ul>
+          <li>Listening to orders and requests accurately</li>
+          <li>Responding clearly in restaurant scenarios</li>
+          <li>Integrating service language in simulations</li>
+          <li>Receiving and applying feedback</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="visual-strip">
+      <div class="image-card">
+        <img src="assets/module3-scene.svg" alt="Illustration of listening practice with audio waves and service notes">
+      </div>
+      <div class="panel highlight-card">
+        <h3>Listening Activation</h3>
+        <p>Use the image to introduce the listening focus of the module. Students can predict what they will hear, identify service vocabulary, and describe how they would respond in a real restaurant setting.</p>
+        <div class="chips" style="margin-top: 14px;">
+          <span>What request do you hear?</span>
+          <span>What should the waiter confirm?</span>
+          <span>What details are important?</span>
+          <span>How do you respond politely?</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="evaluation-panel">
+      <div>
+        <div class="label">Separate Evaluation</div>
+        <h3 style="margin: 0 0 8px; font-family: Georgia, 'Times New Roman', serif; color: var(--brand-dark);">Module 3 Assessment Page</h3>
+        <p style="margin: 0; color: var(--muted);">Open the evaluation rubric and performance tasks on a separate page for independent publication.</p>
+      </div>
+      <a class="action-link" href="module3_evaluation.html">Open Evaluation</a>
+    </section>
+
+    <div class="sections">
+      <section class="section-card">
+        <div class="section-head">
+          <div class="section-no">Subtopic 1.3.1</div>
+          <h2>Listening Comprehension of Orders and Requests with Different Accents</h2>
+        </div>
+        <div class="meta">Students identify key information from restaurant orders, requests, and pronunciation variations.</div>
+        <div class="section-grid">
+          <div class="col stack">
+            <div class="block">
+              <div class="label">Focus</div>
+              <ul>
+                <li>Understand food and drink orders from different speakers.</li>
+                <li>Recognize requests, quantities, and preferences.</li>
+                <li>Practice noting essential details accurately.</li>
+              </ul>
+            </div>
+            <div class="block">
+              <div class="label">Suggested Activities</div>
+              <ol>
+                <li>Listen to short order recordings two or three times.</li>
+                <li>Write down the food, drink, and special request.</li>
+                <li>Compare answers with a partner and justify your choices.</li>
+              </ol>
+            </div>
+            <div class="audio-slot">
+              <strong>Audio space for Listening Practice</strong>
+              <p>Reserved area for accent-based order recordings or teacher guidance.</p>
+              <div class="audio-placeholder"></div>
+            </div>
+          </div>
+          <div class="col stack">
+            <div class="block">
+              <div class="label">Evidence of Learning</div>
+              <ul>
+                <li>Accurate note-taking of menu items and customer preferences.</li>
+                <li>Correct identification of key service vocabulary.</li>
+                <li>Improved listening confidence with varied pronunciation.</li>
+              </ul>
+            </div>
+            <div class="block">
+              <div class="label">Key Vocabulary</div>
+              <div class="chips">
+                <span>Order</span>
+                <span>Request</span>
+                <span>Still water</span>
+                <span>No sugar</span>
+                <span>With rice</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-card">
+        <div class="section-head">
+          <div class="section-no">Subtopic 1.3.2</div>
+          <h2>Active Listening in Real-Life Settings</h2>
+        </div>
+        <div class="meta">Students show attentive listening through clarification, confirmation, and accurate response.</div>
+        <div class="section-grid">
+          <div class="col stack">
+            <div class="block">
+              <div class="label">Focus</div>
+              <ul>
+                <li>Listen carefully before answering.</li>
+                <li>Use confirmation questions to avoid mistakes.</li>
+                <li>Respond politely and professionally.</li>
+              </ul>
+            </div>
+            <div class="block">
+              <div class="label">Suggested Activities</div>
+              <ol>
+                <li>Listen to short restaurant situations and identify what the guest needs.</li>
+                <li>Repeat the request using your own words.</li>
+                <li>Practice clarification phrases in pairs.</li>
+              </ol>
+            </div>
+            <div class="audio-slot">
+              <strong>Audio space for Real-Life Listening</strong>
+              <p>Reserved for realistic service situations, questions, and customer requests.</p>
+              <div class="audio-placeholder"></div>
+            </div>
+          </div>
+          <div class="col stack">
+            <div class="block">
+              <div class="label">Useful Expressions</div>
+              <div class="chips">
+                <span>Could you repeat that?</span>
+                <span>So you would like...</span>
+                <span>Let me confirm</span>
+                <span>Right away</span>
+                <span>Of course</span>
+              </div>
+            </div>
+            <div class="block">
+              <div class="label">Expected Outcome</div>
+              <ul>
+                <li>Students respond more accurately in practical service exchanges.</li>
+                <li>Students reduce errors by confirming information.</li>
+                <li>Students demonstrate active listening behaviors.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-card">
+        <div class="section-head">
+          <div class="section-no">Subtopic 1.3.3</div>
+          <h2>Integration of Skills in the Final Food Service Simulation</h2>
+        </div>
+        <div class="meta">Students combine listening, speaking, and service vocabulary in a complete restaurant performance.</div>
+        <div class="section-grid">
+          <div class="col stack">
+            <div class="block">
+              <div class="label">Focus</div>
+              <ul>
+                <li>Integrate greeting, ordering, recommendations, and problem solving.</li>
+                <li>Use practical food-service English in sequence.</li>
+                <li>Demonstrate fluency and confidence in role play.</li>
+              </ul>
+            </div>
+            <div class="block">
+              <div class="label">Suggested Activities</div>
+              <ol>
+                <li>Prepare a full restaurant interaction in small groups.</li>
+                <li>Assign roles: waiter, customer, support staff, or cashier.</li>
+                <li>Perform the complete scene and rotate roles.</li>
+              </ol>
+            </div>
+            <div class="audio-slot">
+              <strong>Audio space for Simulation</strong>
+              <p>Reserved for model simulations or oral instructions before the performance.</p>
+              <div class="audio-placeholder"></div>
+            </div>
+          </div>
+          <div class="col stack">
+            <div class="block">
+              <div class="label">Performance Elements</div>
+              <div class="chips">
+                <span>Greeting</span>
+                <span>Taking order</span>
+                <span>Recommendation</span>
+                <span>Problem solving</span>
+                <span>Payment</span>
+              </div>
+            </div>
+            <div class="block">
+              <div class="label">Assessment Evidence</div>
+              <ul>
+                <li>Appropriate vocabulary and expressions.</li>
+                <li>Logical sequence of service.</li>
+                <li>Clear pronunciation and interaction.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-card">
+        <div class="section-head">
+          <div class="section-no">Subtopic 1.3.4</div>
+          <h2>Individual Practical Assessment</h2>
+        </div>
+        <div class="meta">Students demonstrate personal performance through guided individual speaking and listening tasks.</div>
+        <div class="section-grid">
+          <div class="col stack">
+            <div class="block">
+              <div class="label">Focus</div>
+              <ul>
+                <li>Evaluate each student individually.</li>
+                <li>Measure listening comprehension and oral response.</li>
+                <li>Observe service language use in an authentic task.</li>
+              </ul>
+            </div>
+            <div class="block">
+              <div class="label">Suggested Activities</div>
+              <ol>
+                <li>Listen to one short scenario and answer key questions.</li>
+                <li>Respond to a customer request orally.</li>
+                <li>Complete a mini service role play with the teacher.</li>
+              </ol>
+            </div>
+            <div class="audio-slot">
+              <strong>Audio space for Assessment</strong>
+              <p>Reserved for individual listening prompts or teacher-administered evaluation audio.</p>
+              <div class="audio-placeholder"></div>
+            </div>
+          </div>
+          <div class="col stack">
+            <div class="block">
+              <div class="label">Assessment Criteria</div>
+              <ul>
+                <li>Listening accuracy</li>
+                <li>Clarity of oral response</li>
+                <li>Use of appropriate expressions</li>
+                <li>Professional interaction</li>
+              </ul>
+            </div>
+            <div class="block">
+              <div class="label">Teacher Notes</div>
+              <p>Use this section to add indicators, scoring rubrics, or quick comments for each student.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-card">
+        <div class="section-head">
+          <div class="section-no">Subtopic 1.3.5</div>
+          <h2>Feedback and Instructional Closure</h2>
+        </div>
+        <div class="meta">Students reflect on strengths, challenges, and next steps after the final practical activities.</div>
+        <div class="section-grid">
+          <div class="col stack">
+            <div class="block">
+              <div class="label">Focus</div>
+              <ul>
+                <li>Review the most important language and strategies.</li>
+                <li>Identify what students can improve.</li>
+                <li>Close the module with clear learning evidence.</li>
+              </ul>
+            </div>
+            <div class="block">
+              <div class="label">Suggested Activities</div>
+              <ol>
+                <li>Give individual and group feedback.</li>
+                <li>Ask students to reflect on one strength and one challenge.</li>
+                <li>Summarize the communication tools learned across the module.</li>
+              </ol>
+            </div>
+            <div class="audio-slot">
+              <strong>Audio space for Closure</strong>
+              <p>Reserved area for final feedback, recap audio, or module closing message.</p>
+              <div class="audio-placeholder"></div>
+            </div>
+          </div>
+          <div class="col stack">
+            <div class="block">
+              <div class="label">Reflection Prompts</div>
+              <div class="chips">
+                <span>What improved?</span>
+                <span>What was difficult?</span>
+                <span>What can I do better?</span>
+                <span>What language will I reuse?</span>
+              </div>
+            </div>
+            <div class="block">
+              <div class="label">Closure Notes</div>
+              <p>This area is ready for final comments, reminders, or instructions for the next module.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <section class="practice-bank">
+      <h2>Applied Practice Set</h2>
+      <p>These extension activities give students more chances to listen, confirm information, and prepare for the final evaluation.</p>
+      <div class="bank-grid">
+        <div class="micro-card">
+          <div class="label">Accent Log</div>
+          <h3>Key Details from Audio</h3>
+          <ol>
+            <li>Listen to a short order and write the food, drink, and extra request.</li>
+            <li>Mark the word that was hardest to understand.</li>
+            <li>Listen again and correct your notes.</li>
+          </ol>
+          <div class="audio-slot">
+            <strong>Audio space for Accent Log</strong>
+            <p>Reserved for varied-accent listening clips or teacher input.</p>
+            <div class="audio-placeholder"></div>
+          </div>
+        </div>
+        <div class="micro-card">
+          <div class="label">Confirmation Drill</div>
+          <h3>Repeat and Confirm</h3>
+          <ol>
+            <li>Rewrite the customer request using <strong>So you would like...</strong></li>
+            <li>Add one confirmation question.</li>
+            <li>Practice the full exchange with a partner.</li>
+          </ol>
+          <div class="audio-slot">
+            <strong>Audio space for Confirmation Drill</strong>
+            <p>Use this box for a model confirmation exchange.</p>
+            <div class="audio-placeholder"></div>
+          </div>
+        </div>
+        <div class="micro-card">
+          <div class="label">Simulation Planner</div>
+          <h3>Before the Final Role Play</h3>
+          <ol>
+            <li>Choose the situation: greeting, order, complaint, or payment.</li>
+            <li>Write the key expressions you will use.</li>
+            <li>Assign roles and rehearse once.</li>
+          </ol>
+          <div class="audio-slot">
+            <strong>Audio space for Simulation Planner</strong>
+            <p>Reserved for rehearsal instructions or a model planning guide.</p>
+            <div class="audio-placeholder"></div>
+          </div>
+        </div>
+        <div class="micro-card">
+          <div class="label">Individual Check</div>
+          <h3>Mini Assessment Task</h3>
+          <ol>
+            <li>Listen to one short prompt.</li>
+            <li>Respond as the waiter in two complete sentences.</li>
+            <li>Use one polite expression and one confirmation phrase.</li>
+          </ol>
+          <div class="audio-slot">
+            <strong>Audio space for Individual Check</strong>
+            <p>Ready for an assessment prompt or teacher-administered audio.</p>
+            <div class="audio-placeholder"></div>
+          </div>
+        </div>
+        <div class="micro-card">
+          <div class="label">Exit Ticket</div>
+          <h3>Reflection and Closure</h3>
+          <ol>
+            <li>Write one thing you understood well.</li>
+            <li>Write one expression you still need to practice.</li>
+            <li>Say your reflection aloud to a partner.</li>
+          </ol>
+          <div class="audio-slot">
+            <strong>Audio space for Exit Ticket</strong>
+            <p>Reserved for final feedback, recap, or closure audio.</p>
+            <div class="audio-placeholder"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="final">
+      <h2>Module 3 Closing Performance</h2>
+      <p>Use this final section to summarize the comprehensive evaluation, highlight student progress, and connect the listening work with practical restaurant communication.</p>
+      <div class="steps">
+        <span>Listening accuracy</span>
+        <span>Active response</span>
+        <span>Integrated simulation</span>
+        <span>Individual assessment</span>
+        <span>Feedback</span>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

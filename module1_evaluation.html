@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Module 1 Evaluation</title>
+<style>
+  :root {
+    --bg: #eef3ef;
+    --surface: #ffffff;
+    --surface-soft: #f6faf7;
+    --line: #dfeae3;
+    --text: #17352a;
+    --muted: #557567;
+    --brand: #1e5631;
+    --brand-dark: #163728;
+    --shadow: 0 12px 28px rgba(20, 44, 32, 0.08);
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    line-height: 1.6;
+  }
+  .wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 28px;
+  }
+  .hero {
+    position: relative;
+    overflow: hidden;
+    border-radius: 28px;
+    min-height: 340px;
+    padding: 40px;
+    color: #ffffff;
+    background:
+      linear-gradient(90deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.18) 48%, rgba(0, 0, 0, 0.05)),
+      url("https://res.cloudinary.com/du4lciu5v/image/upload/q_auto/f_auto/v1775260949/imagen_modulo1_jikhqn.png") center/cover;
+    box-shadow: 0 18px 48px rgba(18, 40, 29, 0.18);
+  }
+  .logo {
+    width: 110px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.12);
+    padding: 10px;
+  }
+  .badge {
+    display: inline-block;
+    margin-top: 18px;
+    padding: 10px 18px;
+    border-radius: 999px;
+    background: var(--brand);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+  }
+  .hero h1 {
+    margin: 18px 0 10px;
+    max-width: 760px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(34px, 6vw, 56px);
+    line-height: 1.08;
+    text-shadow: 0 5px 16px rgba(0, 0, 0, 0.5);
+  }
+  .hero p {
+    max-width: 620px;
+    margin: 0;
+    font-size: 20px;
+    color: #edf5ef;
+  }
+  .intro,
+  .criteria-grid,
+  .visual-strip {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  .intro,
+  .visual-strip,
+  .criteria-grid,
+  .rubric-panel,
+  .final-panel {
+    margin-top: 28px;
+  }
+  .panel,
+  .criterion,
+  .rubric-panel,
+  .final-panel,
+  .image-card {
+    background: var(--surface);
+    border-radius: 24px;
+    box-shadow: var(--shadow);
+  }
+  .panel,
+  .criterion,
+  .rubric-panel,
+  .final-panel {
+    padding: 24px;
+  }
+  .panel h3,
+  .rubric-panel h2,
+  .criterion h3,
+  .final-panel h2 {
+    margin: 0 0 12px;
+    font-family: Georgia, "Times New Roman", serif;
+    color: var(--brand);
+  }
+  .image-card {
+    overflow: hidden;
+    min-height: 300px;
+  }
+  .image-card img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+  }
+  .panel ul,
+  .criterion ul,
+  .criterion ol {
+    margin: 0;
+    padding-left: 20px;
+  }
+  .criterion li + li {
+    margin-top: 8px;
+  }
+  .rubric-table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow: hidden;
+    border-radius: 18px;
+  }
+  .rubric-table th,
+  .rubric-table td {
+    border: 1px solid #cfded2;
+    padding: 14px 16px;
+    text-align: left;
+  }
+  .rubric-table th {
+    background: #edf5ef;
+    color: var(--brand-dark);
+    font-size: 15px;
+  }
+  .rubric-table td:last-child,
+  .rubric-table th:last-child {
+    width: 150px;
+    text-align: center;
+    font-weight: 800;
+  }
+  .criterion {
+    border: 1px solid var(--line);
+    background: linear-gradient(180deg, #ffffff 0%, #f7fbf8 100%);
+  }
+  .weight {
+    display: inline-block;
+    margin-bottom: 12px;
+    padding: 8px 12px;
+    border-radius: 999px;
+    background: #eaf3ed;
+    color: var(--brand);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  .audio-slot {
+    margin-top: 16px;
+    min-height: 96px;
+    border: 2px dashed #bfd3c3;
+    border-radius: 18px;
+    padding: 16px;
+    background: #fbfdfb;
+  }
+  .audio-slot strong {
+    display: block;
+    margin-bottom: 6px;
+    color: var(--brand);
+  }
+  .audio-slot p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 14px;
+  }
+  .audio-placeholder {
+    height: 14px;
+    margin-top: 16px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, rgba(30, 86, 49, 0.18), rgba(30, 86, 49, 0.06));
+  }
+  .action-link {
+    display: inline-block;
+    margin-top: 16px;
+    padding: 12px 20px;
+    border-radius: 10px;
+    background: var(--brand);
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+  }
+  .final-panel {
+    background: linear-gradient(135deg, #1e5631, #2c7242);
+    color: #ffffff;
+  }
+  .final-panel h2 {
+    color: #ffffff;
+  }
+  .final-panel p {
+    margin: 0 0 12px;
+  }
+  .steps {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .steps span {
+    background: rgba(255, 255, 255, 0.14);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    padding: 10px 14px;
+    border-radius: 14px;
+    font-weight: 700;
+  }
+  @media (max-width: 900px) {
+    .intro,
+    .criteria-grid,
+    .visual-strip {
+      grid-template-columns: 1fr;
+    }
+    .hero {
+      padding: 28px;
+      min-height: auto;
+    }
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="hero">
+      <img class="logo" src="https://res.cloudinary.com/du4lciu5v/image/upload/q_auto/f_auto/v1775258231/UEA_logo_jpwwmc.png" alt="UEA logo">
+      <div>
+        <span class="badge">Module 1 Evaluation</span>
+        <h1>Assessment Page for Module 1</h1>
+        <p>Separate evaluation page for attendance, practical workshops, virtual activities, and final theoretical assessment.</p>
+      </div>
+    </section>
+
+    <section class="intro">
+      <div class="panel">
+        <h3>Purpose</h3>
+        <p>This page is designed to be used apart from the workbook. It follows the same visual identity as Module 1, but focuses only on evaluation criteria and evidence.</p>
+      </div>
+      <div class="panel">
+        <h3>Evaluation Focus</h3>
+        <ul>
+          <li>Greetings and courtesy</li>
+          <li>Basic restaurant protocol</li>
+          <li>Vocabulary and comprehension</li>
+          <li>Short oral interaction</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="visual-strip">
+      <div class="image-card">
+        <img src="assets/module1-scene.svg" alt="Module 1 evaluation illustration">
+      </div>
+      <div class="panel">
+        <h3>Teacher Use</h3>
+        <p>You can open this page separately from EVA or GitHub Pages and use it as the formal evaluation reference for Module 1.</p>
+        <a class="action-link" href="module1_vip_workbook.html">Open Module 1 Workbook</a>
+      </div>
+    </section>
+
+    <section class="rubric-panel">
+      <h2>Rubrica de Evaluacion</h2>
+      <table class="rubric-table">
+        <thead>
+          <tr>
+            <th>ASPECTO PARA EVALUAR</th>
+            <th>PORCENTAJE</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Asistencia y participacion activa</td>
+            <td>20%</td>
+          </tr>
+          <tr>
+            <td>Talleres practicos y simulacion (comunicacion y audicion)</td>
+            <td>40%</td>
+          </tr>
+          <tr>
+            <td>Actividades virtuales (sincronicas y asincronicas)</td>
+            <td>20%</td>
+          </tr>
+          <tr>
+            <td>Examen final teorico</td>
+            <td>20%</td>
+          </tr>
+          <tr>
+            <td><strong>TOTAL</strong></td>
+            <td><strong>100%</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="criteria-grid">
+      <div class="criterion">
+        <span class="weight">20% Attendance and Participation</span>
+        <h3>Observation Checklist</h3>
+        <ul>
+          <li>Participates in greeting drills and short oral interaction.</li>
+          <li>Uses polite expressions during class practice.</li>
+          <li>Shows readiness and consistent engagement.</li>
+        </ul>
+      </div>
+      <div class="criterion">
+        <span class="weight">40% Practical Workshops and Simulation</span>
+        <h3>Module 1 Practical Assessment</h3>
+        <ol>
+          <li>Role play a greeting and seating situation.</li>
+          <li>Identify food, service, and courtesy words from a short listening prompt.</li>
+          <li>Arrange the sequence of service from greeting to bill.</li>
+          <li>Describe one dish using basic adjectives.</li>
+        </ol>
+        <div class="audio-slot">
+          <strong>Audio space for Practical Assessment</strong>
+          <p>Reserved for teacher prompts, dictation, or oral evaluation instructions.</p>
+          <div class="audio-placeholder"></div>
+        </div>
+      </div>
+      <div class="criterion">
+        <span class="weight">20% Virtual Activities</span>
+        <h3>Online Evidence</h3>
+        <ul>
+          <li>Submit one short audio greeting.</li>
+          <li>Complete one matching or vocabulary activity online.</li>
+          <li>Upload one short written task with food and service words.</li>
+        </ul>
+      </div>
+      <div class="criterion">
+        <span class="weight">20% Final Theoretical Exam</span>
+        <h3>Written Quiz</h3>
+        <ul>
+          <li>Multiple choice on greetings and restaurant protocol.</li>
+          <li>Fill in the blanks with key expressions.</li>
+          <li>Identify vocabulary and order basic service steps.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="final-panel">
+      <h2>Module 1 Evaluation Summary</h2>
+      <p>Use different evidence sources to score the student fairly while keeping the rubric fixed across the module.</p>
+      <div class="steps">
+        <span>Observation</span>
+        <span>Role play</span>
+        <span>Listening prompt</span>
+        <span>Virtual upload</span>
+        <span>Written quiz</span>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Module 1: Foundations of Professional Service &amp; Communication</title>
+<style>
+  :root {
+    --bg: #eef3ef;
+    --surface: #ffffff;
+    --surface-soft: #f6faf7;
+    --line: #dfeae3;
+    --text: #17352a;
+    --muted: #557567;
+    --brand: #1e5631;
+    --brand-dark: #163728;
+    --shadow: 0 10px 28px rgba(20, 44, 32, 0.08);
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    line-height: 1.6;
+  }
+  .wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 28px;
+  }
+  .hero {
+    position: relative;
+    overflow: hidden;
+    border-radius: 28px;
+    padding: 40px;
+    min-height: 360px;
+    background:
+      linear-gradient(90deg, rgba(0, 0, 0, 0.48), rgba(0, 0, 0, 0.2) 48%, rgba(0, 0, 0, 0.06)),
+      url("https://res.cloudinary.com/du4lciu5v/image/upload/q_auto/f_auto/v1775260949/imagen_modulo1_jikhqn.png") center/cover;
+    box-shadow: 0 18px 48px rgba(18, 40, 29, 0.18);
+    color: #ffffff;
+  }
+  .logo {
+    width: 110px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.12);
+    padding: 10px;
+    display: inline-block;
+    backdrop-filter: blur(2px);
+  }
+  .badge {
+    display: inline-block;
+    padding: 10px 18px;
+    border-radius: 999px;
+    background: var(--brand);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+  }
+  .hero h1 {
+    margin: 20px 0 12px;
+    max-width: 780px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(34px, 6vw, 58px);
+    font-style: italic;
+    line-height: 1.05;
+    text-shadow: 0 5px 16px rgba(0, 0, 0, 0.55);
+  }
+  .hero p {
+    max-width: 680px;
+    margin: 0;
+    font-size: 20px;
+    color: #edf5ef;
+  }
+  .intro,
+  .lesson-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 20px;
+  }
+  .intro {
+    margin-top: 28px;
+  }
+  .panel,
+  .lesson-card {
+    background: var(--surface);
+    border-radius: 24px;
+    box-shadow: var(--shadow);
+  }
+  .panel {
+    padding: 24px;
+  }
+  .panel h3,
+  .lesson-card h2,
+  .final h2 {
+    margin: 0 0 10px;
+    font-family: Georgia, "Times New Roman", serif;
+    color: var(--brand);
+  }
+  .panel ul {
+    margin: 10px 0 0 18px;
+    padding: 0;
+  }
+  .page-switcher {
+    margin-top: 24px;
+    padding: 18px 22px;
+    border-radius: 22px;
+    background: var(--brand-dark);
+    color: #f4faf5;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    box-shadow: 0 16px 34px rgba(20, 55, 40, 0.16);
+  }
+  .page-switcher strong {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 2px;
+  }
+  .page-switcher p {
+    margin: 0;
+    color: #cfe2d3;
+  }
+  .page-actions {
+    margin-left: auto;
+    display: flex;
+    gap: 12px;
+  }
+  .page-link,
+  .page-link-disabled {
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    text-decoration: none;
+  }
+  .page-link {
+    color: var(--brand-dark);
+    background: #ffffff;
+    box-shadow: 0 12px 26px rgba(0, 0, 0, 0.16);
+  }
+  .page-link:hover {
+    transform: translateY(-2px);
+  }
+  .page-link-disabled {
+    background: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.45);
+    cursor: default;
+  }
+  .lessons {
+    margin-top: 28px;
+    display: grid;
+    gap: 22px;
+  }
+  .lesson-card {
+    padding: 26px;
+  }
+  .lesson-head {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+  .lesson-no {
+    background: var(--brand);
+    color: #ffffff;
+    padding: 8px 14px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 700;
+  }
+  .meta {
+    margin: 10px 0 18px;
+    color: #486457;
+    font-weight: 600;
+  }
+  .col {
+    min-width: 0;
+  }
+  .exercise-stack {
+    display: grid;
+    gap: 12px;
+  }
+  .block {
+    background: var(--surface-soft);
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    padding: 18px;
+  }
+  .block p,
+  .block ol,
+  .block ul {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .block ol,
+  .block ul {
+    padding-left: 20px;
+  }
+  .label {
+    display: inline-block;
+    margin-bottom: 10px;
+    color: var(--brand);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.3px;
+    text-transform: uppercase;
+  }
+  .chips {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .chips span {
+    background: #eaf3ed;
+    color: #1c4a30;
+    border-radius: 999px;
+    padding: 8px 12px;
+    font-size: 13px;
+    font-weight: 700;
+  }
+  .gridbox {
+    font-family: "Courier New", monospace;
+    background: var(--brand-dark);
+    color: #f4faf5;
+    border-radius: 14px;
+    padding: 14px;
+    letter-spacing: 2px;
+    line-height: 1.8;
+    overflow: auto;
+  }
+  .audio-slot {
+    min-height: 96px;
+    border: 2px dashed #bfd3c3;
+    border-radius: 18px;
+    padding: 16px;
+    background: #fbfdfb;
+  }
+  .audio-slot strong {
+    display: block;
+    margin-bottom: 6px;
+    color: var(--brand);
+  }
+  .audio-slot p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 14px;
+  }
+  .audio-placeholder {
+    height: 14px;
+    margin-top: 16px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, rgba(30, 86, 49, 0.18), rgba(30, 86, 49, 0.06));
+  }
+  .visual-strip {
+    margin-top: 28px;
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 20px;
+  }
+  .image-card,
+  .practice-bank {
+    background: var(--surface);
+    border-radius: 24px;
+    box-shadow: var(--shadow);
+  }
+  .image-card {
+    overflow: hidden;
+    min-height: 320px;
+  }
+  .image-card img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+  }
+  .highlight-card {
+    border: 1px solid var(--line);
+    background: linear-gradient(135deg, #f7fbf8, #ffffff);
+  }
+  .highlight-card h3,
+  .practice-bank h2,
+  .micro-card h3 {
+    margin: 0 0 10px;
+    font-family: Georgia, "Times New Roman", serif;
+    color: var(--brand);
+  }
+  .practice-bank {
+    margin-top: 28px;
+    padding: 26px;
+  }
+  .practice-bank p {
+    margin: 0 0 16px;
+    color: var(--muted);
+  }
+  .bank-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+  }
+  .micro-card {
+    background: var(--surface-soft);
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    padding: 18px;
+  }
+  .micro-card ol,
+  .micro-card ul {
+    margin: 0;
+    padding-left: 20px;
+  }
+  .micro-card li + li {
+    margin-top: 8px;
+  }
+  .micro-card .audio-slot {
+    margin-top: 14px;
+  }
+  .evaluation-panel {
+    margin-top: 28px;
+    padding: 24px;
+    border-radius: 24px;
+    background: #ffffff;
+    box-shadow: var(--shadow);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    flex-wrap: wrap;
+  }
+  .action-link {
+    display: inline-block;
+    padding: 12px 20px;
+    border-radius: 10px;
+    background: var(--brand);
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+  }
+  .final {
+    margin-top: 28px;
+    padding: 28px;
+    border-radius: 24px;
+    background: linear-gradient(135deg, #1e5631, #2c7242);
+    color: #ffffff;
+    box-shadow: 0 14px 34px rgba(20, 76, 42, 0.22);
+  }
+  .final h2 {
+    color: #ffffff;
+  }
+  .steps {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 14px;
+  }
+  .steps span {
+    background: rgba(255, 255, 255, 0.16);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    padding: 10px 14px;
+    border-radius: 14px;
+    font-weight: 700;
+  }
+  .footer-nav {
+    margin-bottom: 12px;
+  }
+  @media (max-width: 900px) {
+    .intro,
+    .lesson-grid,
+    .visual-strip {
+      grid-template-columns: 1fr;
+    }
+    .hero {
+      padding: 28px;
+      min-height: auto;
+    }
+    .page-switcher {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .page-actions {
+      margin-left: 0;
+    }
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="hero">
+      <img class="logo" src="https://res.cloudinary.com/du4lciu5v/image/upload/q_auto/f_auto/v1775258231/UEA_logo_jpwwmc.png" alt="UEA logo">
+      <div style="margin-top: 18px;">
+        <span class="badge">Module 1 &bull; Hospitality English</span>
+        <h1>Module 1: Foundations of Professional Service &amp; Communication</h1>
+        <p>Interactive workbook for hospitality English with extra practice and audio-ready spaces.</p>
+      </div>
+    </section>
+
+    <section class="intro">
+      <div class="panel">
+        <h3>How this material is organized</h3>
+        <p>This HTML version is designed for fast reading in EVA or any web-based classroom. Each lesson keeps a clean structure and now every exercise includes a reserved area where you can later place an audio file.</p>
+      </div>
+      <div class="panel">
+        <h3>Lessons included</h3>
+        <ul>
+          <li>Greetings and professional courtesy</li>
+          <li>Restaurant protocol</li>
+          <li>Intercultural communication</li>
+          <li>Complaints and special diets</li>
+          <li>Menu and food description</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="visual-strip">
+      <div class="image-card">
+        <img src="assets/module1-scene.svg" alt="Illustration of a waiter greeting guests in a restaurant">
+      </div>
+      <div class="panel highlight-card">
+        <h3>Practice Booster</h3>
+        <p>Use the illustration to warm up the class before the written tasks. Students can describe the scene, identify polite expressions, and predict the service sequence.</p>
+        <div class="chips" style="margin-top: 14px;">
+          <span>Who is the waiter?</span>
+          <span>What is on the table?</span>
+          <span>What greeting can you hear?</span>
+          <span>What happens next?</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="evaluation-panel">
+      <div>
+        <div class="label">Separate Evaluation</div>
+        <h3 style="margin: 0 0 8px; font-family: Georgia, 'Times New Roman', serif; color: var(--brand);">Module 1 Assessment Page</h3>
+        <p style="margin: 0; color: var(--muted);">Open the evaluation rubric and grading activities on a separate page for EVA or external publication.</p>
+      </div>
+      <a class="action-link" href="module1_evaluation.html">Open Evaluation</a>
+    </section>
+
+    <section class="page-switcher" aria-label="Page navigation">
+      <div>
+        <strong>Page 1 of 2</strong>
+        <p>Use the right arrow to continue to a second page with more simple exercises.</p>
+      </div>
+      <div class="page-actions">
+        <span class="page-link-disabled" aria-hidden="true">&larr;</span>
+        <a class="page-link" href="module1_vip_workbook_page2.html" aria-label="Go to page 2">&rarr;</a>
+      </div>
+    </section>
+
+    <div class="lessons">
+      <section class="lesson-card">
+        <div class="lesson-head">
+          <div class="lesson-no">Lesson 1</div>
+          <h2>Lesson 1: Greetings, Introductions and Professional Courtesy</h2>
+        </div>
+        <div class="meta">Students use basic greetings and polite expressions.</div>
+        <div class="lesson-grid">
+          <div class="col">
+            <div class="block">
+              <div class="label">Reading</div>
+              <p>Good evening. Welcome to our restaurant.</p>
+              <p>My name is Ana. I am your waiter today.</p>
+              <p>Please, come with me to your table.</p>
+              <p>Here is the menu.</p>
+              <p>Thank you for coming.</p>
+              <p>The waiter is polite and friendly. The customer feels comfortable and happy.</p>
+            </div>
+            <div class="block">
+              <div class="label">Vocabulary</div>
+              <div class="chips">
+                <span>Hello</span>
+                <span>Welcome</span>
+                <span>Good morning</span>
+                <span>My name is</span>
+                <span>Please</span>
+                <span>Thank you</span>
+                <span>Sir</span>
+                <span>Madam</span>
+              </div>
+            </div>
+          </div>
+          <div class="col exercise-stack">
+            <div class="block">
+              <div class="label">Writing Game</div>
+              <ol>
+                <li>______ evening, welcome!</li>
+                <li>My ______ is Carlos.</li>
+                <li>______ you for coming.</li>
+                <li>Please, follow ______.</li>
+              </ol>
+              <p><strong>Word bank:</strong> me, name, good, thank</p>
+            </div>
+            <div class="audio-slot">
+              <strong>Audio space for Writing Game</strong>
+              <p>Reserved area to insert your audio for this activity.</p>
+              <div class="audio-placeholder"></div>
+            </div>
+            <div class="block">
+              <div class="label">Word Search</div>
+              <p><strong>Find:</strong> HELLO - PLEASE - THANK - NAME - WELCOME</p>
+              <div class="gridbox">H E L L O X T<br>A N A M E P L<br>W E L C O M E<br>T H A N K Y O<br>P L E A S E R</div>
+            </div>
+            <div class="audio-slot">
+              <strong>Audio space for Word Search</strong>
+              <p>Use this box if you want to add pronunciation or instructions later.</p>
+              <div class="audio-placeholder"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="lesson-card">
+        <div class="lesson-head">
+          <div class="lesson-no">Lesson 2</div>
+          <h2>Lesson 2: Restaurant Protocol</h2>
+        </div>
+        <div class="meta">Students identify the basic sequence of service in a restaurant.</div>
+        <div class="lesson-grid">
+          <div class="col">
+            <div class="block">
+              <div class="label">Reading</div>
+              <p>The waiter greets the customer.</p>
+              <p>The waiter gives the menu.</p>
+              <p>The customer reads the menu.</p>
+              <p>The waiter takes the order.</p>
+              <p>The waiter brings food and drinks.</p>
+              <p>At the end, the waiter gives the bill.</p>
+              <p>Good service is important in a restaurant.</p>
+            </div>
+            <div class="block">
+              <div class="label">Focus Words</div>
+              <div class="chips">
+                <span>Menu</span>
+                <span>Order</span>
+                <span>Bill</span>
+                <span>Table</span>
+                <span>Service</span>
+              </div>
+            </div>
+          </div>
+          <div class="col exercise-stack">
+            <div class="block">
+              <div class="label">Writing Game</div>
+              <ol>
+                <li>The waiter gives the ______.</li>
+                <li>The customer reads the ______.</li>
+                <li>The waiter takes the ______.</li>
+                <li>The customer pays the ______.</li>
+              </ol>
+              <p><strong>Word bank:</strong> menu, order, bill</p>
+            </div>
+            <div class="audio-slot">
+              <strong>Audio space for Writing Game</strong>
+              <p>Ready for a short explanation, dictation or model answer.</p>
+              <div class="audio-placeholder"></div>
+            </div>
+            <div class="block">
+              <div class="label">Word Search</div>
+              <p><strong>Find:</strong> MENU - ORDER - BILL - FOOD - TABLE</p>
+              <div class="gridbox">M E N U X O R<br>O R D E R L A<br>B I L L F O O<br>T A B L E D X<br>F O O D X X X</div>
+            </div>
+            <div class="audio-slot">
+              <strong>Audio space for Word Search</strong>
+              <p>Leave your audio file here when you are ready to upload it.</p>
+              <div class="audio-placeholder"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="lesson-card">
+        <div class="lesson-head">
+          <div class="lesson-no">Lesson 3</div>
+          <h2>Lesson 3: Intercultural Communication</h2>
+        </div>
+        <div class="meta">Students recognize the role of simple English in multicultural service.</div>
+        <div class="lesson-grid">
+          <div class="col">
+            <div class="block">
+              <div class="label">Reading</div>
+              <p>Customers come from different countries.</p>
+              <p>They speak different languages.</p>
+              <p>English helps communication.</p>
+              <p>The waiter speaks simple English:</p>
+              <p>&ldquo;Water, please?&rdquo;</p>
+              <p>&ldquo;Do you need help?&rdquo;</p>
+              <p>The customer understands and feels comfortable.</p>
+            </div>
+            <div class="block">
+              <div class="label">Useful Expressions</div>
+              <div class="chips">
+                <span>Water, please?</span>
+                <span>Do you need help?</span>
+                <span>Different languages</span>
+                <span>Communication</span>
+              </div>
+            </div>
+          </div>
+          <div class="col exercise-stack">
+            <div class="block">
+              <div class="label">Writing Game</div>
+              <ol>
+                <li>Customers come from ______ countries.</li>
+                <li>They speak different ______.</li>
+                <li>English helps ______.</li>
+              </ol>
+              <p><strong>Word bank:</strong> communication, languages, different</p>
+            </div>
+            <div class="audio-slot">
+              <strong>Audio space for Writing Game</strong>
+              <p>You can place listening instructions here for multicultural communication practice.</p>
+              <div class="audio-placeholder"></div>
+            </div>
+            <div class="block">
+              <div class="label">Word Search</div>
+              <p><strong>Find:</strong> HELP - WATER - FOOD - LANGUAGE</p>
+              <div class="gridbox">H E L P X X X<br>W A T E R X X<br>F O O D X X X<br>L A N G U A G<br>E X X X X X X</div>
+            </div>
+            <div class="audio-slot">
+              <strong>Audio space for Word Search</strong>
+              <p>Another reserved area for pronunciation support or guided practice.</p>
+              <div class="audio-placeholder"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="lesson-card">
+        <div class="lesson-head">
+          <div class="lesson-no">Lesson 4</div>
+          <h2>Lesson 4: Complaints and Special Diets</h2>
+        </div>
+        <div class="meta">Students respond politely to problems and understand basic special-diet requests.</div>
+        <div class="lesson-grid">
+          <div class="col">
+            <div class="block">
+              <div class="label">Reading</div>
+              <p>The customer has a problem.</p>
+              <p>The food is cold.</p>
+              <p>The waiter says: &ldquo;I&apos;m sorry.&rdquo;</p>
+              <p>The waiter helps the customer.</p>
+              <p>Some customers have allergies.</p>
+              <p>They say: &ldquo;No sugar&rdquo; or &ldquo;No gluten.&rdquo;</p>
+              <p>The waiter must understand and help.</p>
+            </div>
+            <div class="block">
+              <div class="label">Focus Words</div>
+              <div class="chips">
+                <span>Sorry</span>
+                <span>Cold</span>
+                <span>No sugar</span>
+                <span>No gluten</span>
+                <span>Allergy</span>
+              </div>
+            </div>
+          </div>
+          <div class="col exercise-stack">
+            <div class="block">
+              <div class="label">Writing Game</div>
+              <ol>
+                <li>I&apos;m ______.</li>
+                <li>The food is ______.</li>
+                <li>No ______ please.</li>
+              </ol>
+              <p><strong>Word bank:</strong> sorry, cold, sugar</p>
+            </div>
+            <div class="audio-slot">
+              <strong>Audio space for Writing Game</strong>
+              <p>Ideal for adding an apology model or simple listening prompt.</p>
+              <div class="audio-placeholder"></div>
+            </div>
+            <div class="block">
+              <div class="label">Word Search</div>
+              <p><strong>Find:</strong> SORRY - ALLERGY - SUGAR - FOOD</p>
+              <div class="gridbox">S O R R Y X X<br>A L L E R G Y<br>S U G A R X X<br>F O O D X X X</div>
+            </div>
+            <div class="audio-slot">
+              <strong>Audio space for Word Search</strong>
+              <p>Use this reserved block for extra instructions or audio reinforcement.</p>
+              <div class="audio-placeholder"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="lesson-card">
+        <div class="lesson-head">
+          <div class="lesson-no">Lesson 5</div>
+          <h2>Lesson 5: Menu and Food Description</h2>
+        </div>
+        <div class="meta">Students describe simple dishes using basic adjectives.</div>
+        <div class="lesson-grid">
+          <div class="col">
+            <div class="block">
+              <div class="label">Reading</div>
+              <p>This is the menu.</p>
+              <p>We have chicken, rice, and soup.</p>
+              <p>The food is hot and delicious.</p>
+              <p>The waiter describes the food:</p>
+              <p>&ldquo;This is chicken with rice.&rdquo;</p>
+              <p>&ldquo;It is hot and very good.&rdquo;</p>
+              <p>The customer chooses the food.</p>
+            </div>
+            <div class="block">
+              <div class="label">Food Words</div>
+              <div class="chips">
+                <span>Chicken</span>
+                <span>Rice</span>
+                <span>Soup</span>
+                <span>Hot</span>
+                <span>Delicious</span>
+              </div>
+            </div>
+          </div>
+          <div class="col exercise-stack">
+            <div class="block">
+              <div class="label">Writing Game</div>
+              <ol>
+                <li>This is ______.</li>
+                <li>It is ______.</li>
+                <li>The food is ______.</li>
+              </ol>
+              <p><strong>Word bank:</strong> chicken, hot, delicious</p>
+            </div>
+            <div class="audio-slot">
+              <strong>Audio space for Writing Game</strong>
+              <p>Reserved for menu-description audio or guided repetition.</p>
+              <div class="audio-placeholder"></div>
+            </div>
+            <div class="block">
+              <div class="label">Word Search</div>
+              <p><strong>Find:</strong> CHICKEN - RICE - SOUP - HOT</p>
+              <div class="gridbox">C H I C K E N<br>R I C E X X X<br>S O U P X X X<br>H O T X X X X</div>
+            </div>
+            <div class="audio-slot">
+              <strong>Audio space for Word Search</strong>
+              <p>This box is ready for a short pronunciation track or classroom instructions.</p>
+              <div class="audio-placeholder"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <section class="practice-bank">
+      <h2>Extra Exercise Bank</h2>
+      <p>More short activities to reinforce the same content with simple classroom-friendly dynamics.</p>
+      <div class="bank-grid">
+        <div class="micro-card">
+          <div class="label">Matching Practice</div>
+          <h3>Polite Expressions</h3>
+          <ol>
+            <li>Match each greeting with the correct response.</li>
+            <li>Match each polite expression with the correct situation.</li>
+            <li>Say the pairs aloud with a partner.</li>
+          </ol>
+          <div class="audio-slot">
+            <strong>Audio space for Matching Practice</strong>
+            <p>Reserved for model pronunciation or matching instructions.</p>
+            <div class="audio-placeholder"></div>
+          </div>
+        </div>
+        <div class="micro-card">
+          <div class="label">Sequence Activity</div>
+          <h3>Restaurant Steps</h3>
+          <ol>
+            <li>Number the steps from 1 to 5.</li>
+            <li>Greeting, giving the menu, taking the order, serving food, giving the bill.</li>
+            <li>Retell the sequence in your own words.</li>
+          </ol>
+          <div class="audio-slot">
+            <strong>Audio space for Sequence Activity</strong>
+            <p>Use this box for spoken directions or a sequence review.</p>
+            <div class="audio-placeholder"></div>
+          </div>
+        </div>
+        <div class="micro-card">
+          <div class="label">Mini Dialogue</div>
+          <h3>Complete the Conversation</h3>
+          <ol>
+            <li>Write a short dialogue between waiter and customer.</li>
+            <li>Include one greeting, one drink, and one thank-you expression.</li>
+            <li>Practice it orally after writing.</li>
+          </ol>
+          <div class="audio-slot">
+            <strong>Audio space for Mini Dialogue</strong>
+            <p>Reserved for a model conversation or speaking guidance.</p>
+            <div class="audio-placeholder"></div>
+          </div>
+        </div>
+        <div class="micro-card">
+          <div class="label">Quick Check</div>
+          <h3>Food and Service Review</h3>
+          <ol>
+            <li>Write 3 food words and 3 service words from the module.</li>
+            <li>Use each word in one short sentence.</li>
+            <li>Share your answers with a classmate.</li>
+          </ol>
+          <div class="audio-slot">
+            <strong>Audio space for Quick Check</strong>
+            <p>Ready for a short vocabulary review or dictation audio.</p>
+            <div class="audio-placeholder"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="final">
+      <h2>Final Speaking Activity</h2>
+      <p>Role play a complete restaurant interaction using the expressions learned in the module.</p>
+      <div class="steps">
+        <span>Greeting</span>
+        <span>Giving menu</span>
+        <span>Taking order</span>
+        <span>Solving a problem</span>
+      </div>
+    </section>
+
+    <section class="page-switcher footer-nav" aria-label="Continue navigation">
+      <div>
+        <strong>Continue to extra practice</strong>
+        <p>The next page keeps the same visual style and adds more quick activities.</p>
+      </div>
+      <div class="page-actions">
+        <span class="page-link-disabled" aria-hidden="true">&larr;</span>
+        <a class="page-link" href="module1_vip_workbook_page2.html" aria-label="Go to page 2">&rarr;</a>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

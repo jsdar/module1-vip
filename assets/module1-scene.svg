@@ -1,0 +1,34 @@
+<svg width="1200" height="720" viewBox="0 0 1200 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="720" rx="36" fill="#EEF6F0"/>
+  <rect x="48" y="48" width="1104" height="624" rx="30" fill="#DCEBDD"/>
+  <ellipse cx="907" cy="142" rx="176" ry="92" fill="#C3DFC7"/>
+  <ellipse cx="288" cy="572" rx="232" ry="90" fill="#D0E4D2"/>
+  <rect x="138" y="176" width="924" height="398" rx="28" fill="#F8FCF9"/>
+  <rect x="212" y="458" width="776" height="26" rx="13" fill="#22593A"/>
+  <rect x="256" y="484" width="36" height="102" rx="18" fill="#22593A"/>
+  <rect x="908" y="484" width="36" height="102" rx="18" fill="#22593A"/>
+  <rect x="464" y="446" width="272" height="34" rx="17" fill="#2F7148"/>
+  <circle cx="412" cy="312" r="68" fill="#1E5631"/>
+  <rect x="374" y="384" width="78" height="138" rx="28" fill="#2D7A49"/>
+  <rect x="338" y="430" width="46" height="110" rx="20" fill="#1E5631"/>
+  <rect x="442" y="430" width="46" height="110" rx="20" fill="#1E5631"/>
+  <circle cx="804" cy="314" r="66" fill="#D9B58D"/>
+  <rect x="760" y="388" width="92" height="134" rx="28" fill="#EADCCB"/>
+  <rect x="726" y="430" width="40" height="104" rx="20" fill="#C9B9A3"/>
+  <rect x="850" y="430" width="40" height="104" rx="20" fill="#C9B9A3"/>
+  <rect x="534" y="302" width="168" height="106" rx="18" fill="#FFFFFF" stroke="#B8D3BE" stroke-width="6"/>
+  <rect x="562" y="326" width="112" height="12" rx="6" fill="#C9DEC9"/>
+  <rect x="562" y="352" width="90" height="12" rx="6" fill="#D8E8D8"/>
+  <rect x="562" y="378" width="74" height="12" rx="6" fill="#D8E8D8"/>
+  <path d="M455 286C493 260 530 255 564 276" stroke="#D9F0DE" stroke-width="14" stroke-linecap="round"/>
+  <path d="M724 282C759 258 798 255 842 278" stroke="#FFEADF" stroke-width="14" stroke-linecap="round"/>
+  <rect x="604" y="214" width="88" height="58" rx="20" fill="#1E5631"/>
+  <rect x="620" y="204" width="56" height="18" rx="9" fill="#D6E9D8"/>
+  <circle cx="648" cy="238" r="14" fill="#F4FBF5"/>
+  <path d="M640 238H656" stroke="#1E5631" stroke-width="4" stroke-linecap="round"/>
+  <path d="M648 230V246" stroke="#1E5631" stroke-width="4" stroke-linecap="round"/>
+  <rect x="270" y="164" width="174" height="46" rx="23" fill="#1E5631"/>
+  <rect x="760" y="164" width="192" height="46" rx="23" fill="#EAF5EC"/>
+  <circle cx="324" cy="186" r="8" fill="#FFFFFF"/>
+  <circle cx="816" cy="186" r="8" fill="#1E5631"/>
+</svg>
