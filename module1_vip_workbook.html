@@ -218,11 +218,23 @@
   }
   .reading-photo-block-lesson4 {
     min-height: 390px;
-    background-color: #f6faf7;
-    background-image: url("assets/module1-lesson4-reading.jpg");
-    background-position: right center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    display: flex;
+    align-items: stretch;
+    padding: 0;
+    overflow: hidden;
+    background: url("assets/module1-lesson4-reading.jpg") center center / cover no-repeat;
+  }
+  .reading-photo-block-lesson4 .reading-copy {
+    max-width: 380px;
+    width: min(100%, 380px);
+    padding: 18px;
+    background: rgba(255, 255, 255, 0.88);
+  }
+  .reading-photo-block-lesson4 .print-lines {
+    margin-top: 14px;
+    padding: 12px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.9);
   }
   .block p,
   .block ol,
@@ -763,7 +775,7 @@
 <p>Here is the menu.</p>
 <p>Thank you for coming.</p>
 <p>The waiter is polite and friendly. The customer feels comfortable and happy.</p>
-<div class="print-lines print-lines-reading"><div class="print-lines-title">Writing lines</div><span></span><span></span><span></span><span></span><span></span></div></div>
+<div class="print-lines print-lines-reading"><div class="print-lines-title">Writing lines</div><span></span><span></span><span></span><span></span><span></span></div></div></div>
 <div class="block">
 <div class="label">Vocabulary</div>
 <div class="chips">
@@ -828,7 +840,7 @@
 <p>The waiter brings food and drinks.</p>
 <p>At the end, the waiter gives the bill.</p>
 <p>Good service is important in a restaurant.</p>
-<div class="print-lines print-lines-reading"><div class="print-lines-title">Writing lines</div><span></span><span></span><span></span><span></span><span></span></div></div>
+<div class="print-lines print-lines-reading"><div class="print-lines-title">Writing lines</div><span></span><span></span><span></span><span></span><span></span></div></div></div>
 <div class="block">
 <div class="label">Focus Words</div>
 <div class="chips">
@@ -942,6 +954,7 @@
 <div class="lesson-grid">
 <div class="col">
 <div class="block reading-photo-block-lesson4">
+<div class="reading-copy">
 <div class="label">Reading</div>
 <p>The customer has a problem.</p>
 <p>The food is cold.</p>
@@ -950,7 +963,7 @@
 <p>Some customers have allergies.</p>
 <p>They say: “No sugar” or “No gluten.”</p>
 <p>The waiter must understand and help.</p>
-<div class="print-lines print-lines-reading"><div class="print-lines-title">Writing lines</div><span></span><span></span><span></span><span></span><span></span></div></div>
+<div class="print-lines print-lines-reading"><div class="print-lines-title">Writing lines</div><span></span><span></span><span></span><span></span><span></span></div></div></div>
 <div class="block">
 <div class="label">Focus Words</div>
 <div class="chips">
@@ -1011,7 +1024,7 @@
 <p>“This is chicken with rice.”</p>
 <p>“It is hot and very good.”</p>
 <p>The customer chooses the food.</p>
-<div class="print-lines print-lines-reading"><div class="print-lines-title">Writing lines</div><span></span><span></span><span></span><span></span><span></span></div></div>
+<div class="print-lines print-lines-reading"><div class="print-lines-title">Writing lines</div><span></span><span></span><span></span><span></span><span></span></div></div></div>
 <div class="block">
 <div class="label">Food Words</div>
 <div class="chips">
