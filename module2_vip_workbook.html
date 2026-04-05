@@ -289,6 +289,16 @@
     letter-spacing: 1.3px;
     text-transform: uppercase;
   }
+  .exercise-instruction {
+    margin: 0 0 10px;
+    padding: 8px 10px;
+    border-left: 3px solid rgba(30, 86, 49, 0.35);
+    border-radius: 10px;
+    background: rgba(30, 86, 49, 0.05);
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.45;
+  }
   .chips {
     display: flex;
     gap: 8px;
@@ -1294,6 +1304,40 @@
 </section>
 
 <section class="download-panel"><div class="label">Print & PDF</div><h3>Module 2 Consolidated Download</h3><p>Open the A4-ready version of Module 2 and save it as PDF from the print dialog. The worksheet keeps printable writing lines and QR codes for each audio.</p><div class="download-actions"><a class="action-link download-button" href="module2_vip_workbook.html?download=1" rel="noopener noreferrer" target="_blank">Download Module 2 PDF</a></div></section></div>
+<script>
+(function () {
+  const instructionMap = {
+    "Listening": "Read the task first, then listen carefully and write only the key details you hear.",
+    "Reading": "Read the section carefully and mark the important words, questions, or answers.",
+    "Dialogue": "Practice the dialogue aloud and pay attention to pronunciation, pauses, and rhythm.",
+    "Writing": "Write your answers in complete sentences using the target language from this section.",
+    "Speaking - Role Play": "Practice the exchange aloud, switch roles, and try to sound natural and polite.",
+    "Speaking": "Say your answers aloud and practice the task with a partner.",
+    "Key Language": "Review these expressions and use at least two in your speaking or writing.",
+    "Useful Expressions": "Review these expressions and use at least two in your speaking or writing.",
+    "Apology Expressions": "Practice each apology expression aloud and use it in one short example.",
+    "Service Vocabulary": "Read the service words aloud and use them to describe an order or table situation.",
+    "Reading + Vocabulary": "Complete the puzzle tasks and connect the vocabulary with meaning or use.",
+    "Words to Find": "Read the list first and look for each word one by one in the puzzle.",
+    "Word Search Grid": "Search for every word in the grid and mark each one clearly.",
+    "Listening Booster": "Listen again, note the main details, and compare your answers with a classmate.",
+    "Recommendation Lab": "Write your ideas first and then say them aloud like a real restaurant recommendation.",
+    "Problem Solver": "Write a polite response for each problem and include a clear solution.",
+    "Group Order Chart": "Organize the full order clearly and read it aloud like the waiter."
+  };
+  document.querySelectorAll(".label").forEach((label) => {
+    const key = label.textContent.replace(/\s+/g, " ").trim();
+    const text = instructionMap[key];
+    if (!text) return;
+    const next = label.nextElementSibling;
+    if (next && next.classList && next.classList.contains("exercise-instruction")) return;
+    const note = document.createElement("p");
+    note.className = "exercise-instruction";
+    note.textContent = text;
+    label.insertAdjacentElement("afterend", note);
+  });
+}());
+</script>
 <script id="print-tools-script">
 (function () {
   const params = new URLSearchParams(window.location.search);

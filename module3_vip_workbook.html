@@ -287,6 +287,16 @@
     letter-spacing: 1.3px;
     text-transform: uppercase;
   }
+  .exercise-instruction {
+    margin: 0 0 10px;
+    padding: 8px 10px;
+    border-left: 3px solid rgba(30, 86, 49, 0.35);
+    border-radius: 10px;
+    background: rgba(30, 86, 49, 0.05);
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.45;
+  }
   .chips {
     display: flex;
     gap: 8px;
@@ -1048,6 +1058,33 @@
 </section>
 
 <section class="download-panel"><div class="label">Print & PDF</div><h3>Module 3 Consolidated Download</h3><p>Open the A4-ready version of Module 3 and save it as PDF from the print dialog. The worksheet keeps printable writing lines and QR codes for each audio.</p><div class="download-actions"><a class="action-link download-button" href="module3_vip_workbook.html?download=1" rel="noopener noreferrer" target="_blank">Download Module 3 PDF</a></div></section></div>
+<script>
+(function () {
+  const instructionMap = {
+    "Focus": "Read the focus points first and identify the skill you will practice in this task.",
+    "Suggested Activities": "Complete the steps in order and keep short notes of the key information or ideas.",
+    "Key Vocabulary": "Read the vocabulary aloud and use each item in a short service example.",
+    "Useful Expressions": "Practice each expression aloud and use one in a short waiter response.",
+    "Reflection Prompts": "Answer each prompt with honest short reflections and one clear example.",
+    "Accent Log": "Listen carefully, note the key details, and correct your notes after listening again.",
+    "Confirmation Drill": "Rewrite the request clearly and practice the confirmation exchange aloud.",
+    "Simulation Planner": "Plan the situation step by step before you start the final role play.",
+    "Individual Check": "Respond clearly and use complete, polite waiter-style sentences.",
+    "Exit Ticket": "Write short, clear reflections and share one answer aloud if requested."
+  };
+  document.querySelectorAll(".label").forEach((label) => {
+    const key = label.textContent.replace(/\s+/g, " ").trim();
+    const text = instructionMap[key];
+    if (!text) return;
+    const next = label.nextElementSibling;
+    if (next && next.classList && next.classList.contains("exercise-instruction")) return;
+    const note = document.createElement("p");
+    note.className = "exercise-instruction";
+    note.textContent = text;
+    label.insertAdjacentElement("afterend", note);
+  });
+}());
+</script>
 <script id="print-tools-script">
 (function () {
   const params = new URLSearchParams(window.location.search);

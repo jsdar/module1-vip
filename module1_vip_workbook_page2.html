@@ -211,6 +211,16 @@
     letter-spacing: 1.3px;
     text-transform: uppercase;
   }
+  .exercise-instruction {
+    margin: 0 0 10px;
+    padding: 8px 10px;
+    border-left: 3px solid rgba(30, 86, 49, 0.35);
+    border-radius: 10px;
+    background: rgba(30, 86, 49, 0.05);
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.45;
+  }
   .gridbox {
     font-family: "Courier New", monospace;
     background: var(--brand-dark);
@@ -700,6 +710,36 @@
 </div>
 </section>
 <section class="download-panel"><div class="label">Print & PDF</div><h3>Module 1 Consolidated Download</h3><p>Open the A4-ready consolidated version of Module 1 and save it as PDF. This version includes page 1, page 2, printable writing lines, and QR codes for each audio.</p><div class="download-actions"><a class="action-link download-button" href="module1_print_bundle.html?download=1" rel="noopener noreferrer" target="_blank">Download Module 1 PDF</a></div></section></div>
+<script>
+(function () {
+  const instructionMap = {
+    "Reading": "Read the text carefully and underline the key words or ideas you understand.",
+    "Vocabulary": "Say each word aloud and copy the new vocabulary before using it in class.",
+    "Focus Words": "Read each focus word aloud and connect it to the lesson situation.",
+    "Useful Expressions": "Practice each expression aloud and use one in a short service example.",
+    "Food Words": "Read the food words aloud and match them with the menu or reading.",
+    "Writing Game": "Complete all the blanks using the word bank or the lesson vocabulary.",
+    "Word Search": "Find every hidden word in the grid and say the words aloud when you finish.",
+    "Matching Practice": "Match the items carefully and compare your answers with a partner.",
+    "Sequence Activity": "Put the steps in the correct order and retell the sequence in full sentences.",
+    "Mini Dialogue": "Write the dialogue first and then practice it aloud with a partner.",
+    "Quick Check": "Answer each prompt with clear words or short complete sentences.",
+    "Quick Practice": "Complete each sentence with the correct word and then read your answers aloud.",
+    "Mini Word Search": "Find the hidden words and check their pronunciation after solving the puzzle."
+  };
+  document.querySelectorAll(".label").forEach((label) => {
+    const key = label.textContent.replace(/\s+/g, " ").trim();
+    const text = instructionMap[key];
+    if (!text) return;
+    const next = label.nextElementSibling;
+    if (next && next.classList && next.classList.contains("exercise-instruction")) return;
+    const note = document.createElement("p");
+    note.className = "exercise-instruction";
+    note.textContent = text;
+    label.insertAdjacentElement("afterend", note);
+  });
+}());
+</script>
 <script id="print-tools-script">
 (function () {
   const params = new URLSearchParams(window.location.search);
