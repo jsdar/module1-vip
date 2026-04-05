@@ -236,6 +236,17 @@
     display: grid;
     grid-template-columns: 1.1fr 0.9fr;
     gap: 20px;
+    position: relative;
+    padding-bottom: 10px;
+    border-radius: 18px;
+    background-image: repeating-linear-gradient(
+      to bottom,
+      transparent 0,
+      transparent 27px,
+      rgba(223, 173, 19, 0.2) 27px,
+      rgba(223, 173, 19, 0.2) 28px
+    );
+    background-position: 0 16px;
   }
   .col {
     min-width: 0;
