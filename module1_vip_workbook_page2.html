@@ -356,6 +356,14 @@
     max-width: none;
     padding: 0;
   }
+  .lesson-card,
+  .section-card,
+  .practice-bank,
+  .micro-card,
+  .audio-slot,
+  .block {
+    overflow: visible !important;
+  }
   .resource-card,
   .page-switcher,
   .evaluation-panel,
@@ -390,7 +398,27 @@
   .section-grid,
   .visual-strip,
   .bank-grid {
+    display: block !important;
     grid-template-columns: 1fr !important;
+  }
+  .intro > *,
+  .lesson-grid > *,
+  .section-grid > *,
+  .visual-strip > *,
+  .bank-grid > * {
+    margin-bottom: 14px !important;
+  }
+  .audio-slot,
+  .audio-media,
+  .audio-player,
+  .qr-panel,
+  .block,
+  .micro-card,
+  .col,
+  .stack,
+  .exercise-stack {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
   }
   .audio-slot {
     min-height: auto;
