@@ -1,8 +1,10 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>Module 3: Applied Listening Comprehension and Comprehensive Evaluation</title>
 <style>
   :root {
@@ -444,449 +446,597 @@
     }
   }
 </style>
-</head>
+<style id="print-tools-style">
+@page {
+  size: A4;
+  margin: 12mm;
+}
+.print-lines {
+  display: none;
+}
+.print-lines-title {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-top: 14px;
+}
+.print-lines span {
+  display: block;
+  height: 20px;
+  border-bottom: 1px solid rgba(85, 117, 103, 0.45);
+  margin-top: 8px;
+}
+.audio-media {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 118px;
+  gap: 14px;
+  align-items: center;
+  margin-top: 14px;
+}
+.audio-player audio {
+  width: 100% !important;
+  margin-top: 0 !important;
+}
+.qr-panel {
+  padding: 10px;
+  border-radius: 16px;
+  border: 1px solid var(--line);
+  background: #ffffff;
+  text-align: center;
+}
+.qr-link {
+  display: inline-block;
+  text-decoration: none;
+}
+.qr-panel img {
+  width: 88px;
+  height: 88px;
+  display: block;
+  margin: 0 auto 6px;
+}
+.qr-panel span {
+  display: block;
+  font-size: 11px;
+  line-height: 1.25;
+  font-weight: 700;
+  color: var(--muted);
+}
+.download-panel {
+  margin-top: 28px;
+  padding: 24px;
+  border-radius: 24px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+.download-panel h3 {
+  margin: 0 0 10px;
+  font-family: Georgia, "Times New Roman", serif;
+  color: var(--brand);
+}
+.download-panel p {
+  margin: 0;
+  color: var(--muted);
+}
+.download-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 14px;
+}
+.download-button {
+  margin-top: 0 !important;
+}
+@media print {
+  html,
+  body {
+    background: #ffffff !important;
+  }
+  body {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .wrap {
+    max-width: none;
+    padding: 0;
+  }
+  .resource-card,
+  .page-switcher,
+  .evaluation-panel,
+  .download-panel {
+    display: none !important;
+  }
+  .audio-player {
+    display: none !important;
+  }
+  .print-lines {
+    display: block !important;
+  }
+  .lesson-card,
+  .section-card,
+  .practice-bank,
+  .micro-card,
+  .block,
+  .panel,
+  .final,
+  .topic-panel,
+  .outcome-panel,
+  .exam-sheet,
+  .criterion,
+  .rubric-panel,
+  .final-panel {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    box-shadow: none !important;
+  }
+  .intro,
+  .lesson-grid,
+  .section-grid,
+  .visual-strip,
+  .bank-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .audio-slot {
+    min-height: auto;
+  }
+  .audio-media {
+    grid-template-columns: 110px;
+    justify-content: end;
+  }
+  .qr-panel {
+    width: 110px;
+    min-width: 110px;
+  }
+  .qr-panel img {
+    width: 90px;
+    height: 90px;
+  }
+}
+</style></head>
 <body>
-  <div class="wrap">
-    <section class="hero">
-      <div class="hero-top">
-        <img class="logo" src="https://res.cloudinary.com/du4lciu5v/image/upload/q_auto/f_auto/v1775258231/UEA_logo_jpwwmc.png" alt="UEA logo">
-        <span class="badge">UEA-EC-2026-044 &bull; Vinculacion con la Colectividad</span>
-      </div>
-      <div class="hero-copy">
-        <h1>Module 3: Applied Listening Comprehension and Comprehensive Evaluation</h1>
-        <p>Strengthening attentive listening, integrated food service performance, and final oral evaluation in authentic hospitality contexts.</p>
-      </div>
-    </section>
+<div class="wrap">
+<section class="hero">
+<div class="hero-top">
+<img alt="UEA logo" class="logo" src="https://res.cloudinary.com/du4lciu5v/image/upload/q_auto/f_auto/v1775258231/UEA_logo_jpwwmc.png"/>
+<span class="badge">UEA-EC-2026-044 • Vinculacion con la Colectividad</span>
+</div>
+<div class="hero-copy">
+<h1>Module 3: Applied Listening Comprehension and Comprehensive Evaluation</h1>
+<p>Strengthening attentive listening, integrated food service performance, and final oral evaluation in authentic hospitality contexts.</p>
+</div>
+</section>
+<section class="topic-panel">
+<h2>Topic 1.3 Applied Listening Comprehension and Comprehensive Evaluation - 15h</h2>
+<div class="mode-chip">Mode: Virtual synchronous with asynchronous support</div>
+<p class="outcome-note"><strong>You will be able to...</strong> understand customer orders and requests more accurately, use active listening strategies, confirm information clearly, integrate service language in realistic simulations, and respond more confidently during individual assessment.</p>
+<ul>
+<li><span><strong>Subtopic 1.3.1:</strong> Listening comprehension of orders and requests with different accents.</span></li>
+<li><span><strong>Subtopic 1.3.2:</strong> Active listening in real-life settings.</span></li>
+<li><span><strong>Subtopic 1.3.3:</strong> Integration of skills in the final food service simulation.</span></li>
+<li><span><strong>Subtopic 1.3.4:</strong> Individual practical assessment.</span></li>
+<li><span><strong>Subtopic 1.3.5:</strong> Feedback and instructional closure.</span></li>
+</ul>
+</section>
+<section class="intro">
+<div class="panel">
+<h3>How this page is organized</h3>
+<p>This Module 3 page follows the same clean workbook structure you have been using. Each subtopic is presented in a separate section with practical tasks, instructor guidance, and audio-ready space.</p>
+</div>
+<div class="panel">
+<h3>Evaluation focus</h3>
+<ul>
+<li>Listening to orders and requests accurately</li>
+<li>Responding clearly in restaurant scenarios</li>
+<li>Integrating service language in simulations</li>
+<li>Receiving and applying feedback</li>
+</ul>
+</div>
+</section>
+<section class="visual-strip">
+<div class="image-card">
+<img alt="Illustration of listening practice with audio waves and service notes" src="assets/module3-scene.svg"/>
+</div>
+<div class="panel highlight-card">
+<h3>Listening Activation</h3>
+<p>Use the image to introduce the listening focus of the module. Students can predict what they will hear, identify service vocabulary, and describe how they would respond in a real restaurant setting.</p>
+<div class="chips" style="margin-top: 14px;">
+<span>What request do you hear?</span>
+<span>What should the waiter confirm?</span>
+<span>What details are important?</span>
+<span>How do you respond politely?</span>
+</div>
+</div>
+</section>
+<section class="evaluation-panel">
+<div>
+<div class="label">Separate Evaluation</div>
+<h3 style="margin: 0 0 8px; font-family: Georgia, 'Times New Roman', serif; color: var(--brand-dark);">Module 3 Assessment Page</h3>
+<p style="margin: 0; color: var(--muted);">Open the evaluation rubric and performance tasks on a separate page for independent publication.</p>
+</div>
+<a class="action-link" href="module3_evaluation.html">Open Evaluation</a>
+</section>
+<div class="sections">
+<section class="section-card">
+<div class="section-head">
+<div class="section-no">Subtopic 1.3.1</div>
+<h2>Listening Comprehension of Orders and Requests with Different Accents</h2>
+</div>
+<div class="meta">Students identify key information from restaurant orders, requests, and pronunciation variations.</div>
+<div class="section-grid">
+<div class="col stack">
+<div class="block">
+<div class="label">Focus</div>
+<ul>
+<li>Understand food and drink orders from different speakers.</li>
+<li>Recognize requests, quantities, and preferences.</li>
+<li>Practice noting essential details accurately.</li>
+</ul>
+</div>
+<div class="block">
+<div class="label">Suggested Activities</div>
+<ol>
+<li>Listen to short order recordings two or three times.</li>
+<li>Write down the food, drink, and special request.</li>
+<li>Compare answers with a partner and justify your choices.</li>
+</ol>
+</div>
+<div class="audio-slot">
+<strong>Audio space for Listening Practice</strong>
+<p>Reserved area for accent-based order recordings or teacher guidance.</p>
 
-    <section class="topic-panel">
-      <h2>Topic 1.3 Applied Listening Comprehension and Comprehensive Evaluation - 15h</h2>
-      <div class="mode-chip">Mode: Virtual synchronous with asynchronous support</div>
-      <p class="outcome-note"><strong>You will be able to...</strong> understand customer orders and requests more accurately, use active listening strategies, confirm information clearly, integrate service language in realistic simulations, and respond more confidently during individual assessment.</p>
-      <ul>
-        <li><span><strong>Subtopic 1.3.1:</strong> Listening comprehension of orders and requests with different accents.</span></li>
-        <li><span><strong>Subtopic 1.3.2:</strong> Active listening in real-life settings.</span></li>
-        <li><span><strong>Subtopic 1.3.3:</strong> Integration of skills in the final food service simulation.</span></li>
-        <li><span><strong>Subtopic 1.3.4:</strong> Individual practical assessment.</span></li>
-        <li><span><strong>Subtopic 1.3.5:</strong> Feedback and instructional closure.</span></li>
-      </ul>
-    </section>
-
-    <section class="intro">
-      <div class="panel">
-        <h3>How this page is organized</h3>
-        <p>This Module 3 page follows the same clean workbook structure you have been using. Each subtopic is presented in a separate section with practical tasks, instructor guidance, and audio-ready space.</p>
-      </div>
-      <div class="panel">
-        <h3>Evaluation focus</h3>
-        <ul>
-          <li>Listening to orders and requests accurately</li>
-          <li>Responding clearly in restaurant scenarios</li>
-          <li>Integrating service language in simulations</li>
-          <li>Receiving and applying feedback</li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="visual-strip">
-      <div class="image-card">
-        <img src="assets/module3-scene.svg" alt="Illustration of listening practice with audio waves and service notes">
-      </div>
-      <div class="panel highlight-card">
-        <h3>Listening Activation</h3>
-        <p>Use the image to introduce the listening focus of the module. Students can predict what they will hear, identify service vocabulary, and describe how they would respond in a real restaurant setting.</p>
-        <div class="chips" style="margin-top: 14px;">
-          <span>What request do you hear?</span>
-          <span>What should the waiter confirm?</span>
-          <span>What details are important?</span>
-          <span>How do you respond politely?</span>
-        </div>
-      </div>
-    </section>
-
-    <section class="evaluation-panel">
-      <div>
-        <div class="label">Separate Evaluation</div>
-        <h3 style="margin: 0 0 8px; font-family: Georgia, 'Times New Roman', serif; color: var(--brand-dark);">Module 3 Assessment Page</h3>
-        <p style="margin: 0; color: var(--muted);">Open the evaluation rubric and performance tasks on a separate page for independent publication.</p>
-      </div>
-      <a class="action-link" href="module3_evaluation.html">Open Evaluation</a>
-    </section>
-
-    <div class="sections">
-      <section class="section-card">
-        <div class="section-head">
-          <div class="section-no">Subtopic 1.3.1</div>
-          <h2>Listening Comprehension of Orders and Requests with Different Accents</h2>
-        </div>
-        <div class="meta">Students identify key information from restaurant orders, requests, and pronunciation variations.</div>
-        <div class="section-grid">
-          <div class="col stack">
-            <div class="block">
-              <div class="label">Focus</div>
-              <ul>
-                <li>Understand food and drink orders from different speakers.</li>
-                <li>Recognize requests, quantities, and preferences.</li>
-                <li>Practice noting essential details accurately.</li>
-              </ul>
-            </div>
-            <div class="block">
-              <div class="label">Suggested Activities</div>
-              <ol>
-                <li>Listen to short order recordings two or three times.</li>
-                <li>Write down the food, drink, and special request.</li>
-                <li>Compare answers with a partner and justify your choices.</li>
-              </ol>
-            </div>
-            <div class="audio-slot">
-              <strong>Audio space for Listening Practice</strong>
-              <p>Reserved area for accent-based order recordings or teacher guidance.</p>
-              <audio controls preload="none" style="margin-top: 14px; width: 100%;">
-                <source src="audio/module3/m3_listening_practice.wav" type="audio/wav">
+<div class="audio-media"><div class="audio-player"><audio controls="" preload="none" style="margin-top: 14px; width: 100%;">
+<source src="audio/module3/m3_listening_practice.wav" type="audio/wav"/>
                 Your browser does not support the audio element.
-              </audio>
-            </div>
-          </div>
-          <div class="col stack">
-            <div class="block">
-              <div class="label">Evidence of Learning</div>
-              <ul>
-                <li>Accurate note-taking of menu items and customer preferences.</li>
-                <li>Correct identification of key service vocabulary.</li>
-                <li>Improved listening confidence with varied pronunciation.</li>
-              </ul>
-            </div>
-            <div class="block">
-              <div class="label">Key Vocabulary</div>
-              <div class="chips">
-                <span>Order</span>
-                <span>Request</span>
-                <span>Still water</span>
-                <span>No sugar</span>
-                <span>With rice</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+              </audio></div><div class="qr-panel"><a class="qr-link" href="https://jsdar.github.io/module1-vip/audio/module3/m3_listening_practice.wav" rel="noopener noreferrer" target="_blank"><img alt="QR code for audio" src="qr/module3/m3_listening_practice.png"/></a><span>Scan audio</span></div></div></div>
+</div>
+<div class="col stack">
+<div class="block">
+<div class="label">Evidence of Learning</div>
+<ul>
+<li>Accurate note-taking of menu items and customer preferences.</li>
+<li>Correct identification of key service vocabulary.</li>
+<li>Improved listening confidence with varied pronunciation.</li>
+</ul>
+</div>
+<div class="block">
+<div class="label">Key Vocabulary</div>
+<div class="chips">
+<span>Order</span>
+<span>Request</span>
+<span>Still water</span>
+<span>No sugar</span>
+<span>With rice</span>
+</div>
+<div class="print-lines print-lines-vocab"><div class="print-lines-title">Writing lines</div><span></span><span></span><span></span><span></span></div></div>
+</div>
+</div>
+</section>
+<section class="section-card">
+<div class="section-head">
+<div class="section-no">Subtopic 1.3.2</div>
+<h2>Active Listening in Real-Life Settings</h2>
+</div>
+<div class="meta">Students show attentive listening through clarification, confirmation, and accurate response.</div>
+<div class="section-grid">
+<div class="col stack">
+<div class="block">
+<div class="label">Focus</div>
+<ul>
+<li>Listen carefully before answering.</li>
+<li>Use confirmation questions to avoid mistakes.</li>
+<li>Respond politely and professionally.</li>
+</ul>
+</div>
+<div class="block">
+<div class="label">Suggested Activities</div>
+<ol>
+<li>Listen to short restaurant situations and identify what the guest needs.</li>
+<li>Repeat the request using your own words.</li>
+<li>Practice clarification phrases in pairs.</li>
+</ol>
+</div>
+<div class="audio-slot">
+<strong>Audio space for Real-Life Listening</strong>
+<p>Reserved for realistic service situations, questions, and customer requests.</p>
 
-      <section class="section-card">
-        <div class="section-head">
-          <div class="section-no">Subtopic 1.3.2</div>
-          <h2>Active Listening in Real-Life Settings</h2>
-        </div>
-        <div class="meta">Students show attentive listening through clarification, confirmation, and accurate response.</div>
-        <div class="section-grid">
-          <div class="col stack">
-            <div class="block">
-              <div class="label">Focus</div>
-              <ul>
-                <li>Listen carefully before answering.</li>
-                <li>Use confirmation questions to avoid mistakes.</li>
-                <li>Respond politely and professionally.</li>
-              </ul>
-            </div>
-            <div class="block">
-              <div class="label">Suggested Activities</div>
-              <ol>
-                <li>Listen to short restaurant situations and identify what the guest needs.</li>
-                <li>Repeat the request using your own words.</li>
-                <li>Practice clarification phrases in pairs.</li>
-              </ol>
-            </div>
-            <div class="audio-slot">
-              <strong>Audio space for Real-Life Listening</strong>
-              <p>Reserved for realistic service situations, questions, and customer requests.</p>
-              <audio controls preload="none" style="margin-top: 14px; width: 100%;">
-                <source src="audio/module3/m3_real_life_listening.wav" type="audio/wav">
+<div class="audio-media"><div class="audio-player"><audio controls="" preload="none" style="margin-top: 14px; width: 100%;">
+<source src="audio/module3/m3_real_life_listening.wav" type="audio/wav"/>
                 Your browser does not support the audio element.
-              </audio>
-            </div>
-          </div>
-          <div class="col stack">
-            <div class="block">
-              <div class="label">Useful Expressions</div>
-              <div class="chips">
-                <span>Could you repeat that?</span>
-                <span>So you would like...</span>
-                <span>Let me confirm</span>
-                <span>Right away</span>
-                <span>Of course</span>
-              </div>
-            </div>
-            <div class="block">
-              <div class="label">Expected Outcome</div>
-              <ul>
-                <li>Students respond more accurately in practical service exchanges.</li>
-                <li>Students reduce errors by confirming information.</li>
-                <li>Students demonstrate active listening behaviors.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
+              </audio></div><div class="qr-panel"><a class="qr-link" href="https://jsdar.github.io/module1-vip/audio/module3/m3_real_life_listening.wav" rel="noopener noreferrer" target="_blank"><img alt="QR code for audio" src="qr/module3/m3_real_life_listening.png"/></a><span>Scan audio</span></div></div></div>
+</div>
+<div class="col stack">
+<div class="block">
+<div class="label">Useful Expressions</div>
+<div class="chips">
+<span>Could you repeat that?</span>
+<span>So you would like...</span>
+<span>Let me confirm</span>
+<span>Right away</span>
+<span>Of course</span>
+</div>
+<div class="print-lines print-lines-vocab"><div class="print-lines-title">Writing lines</div><span></span><span></span><span></span><span></span></div></div>
+<div class="block">
+<div class="label">Expected Outcome</div>
+<ul>
+<li>Students respond more accurately in practical service exchanges.</li>
+<li>Students reduce errors by confirming information.</li>
+<li>Students demonstrate active listening behaviors.</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section class="section-card">
+<div class="section-head">
+<div class="section-no">Subtopic 1.3.3</div>
+<h2>Integration of Skills in the Final Food Service Simulation</h2>
+</div>
+<div class="meta">Students combine listening, speaking, and service vocabulary in a complete restaurant performance.</div>
+<div class="section-grid">
+<div class="col stack">
+<div class="block">
+<div class="label">Focus</div>
+<ul>
+<li>Integrate greeting, ordering, recommendations, and problem solving.</li>
+<li>Use practical food-service English in sequence.</li>
+<li>Demonstrate fluency and confidence in role play.</li>
+</ul>
+</div>
+<div class="block">
+<div class="label">Suggested Activities</div>
+<ol>
+<li>Prepare a full restaurant interaction in small groups.</li>
+<li>Assign roles: waiter, customer, support staff, or cashier.</li>
+<li>Perform the complete scene and rotate roles.</li>
+</ol>
+</div>
+<div class="audio-slot">
+<strong>Audio space for Simulation</strong>
+<p>Reserved for model simulations or oral instructions before the performance.</p>
 
-      <section class="section-card">
-        <div class="section-head">
-          <div class="section-no">Subtopic 1.3.3</div>
-          <h2>Integration of Skills in the Final Food Service Simulation</h2>
-        </div>
-        <div class="meta">Students combine listening, speaking, and service vocabulary in a complete restaurant performance.</div>
-        <div class="section-grid">
-          <div class="col stack">
-            <div class="block">
-              <div class="label">Focus</div>
-              <ul>
-                <li>Integrate greeting, ordering, recommendations, and problem solving.</li>
-                <li>Use practical food-service English in sequence.</li>
-                <li>Demonstrate fluency and confidence in role play.</li>
-              </ul>
-            </div>
-            <div class="block">
-              <div class="label">Suggested Activities</div>
-              <ol>
-                <li>Prepare a full restaurant interaction in small groups.</li>
-                <li>Assign roles: waiter, customer, support staff, or cashier.</li>
-                <li>Perform the complete scene and rotate roles.</li>
-              </ol>
-            </div>
-            <div class="audio-slot">
-              <strong>Audio space for Simulation</strong>
-              <p>Reserved for model simulations or oral instructions before the performance.</p>
-              <audio controls preload="none" style="margin-top: 14px; width: 100%;">
-                <source src="audio/module3/m3_simulation.wav" type="audio/wav">
+<div class="audio-media"><div class="audio-player"><audio controls="" preload="none" style="margin-top: 14px; width: 100%;">
+<source src="audio/module3/m3_simulation.wav" type="audio/wav"/>
                 Your browser does not support the audio element.
-              </audio>
-            </div>
-          </div>
-          <div class="col stack">
-            <div class="block">
-              <div class="label">Performance Elements</div>
-              <div class="chips">
-                <span>Greeting</span>
-                <span>Taking order</span>
-                <span>Recommendation</span>
-                <span>Problem solving</span>
-                <span>Payment</span>
-              </div>
-            </div>
-            <div class="block">
-              <div class="label">Assessment Evidence</div>
-              <ul>
-                <li>Appropriate vocabulary and expressions.</li>
-                <li>Logical sequence of service.</li>
-                <li>Clear pronunciation and interaction.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
+              </audio></div><div class="qr-panel"><a class="qr-link" href="https://jsdar.github.io/module1-vip/audio/module3/m3_simulation.wav" rel="noopener noreferrer" target="_blank"><img alt="QR code for audio" src="qr/module3/m3_simulation.png"/></a><span>Scan audio</span></div></div></div>
+</div>
+<div class="col stack">
+<div class="block">
+<div class="label">Performance Elements</div>
+<div class="chips">
+<span>Greeting</span>
+<span>Taking order</span>
+<span>Recommendation</span>
+<span>Problem solving</span>
+<span>Payment</span>
+</div>
+<div class="print-lines print-lines-vocab"><div class="print-lines-title">Writing lines</div><span></span><span></span><span></span><span></span></div></div>
+<div class="block">
+<div class="label">Assessment Evidence</div>
+<ul>
+<li>Appropriate vocabulary and expressions.</li>
+<li>Logical sequence of service.</li>
+<li>Clear pronunciation and interaction.</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section class="section-card">
+<div class="section-head">
+<div class="section-no">Subtopic 1.3.4</div>
+<h2>Individual Practical Assessment</h2>
+</div>
+<div class="meta">Students demonstrate personal performance through guided individual speaking and listening tasks.</div>
+<div class="section-grid">
+<div class="col stack">
+<div class="block">
+<div class="label">Focus</div>
+<ul>
+<li>Evaluate each student individually.</li>
+<li>Measure listening comprehension and oral response.</li>
+<li>Observe service language use in an authentic task.</li>
+</ul>
+</div>
+<div class="block">
+<div class="label">Suggested Activities</div>
+<ol>
+<li>Listen to one short scenario and answer key questions.</li>
+<li>Respond to a customer request orally.</li>
+<li>Complete a mini service role play with the teacher.</li>
+</ol>
+</div>
+<div class="audio-slot">
+<strong>Audio space for Assessment</strong>
+<p>Reserved for individual listening prompts or teacher-administered evaluation audio.</p>
 
-      <section class="section-card">
-        <div class="section-head">
-          <div class="section-no">Subtopic 1.3.4</div>
-          <h2>Individual Practical Assessment</h2>
-        </div>
-        <div class="meta">Students demonstrate personal performance through guided individual speaking and listening tasks.</div>
-        <div class="section-grid">
-          <div class="col stack">
-            <div class="block">
-              <div class="label">Focus</div>
-              <ul>
-                <li>Evaluate each student individually.</li>
-                <li>Measure listening comprehension and oral response.</li>
-                <li>Observe service language use in an authentic task.</li>
-              </ul>
-            </div>
-            <div class="block">
-              <div class="label">Suggested Activities</div>
-              <ol>
-                <li>Listen to one short scenario and answer key questions.</li>
-                <li>Respond to a customer request orally.</li>
-                <li>Complete a mini service role play with the teacher.</li>
-              </ol>
-            </div>
-            <div class="audio-slot">
-              <strong>Audio space for Assessment</strong>
-              <p>Reserved for individual listening prompts or teacher-administered evaluation audio.</p>
-              <audio controls preload="none" style="margin-top: 14px; width: 100%;">
-                <source src="audio/module3/m3_assessment.wav" type="audio/wav">
+<div class="audio-media"><div class="audio-player"><audio controls="" preload="none" style="margin-top: 14px; width: 100%;">
+<source src="audio/module3/m3_assessment.wav" type="audio/wav"/>
                 Your browser does not support the audio element.
-              </audio>
-            </div>
-          </div>
-          <div class="col stack">
-            <div class="block">
-              <div class="label">Assessment Criteria</div>
-              <ul>
-                <li>Listening accuracy</li>
-                <li>Clarity of oral response</li>
-                <li>Use of appropriate expressions</li>
-                <li>Professional interaction</li>
-              </ul>
-            </div>
-            <div class="block">
-              <div class="label">Teacher Notes</div>
-              <p>Use this section to add indicators, scoring rubrics, or quick comments for each student.</p>
-            </div>
-          </div>
-        </div>
-      </section>
+              </audio></div><div class="qr-panel"><a class="qr-link" href="https://jsdar.github.io/module1-vip/audio/module3/m3_assessment.wav" rel="noopener noreferrer" target="_blank"><img alt="QR code for audio" src="qr/module3/m3_assessment.png"/></a><span>Scan audio</span></div></div></div>
+</div>
+<div class="col stack">
+<div class="block">
+<div class="label">Assessment Criteria</div>
+<ul>
+<li>Listening accuracy</li>
+<li>Clarity of oral response</li>
+<li>Use of appropriate expressions</li>
+<li>Professional interaction</li>
+</ul>
+</div>
+<div class="block">
+<div class="label">Teacher Notes</div>
+<p>Use this section to add indicators, scoring rubrics, or quick comments for each student.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="section-card">
+<div class="section-head">
+<div class="section-no">Subtopic 1.3.5</div>
+<h2>Feedback and Instructional Closure</h2>
+</div>
+<div class="meta">Students reflect on strengths, challenges, and next steps after the final practical activities.</div>
+<div class="section-grid">
+<div class="col stack">
+<div class="block">
+<div class="label">Focus</div>
+<ul>
+<li>Review the most important language and strategies.</li>
+<li>Identify what students can improve.</li>
+<li>Close the module with clear learning evidence.</li>
+</ul>
+</div>
+<div class="block">
+<div class="label">Suggested Activities</div>
+<ol>
+<li>Give individual and group feedback.</li>
+<li>Ask students to reflect on one strength and one challenge.</li>
+<li>Summarize the communication tools learned across the module.</li>
+</ol>
+</div>
+<div class="audio-slot">
+<strong>Audio space for Closure</strong>
+<p>Reserved area for final feedback, recap audio, or module closing message.</p>
 
-      <section class="section-card">
-        <div class="section-head">
-          <div class="section-no">Subtopic 1.3.5</div>
-          <h2>Feedback and Instructional Closure</h2>
-        </div>
-        <div class="meta">Students reflect on strengths, challenges, and next steps after the final practical activities.</div>
-        <div class="section-grid">
-          <div class="col stack">
-            <div class="block">
-              <div class="label">Focus</div>
-              <ul>
-                <li>Review the most important language and strategies.</li>
-                <li>Identify what students can improve.</li>
-                <li>Close the module with clear learning evidence.</li>
-              </ul>
-            </div>
-            <div class="block">
-              <div class="label">Suggested Activities</div>
-              <ol>
-                <li>Give individual and group feedback.</li>
-                <li>Ask students to reflect on one strength and one challenge.</li>
-                <li>Summarize the communication tools learned across the module.</li>
-              </ol>
-            </div>
-            <div class="audio-slot">
-              <strong>Audio space for Closure</strong>
-              <p>Reserved area for final feedback, recap audio, or module closing message.</p>
-              <audio controls preload="none" style="margin-top: 14px; width: 100%;">
-                <source src="audio/module3/m3_closure.wav" type="audio/wav">
+<div class="audio-media"><div class="audio-player"><audio controls="" preload="none" style="margin-top: 14px; width: 100%;">
+<source src="audio/module3/m3_closure.wav" type="audio/wav"/>
                 Your browser does not support the audio element.
-              </audio>
-            </div>
-          </div>
-          <div class="col stack">
-            <div class="block">
-              <div class="label">Reflection Prompts</div>
-              <div class="chips">
-                <span>What improved?</span>
-                <span>What was difficult?</span>
-                <span>What can I do better?</span>
-                <span>What language will I reuse?</span>
-              </div>
-            </div>
-            <div class="block">
-              <div class="label">Closure Notes</div>
-              <p>This area is ready for final comments, reminders, or instructions for the next module.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
+              </audio></div><div class="qr-panel"><a class="qr-link" href="https://jsdar.github.io/module1-vip/audio/module3/m3_closure.wav" rel="noopener noreferrer" target="_blank"><img alt="QR code for audio" src="qr/module3/m3_closure.png"/></a><span>Scan audio</span></div></div></div>
+</div>
+<div class="col stack">
+<div class="block">
+<div class="label">Reflection Prompts</div>
+<div class="chips">
+<span>What improved?</span>
+<span>What was difficult?</span>
+<span>What can I do better?</span>
+<span>What language will I reuse?</span>
+</div>
+<div class="print-lines print-lines-vocab"><div class="print-lines-title">Writing lines</div><span></span><span></span><span></span><span></span></div></div>
+<div class="block">
+<div class="label">Closure Notes</div>
+<p>This area is ready for final comments, reminders, or instructions for the next module.</p>
+</div>
+</div>
+</div>
+</section>
+</div>
+<section class="practice-bank">
+<h2>Applied Practice Set</h2>
+<p>These extension activities give students more chances to listen, confirm information, and prepare for the final evaluation.</p>
+<div class="bank-grid">
+<div class="micro-card">
+<div class="label">Accent Log</div>
+<h3>Key Details from Audio</h3>
+<ol>
+<li>Listen to a short order and write the food, drink, and extra request.</li>
+<li>Mark the word that was hardest to understand.</li>
+<li>Listen again and correct your notes.</li>
+</ol>
+<div class="audio-slot">
+<strong>Audio space for Accent Log</strong>
+<p>Reserved for varied-accent listening clips or teacher input.</p>
 
-    <section class="practice-bank">
-      <h2>Applied Practice Set</h2>
-      <p>These extension activities give students more chances to listen, confirm information, and prepare for the final evaluation.</p>
-      <div class="bank-grid">
-        <div class="micro-card">
-          <div class="label">Accent Log</div>
-          <h3>Key Details from Audio</h3>
-          <ol>
-            <li>Listen to a short order and write the food, drink, and extra request.</li>
-            <li>Mark the word that was hardest to understand.</li>
-            <li>Listen again and correct your notes.</li>
-          </ol>
-          <div class="audio-slot">
-            <strong>Audio space for Accent Log</strong>
-            <p>Reserved for varied-accent listening clips or teacher input.</p>
-            <audio controls preload="none" style="margin-top: 14px; width: 100%;">
-              <source src="audio/module3/m3_accent_log.wav" type="audio/wav">
+<div class="audio-media"><div class="audio-player"><audio controls="" preload="none" style="margin-top: 14px; width: 100%;">
+<source src="audio/module3/m3_accent_log.wav" type="audio/wav"/>
               Your browser does not support the audio element.
-            </audio>
-          </div>
-        </div>
-        <div class="micro-card">
-          <div class="label">Confirmation Drill</div>
-          <h3>Repeat and Confirm</h3>
-          <ol>
-            <li>Rewrite the customer request using <strong>So you would like...</strong></li>
-            <li>Add one confirmation question.</li>
-            <li>Practice the full exchange with a partner.</li>
-          </ol>
-          <div class="audio-slot">
-            <strong>Audio space for Confirmation Drill</strong>
-            <p>Use this box for a model confirmation exchange.</p>
-            <audio controls preload="none" style="margin-top: 14px; width: 100%;">
-              <source src="audio/module3/m3_confirmation_drill.wav" type="audio/wav">
-              Your browser does not support the audio element.
-            </audio>
-          </div>
-        </div>
-        <div class="micro-card">
-          <div class="label">Simulation Planner</div>
-          <h3>Before the Final Role Play</h3>
-          <ol>
-            <li>Choose the situation: greeting, order, complaint, or payment.</li>
-            <li>Write the key expressions you will use.</li>
-            <li>Assign roles and rehearse once.</li>
-          </ol>
-          <div class="audio-slot">
-            <strong>Audio space for Simulation Planner</strong>
-            <p>Reserved for rehearsal instructions or a model planning guide.</p>
-            <audio controls preload="none" style="margin-top: 14px; width: 100%;">
-              <source src="audio/module3/m3_simulation_planner.wav" type="audio/wav">
-              Your browser does not support the audio element.
-            </audio>
-          </div>
-        </div>
-        <div class="micro-card">
-          <div class="label">Individual Check</div>
-          <h3>Mini Assessment Task</h3>
-          <ol>
-            <li>Listen to one short prompt.</li>
-            <li>Respond as the waiter in two complete sentences.</li>
-            <li>Use one polite expression and one confirmation phrase.</li>
-          </ol>
-          <div class="audio-slot">
-            <strong>Audio space for Individual Check</strong>
-            <p>Ready for an assessment prompt or teacher-administered audio.</p>
-            <audio controls preload="none" style="margin-top: 14px; width: 100%;">
-              <source src="audio/module3/m3_individual_check.wav" type="audio/wav">
-              Your browser does not support the audio element.
-            </audio>
-          </div>
-        </div>
-        <div class="micro-card">
-          <div class="label">Exit Ticket</div>
-          <h3>Reflection and Closure</h3>
-          <ol>
-            <li>Write one thing you understood well.</li>
-            <li>Write one expression you still need to practice.</li>
-            <li>Say your reflection aloud to a partner.</li>
-          </ol>
-          <div class="audio-slot">
-            <strong>Audio space for Exit Ticket</strong>
-            <p>Reserved for final feedback, recap, or closure audio.</p>
-            <audio controls preload="none" style="margin-top: 14px; width: 100%;">
-              <source src="audio/module3/m3_exit_ticket.wav" type="audio/wav">
-              Your browser does not support the audio element.
-            </audio>
-          </div>
-        </div>
-      </div>
-    </section>
+            </audio></div><div class="qr-panel"><a class="qr-link" href="https://jsdar.github.io/module1-vip/audio/module3/m3_accent_log.wav" rel="noopener noreferrer" target="_blank"><img alt="QR code for audio" src="qr/module3/m3_accent_log.png"/></a><span>Scan audio</span></div></div></div>
+</div>
+<div class="micro-card">
+<div class="label">Confirmation Drill</div>
+<h3>Repeat and Confirm</h3>
+<ol>
+<li>Rewrite the customer request using <strong>So you would like...</strong></li>
+<li>Add one confirmation question.</li>
+<li>Practice the full exchange with a partner.</li>
+</ol>
+<div class="audio-slot">
+<strong>Audio space for Confirmation Drill</strong>
+<p>Use this box for a model confirmation exchange.</p>
 
-    <section class="final">
-      <h2>Module 3 Closing Performance</h2>
-      <p>Use this final section to summarize the comprehensive evaluation, highlight student progress, and connect the listening work with practical restaurant communication.</p>
-      <div class="steps">
-        <span>Listening accuracy</span>
-        <span>Active response</span>
-        <span>Integrated simulation</span>
-        <span>Individual assessment</span>
-        <span>Feedback</span>
-      </div>
-    </section>
-  </div>
-</body>
+<div class="audio-media"><div class="audio-player"><audio controls="" preload="none" style="margin-top: 14px; width: 100%;">
+<source src="audio/module3/m3_confirmation_drill.wav" type="audio/wav"/>
+              Your browser does not support the audio element.
+            </audio></div><div class="qr-panel"><a class="qr-link" href="https://jsdar.github.io/module1-vip/audio/module3/m3_confirmation_drill.wav" rel="noopener noreferrer" target="_blank"><img alt="QR code for audio" src="qr/module3/m3_confirmation_drill.png"/></a><span>Scan audio</span></div></div></div>
+</div>
+<div class="micro-card">
+<div class="label">Simulation Planner</div>
+<h3>Before the Final Role Play</h3>
+<ol>
+<li>Choose the situation: greeting, order, complaint, or payment.</li>
+<li>Write the key expressions you will use.</li>
+<li>Assign roles and rehearse once.</li>
+</ol>
+<div class="audio-slot">
+<strong>Audio space for Simulation Planner</strong>
+<p>Reserved for rehearsal instructions or a model planning guide.</p>
+
+<div class="audio-media"><div class="audio-player"><audio controls="" preload="none" style="margin-top: 14px; width: 100%;">
+<source src="audio/module3/m3_simulation_planner.wav" type="audio/wav"/>
+              Your browser does not support the audio element.
+            </audio></div><div class="qr-panel"><a class="qr-link" href="https://jsdar.github.io/module1-vip/audio/module3/m3_simulation_planner.wav" rel="noopener noreferrer" target="_blank"><img alt="QR code for audio" src="qr/module3/m3_simulation_planner.png"/></a><span>Scan audio</span></div></div></div>
+</div>
+<div class="micro-card">
+<div class="label">Individual Check</div>
+<h3>Mini Assessment Task</h3>
+<ol>
+<li>Listen to one short prompt.</li>
+<li>Respond as the waiter in two complete sentences.</li>
+<li>Use one polite expression and one confirmation phrase.</li>
+</ol>
+<div class="audio-slot">
+<strong>Audio space for Individual Check</strong>
+<p>Ready for an assessment prompt or teacher-administered audio.</p>
+
+<div class="audio-media"><div class="audio-player"><audio controls="" preload="none" style="margin-top: 14px; width: 100%;">
+<source src="audio/module3/m3_individual_check.wav" type="audio/wav"/>
+              Your browser does not support the audio element.
+            </audio></div><div class="qr-panel"><a class="qr-link" href="https://jsdar.github.io/module1-vip/audio/module3/m3_individual_check.wav" rel="noopener noreferrer" target="_blank"><img alt="QR code for audio" src="qr/module3/m3_individual_check.png"/></a><span>Scan audio</span></div></div></div>
+</div>
+<div class="micro-card">
+<div class="label">Exit Ticket</div>
+<h3>Reflection and Closure</h3>
+<ol>
+<li>Write one thing you understood well.</li>
+<li>Write one expression you still need to practice.</li>
+<li>Say your reflection aloud to a partner.</li>
+</ol>
+<div class="audio-slot">
+<strong>Audio space for Exit Ticket</strong>
+<p>Reserved for final feedback, recap, or closure audio.</p>
+
+<div class="audio-media"><div class="audio-player"><audio controls="" preload="none" style="margin-top: 14px; width: 100%;">
+<source src="audio/module3/m3_exit_ticket.wav" type="audio/wav"/>
+              Your browser does not support the audio element.
+            </audio></div><div class="qr-panel"><a class="qr-link" href="https://jsdar.github.io/module1-vip/audio/module3/m3_exit_ticket.wav" rel="noopener noreferrer" target="_blank"><img alt="QR code for audio" src="qr/module3/m3_exit_ticket.png"/></a><span>Scan audio</span></div></div></div>
+</div>
+</div>
+</section>
+<section class="final">
+<h2>Module 3 Closing Performance</h2>
+<p>Use this final section to summarize the comprehensive evaluation, highlight student progress, and connect the listening work with practical restaurant communication.</p>
+<div class="steps">
+<span>Listening accuracy</span>
+<span>Active response</span>
+<span>Integrated simulation</span>
+<span>Individual assessment</span>
+<span>Feedback</span>
+</div>
+</section>
+<section class="download-panel"><div class="label">Print & PDF</div><h3>Module 3 Consolidated Download</h3><p>Open the A4-ready version of Module 3 and save it as PDF from the print dialog. The worksheet keeps printable writing lines and QR codes for each audio.</p><div class="download-actions"><a class="action-link download-button" href="module3_vip_workbook.html?download=1" rel="noopener noreferrer" target="_blank">Download Module 3 PDF</a></div></section></div>
+<script id="print-tools-script">
+(function () {
+  const params = new URLSearchParams(window.location.search);
+  if (params.get('download') === '1') {
+    window.addEventListener('load', function () {
+      setTimeout(function () {
+        window.print();
+      }, 700);
+    });
+  }
+})();
+</script></body>
 </html>

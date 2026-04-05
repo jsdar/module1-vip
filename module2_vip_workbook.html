@@ -1,8 +1,10 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>Module 2: Oral Interaction and Service Simulation</title>
 <style>
   :root {
@@ -514,640 +516,787 @@
     }
   }
 </style>
-</head>
+<style id="print-tools-style">
+@page {
+  size: A4;
+  margin: 12mm;
+}
+.print-lines {
+  display: none;
+}
+.print-lines-title {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-top: 14px;
+}
+.print-lines span {
+  display: block;
+  height: 20px;
+  border-bottom: 1px solid rgba(85, 117, 103, 0.45);
+  margin-top: 8px;
+}
+.audio-media {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 118px;
+  gap: 14px;
+  align-items: center;
+  margin-top: 14px;
+}
+.audio-player audio {
+  width: 100% !important;
+  margin-top: 0 !important;
+}
+.qr-panel {
+  padding: 10px;
+  border-radius: 16px;
+  border: 1px solid var(--line);
+  background: #ffffff;
+  text-align: center;
+}
+.qr-link {
+  display: inline-block;
+  text-decoration: none;
+}
+.qr-panel img {
+  width: 88px;
+  height: 88px;
+  display: block;
+  margin: 0 auto 6px;
+}
+.qr-panel span {
+  display: block;
+  font-size: 11px;
+  line-height: 1.25;
+  font-weight: 700;
+  color: var(--muted);
+}
+.download-panel {
+  margin-top: 28px;
+  padding: 24px;
+  border-radius: 24px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+.download-panel h3 {
+  margin: 0 0 10px;
+  font-family: Georgia, "Times New Roman", serif;
+  color: var(--brand);
+}
+.download-panel p {
+  margin: 0;
+  color: var(--muted);
+}
+.download-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 14px;
+}
+.download-button {
+  margin-top: 0 !important;
+}
+@media print {
+  html,
+  body {
+    background: #ffffff !important;
+  }
+  body {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .wrap {
+    max-width: none;
+    padding: 0;
+  }
+  .resource-card,
+  .page-switcher,
+  .evaluation-panel,
+  .download-panel {
+    display: none !important;
+  }
+  .audio-player {
+    display: none !important;
+  }
+  .print-lines {
+    display: block !important;
+  }
+  .lesson-card,
+  .section-card,
+  .practice-bank,
+  .micro-card,
+  .block,
+  .panel,
+  .final,
+  .topic-panel,
+  .outcome-panel,
+  .exam-sheet,
+  .criterion,
+  .rubric-panel,
+  .final-panel {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    box-shadow: none !important;
+  }
+  .intro,
+  .lesson-grid,
+  .section-grid,
+  .visual-strip,
+  .bank-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .audio-slot {
+    min-height: auto;
+  }
+  .audio-media {
+    grid-template-columns: 110px;
+    justify-content: end;
+  }
+  .qr-panel {
+    width: 110px;
+    min-width: 110px;
+  }
+  .qr-panel img {
+    width: 90px;
+    height: 90px;
+  }
+}
+</style></head>
 <body>
-  <div class="wrap">
-    <section class="hero">
-      <div class="hero-top">
-        <img class="logo" src="https://res.cloudinary.com/du4lciu5v/image/upload/q_auto/f_auto/v1775258231/UEA_logo_jpwwmc.png" alt="UEA logo">
-        <span class="badge">UEA-EC-2026-044 &bull; Vinculacion con la Colectividad</span>
-      </div>
-      <div class="hero-copy">
-        <h1>Module 2: Oral Interaction and Service Simulation</h1>
-        <p>Building confident restaurant communication through guided dialogues, role plays, and practical service scenarios.</p>
-      </div>
-    </section>
+<div class="wrap">
+<section class="hero">
+<div class="hero-top">
+<img alt="UEA logo" class="logo" src="https://res.cloudinary.com/du4lciu5v/image/upload/q_auto/f_auto/v1775258231/UEA_logo_jpwwmc.png"/>
+<span class="badge">UEA-EC-2026-044 • Vinculacion con la Colectividad</span>
+</div>
+<div class="hero-copy">
+<h1>Module 2: Oral Interaction and Service Simulation</h1>
+<p>Building confident restaurant communication through guided dialogues, role plays, and practical service scenarios.</p>
+</div>
+</section>
+<section class="topic-panel">
+<h2>Topic 2.0 Oral Interaction and Comprehensive Simulation of Food Service - 15h</h2>
+<div class="mode-chip">Mode: Virtual synchronous with asynchronous support</div>
+<p class="outcome-note"><strong>You will be able to...</strong> welcome guests, take food and drink orders, recommend dishes confidently, solve simple service problems politely, and manage short group-service situations in English.</p>
+<ul>
+<li><span><strong>Subtopic 2.1:</strong> Customer reception and order taking.</span></li>
+<li><span><strong>Subtopic 2.2:</strong> Recommendations, suggestive selling, and daily specials.</span></li>
+<li><span><strong>Subtopic 2.3:</strong> Handling modifications, mistakes, and special requests.</span></li>
+<li><span><strong>Subtopic 2.4:</strong> Service for groups and complex situations.</span></li>
+<li><span><strong>Subtopic 2.5:</strong> Comprehensive simulation and oral assessment.</span></li>
+</ul>
+</section>
+<section class="intro">
+<div class="panel">
+<h3>How this module works</h3>
+<p>The activities follow the same dynamic as Module 1, but now the visual style is warmer and more premium. Each dialogue includes listening, reading, writing, speaking, and reserved audio areas.</p>
+</div>
+<div class="panel">
+<h3>What students practice</h3>
+<ul>
+<li>Reception and taking orders</li>
+<li>Food recommendations and suggestions</li>
+<li>Solving mistakes and complaints</li>
+<li>Group service interaction</li>
+<li>Vocabulary reinforcement and final speaking performance</li>
+</ul>
+</div>
+</section>
+<section class="visual-strip">
+<div class="image-card">
+<img alt="Illustration of a waiter taking an order and serving food" src="assets/module2-scene.svg"/>
+</div>
+<div class="panel highlight-card">
+<h3>Visual Warm-Up</h3>
+<p>Use the illustration to activate speaking before students read the dialogues. They can describe the waiter, predict the order, and identify recommendation language from the scene.</p>
+<div class="chips" style="margin-top: 14px;">
+<span>What is the customer ordering?</span>
+<span>What would you recommend?</span>
+<span>What drink do you see?</span>
+<span>Who speaks first?</span>
+</div>
+</div>
+</section>
+<section class="resource-card">
+<div class="resource-top">
+<div class="resource-copy">
+<div class="label">Interactive Resource</div>
+<h3 style="margin: 0 0 10px; font-family: Georgia, 'Times New Roman', serif; color: var(--brand-dark);">Genially Drinks Presentation</h3>
+<p>This interactive presentation fits best in <strong>Module 2</strong> because students are already taking drink orders, identifying beverage vocabulary, and making simple recommendations. Use it before Dialogue 1 or Dialogue 2 as a warm-up, vocabulary review, or guided speaking prompt.</p>
+</div>
+<a class="action-link" href="https://view.genially.com/64a5804432c2ff001a1ddb3c/presentation-drinks" rel="noopener noreferrer" target="_blank">Open Genially</a>
+</div>
+<div class="embed-frame">
+<div class="genially-shell">
+<iframe allowfullscreen="true" allownetworking="all" allowscriptaccess="always" frameborder="0" height="675" scrolling="no" src="https://view.genially.com/64a5804432c2ff001a1ddb3c/presentation-drinks" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" title="drinks" type="text/html" width="1200"></iframe>
+</div>
+</div>
+</section>
+<section class="evaluation-panel">
+<div>
+<div class="label">Separate Evaluation</div>
+<h3 style="margin: 0 0 8px; font-family: Georgia, 'Times New Roman', serif; color: var(--brand-dark);">Module 2 Assessment Page</h3>
+<p style="margin: 0; color: var(--muted);">Open the evaluation rubric and assessment tasks on a separate page with the same visual identity.</p>
+</div>
+<a class="action-link" href="module2_evaluation.html">Open Evaluation</a>
+</section>
+<div class="lessons">
+<section class="lesson-card">
+<div class="lesson-head">
+<div class="lesson-no">Dialogue 1</div>
+<h2>Reception and Taking Orders</h2>
+</div>
+<div class="meta">Students practice greetings, drinks, and basic restaurant orders.</div>
+<div class="lesson-grid">
+<div class="col stack">
+<div class="block">
+<div class="label">Listening</div>
+<ol>
+<li>Listen to the teacher reading the dialogue two times.</li>
+<li>Identify and write 3 greetings you hear.</li>
+<li>Listen again and write 2 drinks from the dialogue.</li>
+</ol>
+</div>
+<div class="audio-slot">
+<strong>Audio space for Listening</strong>
+<p>Reserved area for the teacher audio or dialogue recording.</p>
 
-    <section class="topic-panel">
-      <h2>Topic 2.0 Oral Interaction and Comprehensive Simulation of Food Service - 15h</h2>
-      <div class="mode-chip">Mode: Virtual synchronous with asynchronous support</div>
-      <p class="outcome-note"><strong>You will be able to...</strong> welcome guests, take food and drink orders, recommend dishes confidently, solve simple service problems politely, and manage short group-service situations in English.</p>
-      <ul>
-        <li><span><strong>Subtopic 2.1:</strong> Customer reception and order taking.</span></li>
-        <li><span><strong>Subtopic 2.2:</strong> Recommendations, suggestive selling, and daily specials.</span></li>
-        <li><span><strong>Subtopic 2.3:</strong> Handling modifications, mistakes, and special requests.</span></li>
-        <li><span><strong>Subtopic 2.4:</strong> Service for groups and complex situations.</span></li>
-        <li><span><strong>Subtopic 2.5:</strong> Comprehensive simulation and oral assessment.</span></li>
-      </ul>
-    </section>
+<div class="audio-media"><div class="audio-player"><audio controls="" preload="none" style="margin-top: 14px; width: 100%;">
+<source src="audio/module2/m2_d1_listening.wav" type="audio/wav"/>
+                Your browser does not support the audio element.
+              </audio></div><div class="qr-panel"><a class="qr-link" href="https://jsdar.github.io/module1-vip/audio/module2/m2_d1_listening.wav" rel="noopener noreferrer" target="_blank"><img alt="QR code for audio" src="qr/module2/m2_d1_listening.png"/></a><span>Scan audio</span></div></div></div>
+<div class="block">
+<div class="label">Reading</div>
+<ol>
+<li>Read the dialogue carefully.</li>
+<li>Underline all food and drink words.</li>
+<li>Circle all questions.</li>
+</ol>
+<div class="print-lines print-lines-reading"><div class="print-lines-title">Writing lines</div><span></span><span></span><span></span><span></span><span></span></div></div>
+<div class="block dialogue">
+<div class="label">Dialogue</div>
+<p><strong>Waiter:</strong> Good evening. Welcome to our restaurant.</p>
+<p><strong>Customer:</strong> Good evening.</p>
+<p><strong>Waiter:</strong> Table for two?</p>
+<p><strong>Customer:</strong> Yes, please.</p>
+<p><strong>Waiter:</strong> This way, please. Here is your table.</p>
+<p><strong>Customer:</strong> Thank you.</p>
+<p><strong>Waiter:</strong> Here is the menu. Would you like something to drink?</p>
+<p><strong>Customer:</strong> Yes, I would like a lemonade, please.</p>
+<p><strong>Waiter:</strong> Of course. One lemonade. And for you?</p>
+<p><strong>Customer 2:</strong> I would like water, please.</p>
+<p><strong>Waiter:</strong> Still or sparkling water?</p>
+<p><strong>Customer 2:</strong> Still water, please.</p>
+<p><strong>Waiter:</strong> Perfect. I will come back to take your order.</p>
+<p><strong>(Later)</strong></p>
+<p><strong>Waiter:</strong> Are you ready to order?</p>
+<p><strong>Customer:</strong> Yes. I would like chicken with rice.</p>
+<p><strong>Customer 2:</strong> I would like pasta.</p>
+<p><strong>Waiter:</strong> Excellent choice. Thank you.</p>
+</div>
+</div>
+<div class="col stack">
+<div class="block">
+<div class="label">Writing</div>
+<ol>
+<li>Write 3 sentences using: <strong>I would like...</strong></li>
+<li>Write 1 short order with food and drink.</li>
+</ol>
+</div>
+<div class="audio-slot">
+<strong>Audio space for Writing</strong>
+<p>Use this area for model answers, dictation, or pronunciation support.</p>
 
-    <section class="intro">
-      <div class="panel">
-        <h3>How this module works</h3>
-        <p>The activities follow the same dynamic as Module 1, but now the visual style is warmer and more premium. Each dialogue includes listening, reading, writing, speaking, and reserved audio areas.</p>
-      </div>
-      <div class="panel">
-        <h3>What students practice</h3>
-        <ul>
-          <li>Reception and taking orders</li>
-          <li>Food recommendations and suggestions</li>
-          <li>Solving mistakes and complaints</li>
-          <li>Group service interaction</li>
-          <li>Vocabulary reinforcement and final speaking performance</li>
-        </ul>
-      </div>
-    </section>
+<div class="audio-media"><div class="audio-player"><audio controls="" preload="none" style="margin-top: 14px; width: 100%;">
+<source src="audio/module2/m2_d1_writing.wav" type="audio/wav"/>
+                Your browser does not support the audio element.
+              </audio></div><div class="qr-panel"><a class="qr-link" href="https://jsdar.github.io/module1-vip/audio/module2/m2_d1_writing.wav" rel="noopener noreferrer" target="_blank"><img alt="QR code for audio" src="qr/module2/m2_d1_writing.png"/></a><span>Scan audio</span></div></div></div>
+<div class="block">
+<div class="label">Speaking - Role Play</div>
+<ol>
+<li>Work in pairs.</li>
+<li>Student A = Waiter / Student B = Customer.</li>
+<li>Practice the dialogue.</li>
+<li>Change roles.</li>
+</ol>
+</div>
+<div class="audio-slot">
+<strong>Audio space for Speaking</strong>
+<p>Reserved for a model role play or guided oral practice.</p>
 
-    <section class="visual-strip">
-      <div class="image-card">
-        <img src="assets/module2-scene.svg" alt="Illustration of a waiter taking an order and serving food">
-      </div>
-      <div class="panel highlight-card">
-        <h3>Visual Warm-Up</h3>
-        <p>Use the illustration to activate speaking before students read the dialogues. They can describe the waiter, predict the order, and identify recommendation language from the scene.</p>
-        <div class="chips" style="margin-top: 14px;">
-          <span>What is the customer ordering?</span>
-          <span>What would you recommend?</span>
-          <span>What drink do you see?</span>
-          <span>Who speaks first?</span>
-        </div>
-      </div>
-    </section>
+<div class="audio-media"><div class="audio-player"><audio controls="" preload="none" style="margin-top: 14px; width: 100%;">
+<source src="audio/module2/m2_d1_speaking.wav" type="audio/wav"/>
+                Your browser does not support the audio element.
+              </audio></div><div class="qr-panel"><a class="qr-link" href="https://jsdar.github.io/module1-vip/audio/module2/m2_d1_speaking.wav" rel="noopener noreferrer" target="_blank"><img alt="QR code for audio" src="qr/module2/m2_d1_speaking.png"/></a><span>Scan audio</span></div></div></div>
+<div class="block">
+<div class="label">Key Language</div>
+<div class="chips">
+<span>Good evening</span>
+<span>Would you like...?</span>
+<span>I would like...</span>
+<span>Still water</span>
+<span>Take your order</span>
+</div>
+<div class="print-lines print-lines-vocab"><div class="print-lines-title">Writing lines</div><span></span><span></span><span></span><span></span></div></div>
+</div>
+</div>
+</section>
+<section class="lesson-card">
+<div class="lesson-head">
+<div class="lesson-no">Dialogue 2</div>
+<h2>Recommendations and Suggestions</h2>
+</div>
+<div class="meta">Students recommend dishes and react to suggestions using simple adjectives.</div>
+<div class="lesson-grid">
+<div class="col stack">
+<div class="block">
+<div class="label">Listening</div>
+<ol>
+<li>Listen to the dialogue.</li>
+<li>Write the recommended dish.</li>
+<li>Write 2 adjectives you hear.</li>
+</ol>
+</div>
+<div class="audio-slot">
+<strong>Audio space for Listening</strong>
+<p>Reserved area for the recommendation dialogue audio.</p>
 
-    <section class="resource-card">
-      <div class="resource-top">
-        <div class="resource-copy">
-          <div class="label">Interactive Resource</div>
-          <h3 style="margin: 0 0 10px; font-family: Georgia, 'Times New Roman', serif; color: var(--brand-dark);">Genially Drinks Presentation</h3>
-          <p>This interactive presentation fits best in <strong>Module 2</strong> because students are already taking drink orders, identifying beverage vocabulary, and making simple recommendations. Use it before Dialogue 1 or Dialogue 2 as a warm-up, vocabulary review, or guided speaking prompt.</p>
-        </div>
-        <a class="action-link" href="https://view.genially.com/64a5804432c2ff001a1ddb3c/presentation-drinks" target="_blank" rel="noopener noreferrer">Open Genially</a>
-      </div>
-      <div class="embed-frame">
-        <div class="genially-shell">
-          <iframe title="drinks" frameborder="0" width="1200" height="675" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://view.genially.com/64a5804432c2ff001a1ddb3c/presentation-drinks" type="text/html" allowscriptaccess="always" allowfullscreen="true" scrolling="no" allownetworking="all"></iframe>
-        </div>
-      </div>
-    </section>
+<div class="audio-media"><div class="audio-player"><audio controls="" preload="none" style="margin-top: 14px; width: 100%;">
+<source src="audio/module2/m2_d2_listening.wav" type="audio/wav"/>
+                Your browser does not support the audio element.
+              </audio></div><div class="qr-panel"><a class="qr-link" href="https://jsdar.github.io/module1-vip/audio/module2/m2_d2_listening.wav" rel="noopener noreferrer" target="_blank"><img alt="QR code for audio" src="qr/module2/m2_d2_listening.png"/></a><span>Scan audio</span></div></div></div>
+<div class="block">
+<div class="label">Reading</div>
+<ol>
+<li>Read the dialogue.</li>
+<li>Underline all adjectives: delicious, fresh, popular.</li>
+<li>Answer: What is the special of the day?</li>
+</ol>
+<div class="print-lines print-lines-reading"><div class="print-lines-title">Writing lines</div><span></span><span></span><span></span><span></span><span></span></div></div>
+<div class="block dialogue">
+<div class="label">Dialogue</div>
+<p><strong>Waiter:</strong> Are you ready to order?</p>
+<p><strong>Customer:</strong> Not yet. What do you recommend?</p>
+<p><strong>Waiter:</strong> I recommend the grilled fish. It is very fresh and delicious.</p>
+<p><strong>Customer:</strong> That sounds good. What comes with it?</p>
+<p><strong>Waiter:</strong> It comes with salad and rice.</p>
+<p><strong>Customer:</strong> Perfect. I will take that.</p>
+<p><strong>Waiter:</strong> Would you like something to drink?</p>
+<p><strong>Customer:</strong> Yes, a juice please.</p>
+<p><strong>Waiter:</strong> We also have today's special: beef soup.</p>
+<p><strong>Customer:</strong> Oh, that sounds interesting.</p>
+<p><strong>Waiter:</strong> It is very popular.</p>
+<p><strong>Customer:</strong> Ok, I will try the soup too.</p>
+<p><strong>Waiter:</strong> Great choice!</p>
+</div>
+</div>
+<div class="col stack">
+<div class="block">
+<div class="label">Writing</div>
+<ol>
+<li>Write 2 recommendations using <strong>I recommend...</strong></li>
+<li>Write 1 sentence with <strong>Today's special is...</strong></li>
+</ol>
+</div>
+<div class="audio-slot">
+<strong>Audio space for Writing</strong>
+<p>Use this area to upload guided writing help or model recommendations.</p>
 
-    <section class="evaluation-panel">
-      <div>
-        <div class="label">Separate Evaluation</div>
-        <h3 style="margin: 0 0 8px; font-family: Georgia, 'Times New Roman', serif; color: var(--brand-dark);">Module 2 Assessment Page</h3>
-        <p style="margin: 0; color: var(--muted);">Open the evaluation rubric and assessment tasks on a separate page with the same visual identity.</p>
-      </div>
-      <a class="action-link" href="module2_evaluation.html">Open Evaluation</a>
-    </section>
+<div class="audio-media"><div class="audio-player"><audio controls="" preload="none" style="margin-top: 14px; width: 100%;">
+<source src="audio/module2/m2_d2_writing.wav" type="audio/wav"/>
+                Your browser does not support the audio element.
+              </audio></div><div class="qr-panel"><a class="qr-link" href="https://jsdar.github.io/module1-vip/audio/module2/m2_d2_writing.wav" rel="noopener noreferrer" target="_blank"><img alt="QR code for audio" src="qr/module2/m2_d2_writing.png"/></a><span>Scan audio</span></div></div></div>
+<div class="block">
+<div class="label">Speaking - Role Play</div>
+<ol>
+<li>Work in pairs.</li>
+<li>One student recommends food.</li>
+<li>The other student asks questions.</li>
+</ol>
+</div>
+<div class="audio-slot">
+<strong>Audio space for Speaking</strong>
+<p>Reserved for speaking support or a sample recommendation exchange.</p>
 
-    <div class="lessons">
-      <section class="lesson-card">
-        <div class="lesson-head">
-          <div class="lesson-no">Dialogue 1</div>
-          <h2>Reception and Taking Orders</h2>
-        </div>
-        <div class="meta">Students practice greetings, drinks, and basic restaurant orders.</div>
-        <div class="lesson-grid">
-          <div class="col stack">
-            <div class="block">
-              <div class="label">Listening</div>
-              <ol>
-                <li>Listen to the teacher reading the dialogue two times.</li>
-                <li>Identify and write 3 greetings you hear.</li>
-                <li>Listen again and write 2 drinks from the dialogue.</li>
-              </ol>
-            </div>
-            <div class="audio-slot">
-              <strong>Audio space for Listening</strong>
-              <p>Reserved area for the teacher audio or dialogue recording.</p>
-              <audio controls preload="none" style="margin-top: 14px; width: 100%;">
-                <source src="audio/module2/m2_d1_listening.wav" type="audio/wav">
+<div class="audio-media"><div class="audio-player"><audio controls="" preload="none" style="margin-top: 14px; width: 100%;">
+<source src="audio/module2/m2_d2_speaking.wav" type="audio/wav"/>
                 Your browser does not support the audio element.
-              </audio>
-            </div>
-            <div class="block">
-              <div class="label">Reading</div>
-              <ol>
-                <li>Read the dialogue carefully.</li>
-                <li>Underline all food and drink words.</li>
-                <li>Circle all questions.</li>
-              </ol>
-            </div>
-            <div class="block dialogue">
-              <div class="label">Dialogue</div>
-              <p><strong>Waiter:</strong> Good evening. Welcome to our restaurant.</p>
-              <p><strong>Customer:</strong> Good evening.</p>
-              <p><strong>Waiter:</strong> Table for two?</p>
-              <p><strong>Customer:</strong> Yes, please.</p>
-              <p><strong>Waiter:</strong> This way, please. Here is your table.</p>
-              <p><strong>Customer:</strong> Thank you.</p>
-              <p><strong>Waiter:</strong> Here is the menu. Would you like something to drink?</p>
-              <p><strong>Customer:</strong> Yes, I would like a lemonade, please.</p>
-              <p><strong>Waiter:</strong> Of course. One lemonade. And for you?</p>
-              <p><strong>Customer 2:</strong> I would like water, please.</p>
-              <p><strong>Waiter:</strong> Still or sparkling water?</p>
-              <p><strong>Customer 2:</strong> Still water, please.</p>
-              <p><strong>Waiter:</strong> Perfect. I will come back to take your order.</p>
-              <p><strong>(Later)</strong></p>
-              <p><strong>Waiter:</strong> Are you ready to order?</p>
-              <p><strong>Customer:</strong> Yes. I would like chicken with rice.</p>
-              <p><strong>Customer 2:</strong> I would like pasta.</p>
-              <p><strong>Waiter:</strong> Excellent choice. Thank you.</p>
-            </div>
-          </div>
-          <div class="col stack">
-            <div class="block">
-              <div class="label">Writing</div>
-              <ol>
-                <li>Write 3 sentences using: <strong>I would like...</strong></li>
-                <li>Write 1 short order with food and drink.</li>
-              </ol>
-            </div>
-            <div class="audio-slot">
-              <strong>Audio space for Writing</strong>
-              <p>Use this area for model answers, dictation, or pronunciation support.</p>
-              <audio controls preload="none" style="margin-top: 14px; width: 100%;">
-                <source src="audio/module2/m2_d1_writing.wav" type="audio/wav">
-                Your browser does not support the audio element.
-              </audio>
-            </div>
-            <div class="block">
-              <div class="label">Speaking - Role Play</div>
-              <ol>
-                <li>Work in pairs.</li>
-                <li>Student A = Waiter / Student B = Customer.</li>
-                <li>Practice the dialogue.</li>
-                <li>Change roles.</li>
-              </ol>
-            </div>
-            <div class="audio-slot">
-              <strong>Audio space for Speaking</strong>
-              <p>Reserved for a model role play or guided oral practice.</p>
-              <audio controls preload="none" style="margin-top: 14px; width: 100%;">
-                <source src="audio/module2/m2_d1_speaking.wav" type="audio/wav">
-                Your browser does not support the audio element.
-              </audio>
-            </div>
-            <div class="block">
-              <div class="label">Key Language</div>
-              <div class="chips">
-                <span>Good evening</span>
-                <span>Would you like...?</span>
-                <span>I would like...</span>
-                <span>Still water</span>
-                <span>Take your order</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+              </audio></div><div class="qr-panel"><a class="qr-link" href="https://jsdar.github.io/module1-vip/audio/module2/m2_d2_speaking.wav" rel="noopener noreferrer" target="_blank"><img alt="QR code for audio" src="qr/module2/m2_d2_speaking.png"/></a><span>Scan audio</span></div></div></div>
+<div class="block">
+<div class="label">Useful Expressions</div>
+<div class="chips">
+<span>I recommend...</span>
+<span>Today's special</span>
+<span>Fresh</span>
+<span>Delicious</span>
+<span>Popular</span>
+</div>
+<div class="print-lines print-lines-vocab"><div class="print-lines-title">Writing lines</div><span></span><span></span><span></span><span></span></div></div>
+</div>
+</div>
+</section>
+<section class="lesson-card">
+<div class="lesson-head">
+<div class="lesson-no">Dialogue 3</div>
+<h2>Problems and Solutions</h2>
+</div>
+<div class="meta">Students respond politely to mistakes and offer simple solutions.</div>
+<div class="lesson-grid">
+<div class="col stack">
+<div class="block">
+<div class="label">Listening</div>
+<ol>
+<li>Listen to the dialogue.</li>
+<li>Identify the problem.</li>
+<li>Write what the waiter says to solve it.</li>
+</ol>
+</div>
+<div class="audio-slot">
+<strong>Audio space for Listening</strong>
+<p>Reserved area for a problem-solving dialogue recording.</p>
 
-      <section class="lesson-card">
-        <div class="lesson-head">
-          <div class="lesson-no">Dialogue 2</div>
-          <h2>Recommendations and Suggestions</h2>
-        </div>
-        <div class="meta">Students recommend dishes and react to suggestions using simple adjectives.</div>
-        <div class="lesson-grid">
-          <div class="col stack">
-            <div class="block">
-              <div class="label">Listening</div>
-              <ol>
-                <li>Listen to the dialogue.</li>
-                <li>Write the recommended dish.</li>
-                <li>Write 2 adjectives you hear.</li>
-              </ol>
-            </div>
-            <div class="audio-slot">
-              <strong>Audio space for Listening</strong>
-              <p>Reserved area for the recommendation dialogue audio.</p>
-              <audio controls preload="none" style="margin-top: 14px; width: 100%;">
-                <source src="audio/module2/m2_d2_listening.wav" type="audio/wav">
+<div class="audio-media"><div class="audio-player"><audio controls="" preload="none" style="margin-top: 14px; width: 100%;">
+<source src="audio/module2/m2_d3_listening.wav" type="audio/wav"/>
                 Your browser does not support the audio element.
-              </audio>
-            </div>
-            <div class="block">
-              <div class="label">Reading</div>
-              <ol>
-                <li>Read the dialogue.</li>
-                <li>Underline all adjectives: delicious, fresh, popular.</li>
-                <li>Answer: What is the special of the day?</li>
-              </ol>
-            </div>
-            <div class="block dialogue">
-              <div class="label">Dialogue</div>
-              <p><strong>Waiter:</strong> Are you ready to order?</p>
-              <p><strong>Customer:</strong> Not yet. What do you recommend?</p>
-              <p><strong>Waiter:</strong> I recommend the grilled fish. It is very fresh and delicious.</p>
-              <p><strong>Customer:</strong> That sounds good. What comes with it?</p>
-              <p><strong>Waiter:</strong> It comes with salad and rice.</p>
-              <p><strong>Customer:</strong> Perfect. I will take that.</p>
-              <p><strong>Waiter:</strong> Would you like something to drink?</p>
-              <p><strong>Customer:</strong> Yes, a juice please.</p>
-              <p><strong>Waiter:</strong> We also have today&apos;s special: beef soup.</p>
-              <p><strong>Customer:</strong> Oh, that sounds interesting.</p>
-              <p><strong>Waiter:</strong> It is very popular.</p>
-              <p><strong>Customer:</strong> Ok, I will try the soup too.</p>
-              <p><strong>Waiter:</strong> Great choice!</p>
-            </div>
-          </div>
-          <div class="col stack">
-            <div class="block">
-              <div class="label">Writing</div>
-              <ol>
-                <li>Write 2 recommendations using <strong>I recommend...</strong></li>
-                <li>Write 1 sentence with <strong>Today&apos;s special is...</strong></li>
-              </ol>
-            </div>
-            <div class="audio-slot">
-              <strong>Audio space for Writing</strong>
-              <p>Use this area to upload guided writing help or model recommendations.</p>
-              <audio controls preload="none" style="margin-top: 14px; width: 100%;">
-                <source src="audio/module2/m2_d2_writing.wav" type="audio/wav">
-                Your browser does not support the audio element.
-              </audio>
-            </div>
-            <div class="block">
-              <div class="label">Speaking - Role Play</div>
-              <ol>
-                <li>Work in pairs.</li>
-                <li>One student recommends food.</li>
-                <li>The other student asks questions.</li>
-              </ol>
-            </div>
-            <div class="audio-slot">
-              <strong>Audio space for Speaking</strong>
-              <p>Reserved for speaking support or a sample recommendation exchange.</p>
-              <audio controls preload="none" style="margin-top: 14px; width: 100%;">
-                <source src="audio/module2/m2_d2_speaking.wav" type="audio/wav">
-                Your browser does not support the audio element.
-              </audio>
-            </div>
-            <div class="block">
-              <div class="label">Useful Expressions</div>
-              <div class="chips">
-                <span>I recommend...</span>
-                <span>Today&apos;s special</span>
-                <span>Fresh</span>
-                <span>Delicious</span>
-                <span>Popular</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+              </audio></div><div class="qr-panel"><a class="qr-link" href="https://jsdar.github.io/module1-vip/audio/module2/m2_d3_listening.wav" rel="noopener noreferrer" target="_blank"><img alt="QR code for audio" src="qr/module2/m2_d3_listening.png"/></a><span>Scan audio</span></div></div></div>
+<div class="block">
+<div class="label">Reading</div>
+<ol>
+<li>Read the dialogue.</li>
+<li>Underline all apology expressions.</li>
+</ol>
+<div class="print-lines print-lines-reading"><div class="print-lines-title">Writing lines</div><span></span><span></span><span></span><span></span><span></span></div></div>
+<div class="block dialogue">
+<div class="label">Dialogue</div>
+<p><strong>Customer:</strong> Excuse me.</p>
+<p><strong>Waiter:</strong> Yes, how can I help you?</p>
+<p><strong>Customer:</strong> This is not my order. I ordered chicken, not fish.</p>
+<p><strong>Waiter:</strong> I'm very sorry for the mistake.</p>
+<p><strong>Customer:</strong> That's okay.</p>
+<p><strong>Waiter:</strong> I will fix it right away. Please wait a moment.</p>
+<p><strong>(Later)</strong></p>
+<p><strong>Waiter:</strong> Here is your chicken. Sorry for the delay.</p>
+<p><strong>Customer:</strong> Thank you very much.</p>
+<p><strong>Waiter:</strong> Is everything okay now?</p>
+<p><strong>Customer:</strong> Yes, everything is fine.</p>
+<p><strong>Waiter:</strong> Enjoy your meal.</p>
+</div>
+</div>
+<div class="col stack">
+<div class="block">
+<div class="label">Writing</div>
+<ol>
+<li>Write 3 sentences with <strong>I'm sorry...</strong></li>
+<li>Write 2 solutions. Example: <strong>I will fix it.</strong></li>
+</ol>
+</div>
+<div class="audio-slot">
+<strong>Audio space for Writing</strong>
+<p>Use this area for apology models or solution prompts.</p>
 
-      <section class="lesson-card">
-        <div class="lesson-head">
-          <div class="lesson-no">Dialogue 3</div>
-          <h2>Problems and Solutions</h2>
-        </div>
-        <div class="meta">Students respond politely to mistakes and offer simple solutions.</div>
-        <div class="lesson-grid">
-          <div class="col stack">
-            <div class="block">
-              <div class="label">Listening</div>
-              <ol>
-                <li>Listen to the dialogue.</li>
-                <li>Identify the problem.</li>
-                <li>Write what the waiter says to solve it.</li>
-              </ol>
-            </div>
-            <div class="audio-slot">
-              <strong>Audio space for Listening</strong>
-              <p>Reserved area for a problem-solving dialogue recording.</p>
-              <audio controls preload="none" style="margin-top: 14px; width: 100%;">
-                <source src="audio/module2/m2_d3_listening.wav" type="audio/wav">
+<div class="audio-media"><div class="audio-player"><audio controls="" preload="none" style="margin-top: 14px; width: 100%;">
+<source src="audio/module2/m2_d3_writing.wav" type="audio/wav"/>
                 Your browser does not support the audio element.
-              </audio>
-            </div>
-            <div class="block">
-              <div class="label">Reading</div>
-              <ol>
-                <li>Read the dialogue.</li>
-                <li>Underline all apology expressions.</li>
-              </ol>
-            </div>
-            <div class="block dialogue">
-              <div class="label">Dialogue</div>
-              <p><strong>Customer:</strong> Excuse me.</p>
-              <p><strong>Waiter:</strong> Yes, how can I help you?</p>
-              <p><strong>Customer:</strong> This is not my order. I ordered chicken, not fish.</p>
-              <p><strong>Waiter:</strong> I&apos;m very sorry for the mistake.</p>
-              <p><strong>Customer:</strong> That&apos;s okay.</p>
-              <p><strong>Waiter:</strong> I will fix it right away. Please wait a moment.</p>
-              <p><strong>(Later)</strong></p>
-              <p><strong>Waiter:</strong> Here is your chicken. Sorry for the delay.</p>
-              <p><strong>Customer:</strong> Thank you very much.</p>
-              <p><strong>Waiter:</strong> Is everything okay now?</p>
-              <p><strong>Customer:</strong> Yes, everything is fine.</p>
-              <p><strong>Waiter:</strong> Enjoy your meal.</p>
-            </div>
-          </div>
-          <div class="col stack">
-            <div class="block">
-              <div class="label">Writing</div>
-              <ol>
-                <li>Write 3 sentences with <strong>I&apos;m sorry...</strong></li>
-                <li>Write 2 solutions. Example: <strong>I will fix it.</strong></li>
-              </ol>
-            </div>
-            <div class="audio-slot">
-              <strong>Audio space for Writing</strong>
-              <p>Use this area for apology models or solution prompts.</p>
-              <audio controls preload="none" style="margin-top: 14px; width: 100%;">
-                <source src="audio/module2/m2_d3_writing.wav" type="audio/wav">
-                Your browser does not support the audio element.
-              </audio>
-            </div>
-            <div class="block">
-              <div class="label">Speaking - Role Play</div>
-              <ol>
-                <li>Work in pairs.</li>
-                <li>Create a problem: wrong food, cold food, or delay.</li>
-                <li>Act the situation.</li>
-              </ol>
-            </div>
-            <div class="audio-slot">
-              <strong>Audio space for Speaking</strong>
-              <p>Reserved for a sample apology conversation or oral instructions.</p>
-              <audio controls preload="none" style="margin-top: 14px; width: 100%;">
-                <source src="audio/module2/m2_d3_speaking.wav" type="audio/wav">
-                Your browser does not support the audio element.
-              </audio>
-            </div>
-            <div class="block">
-              <div class="label">Apology Expressions</div>
-              <div class="chips">
-                <span>I&apos;m very sorry</span>
-                <span>Sorry for the delay</span>
-                <span>I will fix it</span>
-                <span>Please wait</span>
-                <span>How can I help?</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+              </audio></div><div class="qr-panel"><a class="qr-link" href="https://jsdar.github.io/module1-vip/audio/module2/m2_d3_writing.wav" rel="noopener noreferrer" target="_blank"><img alt="QR code for audio" src="qr/module2/m2_d3_writing.png"/></a><span>Scan audio</span></div></div></div>
+<div class="block">
+<div class="label">Speaking - Role Play</div>
+<ol>
+<li>Work in pairs.</li>
+<li>Create a problem: wrong food, cold food, or delay.</li>
+<li>Act the situation.</li>
+</ol>
+</div>
+<div class="audio-slot">
+<strong>Audio space for Speaking</strong>
+<p>Reserved for a sample apology conversation or oral instructions.</p>
 
-      <section class="lesson-card">
-        <div class="lesson-head">
-          <div class="lesson-no">Dialogue 4</div>
-          <h2>Group Service</h2>
-        </div>
-        <div class="meta">Students simulate restaurant service with several customers and different orders.</div>
-        <div class="lesson-grid">
-          <div class="col stack">
-            <div class="block">
-              <div class="label">Listening</div>
-              <ol>
-                <li>Listen and count how many people are in the group.</li>
-                <li>Write 3 different orders.</li>
-              </ol>
-            </div>
-            <div class="audio-slot">
-              <strong>Audio space for Listening</strong>
-              <p>Reserved area for the group-service dialogue recording.</p>
-              <audio controls preload="none" style="margin-top: 14px; width: 100%;">
-                <source src="audio/module2/m2_d4_listening.wav" type="audio/wav">
+<div class="audio-media"><div class="audio-player"><audio controls="" preload="none" style="margin-top: 14px; width: 100%;">
+<source src="audio/module2/m2_d3_speaking.wav" type="audio/wav"/>
                 Your browser does not support the audio element.
-              </audio>
-            </div>
-            <div class="block">
-              <div class="label">Reading</div>
-              <ol>
-                <li>Read the dialogue.</li>
-                <li>Underline different foods and drinks.</li>
-              </ol>
-            </div>
-            <div class="block dialogue">
-              <div class="label">Dialogue</div>
-              <p><strong>Waiter:</strong> Hello everyone. Welcome!</p>
-              <p><strong>Group:</strong> Hello.</p>
-              <p><strong>Waiter:</strong> Are you ready to order?</p>
-              <p><strong>Customer 1:</strong> Yes, I would like a burger and fries.</p>
-              <p><strong>Waiter:</strong> And to drink?</p>
-              <p><strong>Customer 1:</strong> A soda, please.</p>
-              <p><strong>Waiter:</strong> Thank you. And you?</p>
-              <p><strong>Customer 2:</strong> I would like a salad and water.</p>
-              <p><strong>Waiter:</strong> Still or sparkling?</p>
-              <p><strong>Customer 2:</strong> Still water.</p>
-              <p><strong>Customer 3:</strong> I want pizza and a juice.</p>
-              <p><strong>Waiter:</strong> Thank you. Anything else?</p>
-              <p><strong>Group:</strong> No, that&apos;s all.</p>
-              <p><strong>Waiter:</strong> Perfect. Your order will be ready soon.</p>
-            </div>
-          </div>
-          <div class="col stack">
-            <div class="block">
-              <div class="label">Writing</div>
-              <ol>
-                <li>Write a group order for 4 people.</li>
-              </ol>
-            </div>
-            <div class="audio-slot">
-              <strong>Audio space for Writing</strong>
-              <p>Use this area for a group-order example or vocabulary support.</p>
-              <audio controls preload="none" style="margin-top: 14px; width: 100%;">
-                <source src="audio/module2/m2_d4_writing.wav" type="audio/wav">
-                Your browser does not support the audio element.
-              </audio>
-            </div>
-            <div class="block">
-              <div class="label">Speaking - Role Play</div>
-              <ol>
-                <li>Form groups of 4 to 5 students.</li>
-                <li>One waiter, the rest are customers.</li>
-                <li>Simulate a real restaurant situation.</li>
-              </ol>
-            </div>
-            <div class="audio-slot">
-              <strong>Audio space for Speaking</strong>
-              <p>Reserved for speaking instructions or a full model group interaction.</p>
-              <audio controls preload="none" style="margin-top: 14px; width: 100%;">
-                <source src="audio/module2/m2_d4_speaking.wav" type="audio/wav">
-                Your browser does not support the audio element.
-              </audio>
-            </div>
-            <div class="block">
-              <div class="label">Service Vocabulary</div>
-              <div class="chips">
-                <span>Burger</span>
-                <span>Fries</span>
-                <span>Salad</span>
-                <span>Soda</span>
-                <span>Pizza</span>
-                <span>Juice</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+              </audio></div><div class="qr-panel"><a class="qr-link" href="https://jsdar.github.io/module1-vip/audio/module2/m2_d3_speaking.wav" rel="noopener noreferrer" target="_blank"><img alt="QR code for audio" src="qr/module2/m2_d3_speaking.png"/></a><span>Scan audio</span></div></div></div>
+<div class="block">
+<div class="label">Apology Expressions</div>
+<div class="chips">
+<span>I'm very sorry</span>
+<span>Sorry for the delay</span>
+<span>I will fix it</span>
+<span>Please wait</span>
+<span>How can I help?</span>
+</div>
+<div class="print-lines print-lines-vocab"><div class="print-lines-title">Writing lines</div><span></span><span></span><span></span><span></span></div></div>
+</div>
+</div>
+</section>
+<section class="lesson-card">
+<div class="lesson-head">
+<div class="lesson-no">Dialogue 4</div>
+<h2>Group Service</h2>
+</div>
+<div class="meta">Students simulate restaurant service with several customers and different orders.</div>
+<div class="lesson-grid">
+<div class="col stack">
+<div class="block">
+<div class="label">Listening</div>
+<ol>
+<li>Listen and count how many people are in the group.</li>
+<li>Write 3 different orders.</li>
+</ol>
+</div>
+<div class="audio-slot">
+<strong>Audio space for Listening</strong>
+<p>Reserved area for the group-service dialogue recording.</p>
 
-      <section class="lesson-card">
-        <div class="lesson-head">
-          <div class="lesson-no">Vocabulary</div>
-          <h2>Word Search Activity</h2>
-        </div>
-        <div class="meta">Students reinforce key restaurant vocabulary through reading, writing, and pronunciation.</div>
-        <div class="lesson-grid">
-          <div class="col stack">
-            <div class="block">
-              <div class="label">Reading + Vocabulary</div>
-              <ol>
-                <li>Find all the words in the puzzle.</li>
-                <li>Circle each word.</li>
-                <li>Match each word with its meaning.</li>
-              </ol>
-            </div>
-            <div class="block">
-              <div class="label">Words to Find</div>
-              <div class="chips">
-                <span>Menu</span>
-                <span>Order</span>
-                <span>Water</span>
-                <span>Food</span>
-                <span>Drink</span>
-                <span>Table</span>
-                <span>Bill</span>
-                <span>Soup</span>
-                <span>Rice</span>
-                <span>Meat</span>
-                <span>Fish</span>
-                <span>Chicken</span>
-              </div>
-            </div>
-            <div class="block">
-              <div class="label">Word Search Grid</div>
-              <div class="gridbox">M E N U T A B L E<br>O R D E R F O O D<br>W A T E R D R I N<br>K C H I C K E N S<br>F I S H S O U P A<br>R I C E B I L L T<br>M E A T O R D E R<br>D R I N K W A T E<br>T A B L E F O O D<br>S O U P M E N U R</div>
-            </div>
-          </div>
-          <div class="col stack">
-            <div class="block">
-              <div class="label">Writing</div>
-              <ol>
-                <li>Write 5 sentences using the vocabulary.</li>
-              </ol>
-            </div>
-            <div class="audio-slot">
-              <strong>Audio space for Writing</strong>
-              <p>Reserved for dictation or sentence-building support.</p>
-              <audio controls preload="none" style="margin-top: 14px; width: 100%;">
-                <source src="audio/module2/m2_wordsearch_writing.wav" type="audio/wav">
+<div class="audio-media"><div class="audio-player"><audio controls="" preload="none" style="margin-top: 14px; width: 100%;">
+<source src="audio/module2/m2_d4_listening.wav" type="audio/wav"/>
                 Your browser does not support the audio element.
-              </audio>
-            </div>
-            <div class="block">
-              <div class="label">Speaking</div>
-              <ol>
-                <li>Say each word aloud.</li>
-                <li>Practice pronunciation with a partner.</li>
-              </ol>
-            </div>
-            <div class="audio-slot">
-              <strong>Audio space for Speaking</strong>
-              <p>Use this box for pronunciation practice or vocabulary review.</p>
-              <audio controls preload="none" style="margin-top: 14px; width: 100%;">
-                <source src="audio/module2/m2_wordsearch_speaking.wav" type="audio/wav">
-                Your browser does not support the audio element.
-              </audio>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
+              </audio></div><div class="qr-panel"><a class="qr-link" href="https://jsdar.github.io/module1-vip/audio/module2/m2_d4_listening.wav" rel="noopener noreferrer" target="_blank"><img alt="QR code for audio" src="qr/module2/m2_d4_listening.png"/></a><span>Scan audio</span></div></div></div>
+<div class="block">
+<div class="label">Reading</div>
+<ol>
+<li>Read the dialogue.</li>
+<li>Underline different foods and drinks.</li>
+</ol>
+<div class="print-lines print-lines-reading"><div class="print-lines-title">Writing lines</div><span></span><span></span><span></span><span></span><span></span></div></div>
+<div class="block dialogue">
+<div class="label">Dialogue</div>
+<p><strong>Waiter:</strong> Hello everyone. Welcome!</p>
+<p><strong>Group:</strong> Hello.</p>
+<p><strong>Waiter:</strong> Are you ready to order?</p>
+<p><strong>Customer 1:</strong> Yes, I would like a burger and fries.</p>
+<p><strong>Waiter:</strong> And to drink?</p>
+<p><strong>Customer 1:</strong> A soda, please.</p>
+<p><strong>Waiter:</strong> Thank you. And you?</p>
+<p><strong>Customer 2:</strong> I would like a salad and water.</p>
+<p><strong>Waiter:</strong> Still or sparkling?</p>
+<p><strong>Customer 2:</strong> Still water.</p>
+<p><strong>Customer 3:</strong> I want pizza and a juice.</p>
+<p><strong>Waiter:</strong> Thank you. Anything else?</p>
+<p><strong>Group:</strong> No, that's all.</p>
+<p><strong>Waiter:</strong> Perfect. Your order will be ready soon.</p>
+</div>
+</div>
+<div class="col stack">
+<div class="block">
+<div class="label">Writing</div>
+<ol>
+<li>Write a group order for 4 people.</li>
+</ol>
+</div>
+<div class="audio-slot">
+<strong>Audio space for Writing</strong>
+<p>Use this area for a group-order example or vocabulary support.</p>
 
-    <section class="practice-bank">
-      <h2>Extra Dialogue Practice</h2>
-      <p>These extension tasks give you more rounds of listening, writing, and role-play using the same service situations from the module.</p>
-      <div class="bank-grid">
-        <div class="micro-card">
-          <div class="label">Listening Booster</div>
-          <h3>Order Details</h3>
-          <ol>
-            <li>Listen again and write two drinks and two main dishes.</li>
-            <li>Underline all questions you hear.</li>
-            <li>Repeat the final order aloud.</li>
-          </ol>
-          <div class="audio-slot">
-              <strong>Audio space for Listening Booster</strong>
-              <p>Reserved for an extra dialogue recording or dictation.</p>
-              <audio controls preload="none" style="margin-top: 14px; width: 100%;">
-                <source src="audio/module2/m2_listening_booster.wav" type="audio/wav">
+<div class="audio-media"><div class="audio-player"><audio controls="" preload="none" style="margin-top: 14px; width: 100%;">
+<source src="audio/module2/m2_d4_writing.wav" type="audio/wav"/>
                 Your browser does not support the audio element.
-              </audio>
-            </div>
-        </div>
-        <div class="micro-card">
-          <div class="label">Recommendation Lab</div>
-          <h3>Special of the Day</h3>
-          <ol>
-            <li>Write one sentence with <strong>I recommend...</strong></li>
-            <li>Write one sentence with <strong>Today&apos;s special is...</strong></li>
-            <li>Ask one follow-up question about the dish.</li>
-          </ol>
-          <div class="audio-slot">
-              <strong>Audio space for Recommendation Lab</strong>
-              <p>Use this box for recommendation prompts or speaking support.</p>
-              <audio controls preload="none" style="margin-top: 14px; width: 100%;">
-                <source src="audio/module2/m2_recommendation_lab.wav" type="audio/wav">
-                Your browser does not support the audio element.
-              </audio>
-            </div>
-        </div>
-        <div class="micro-card">
-          <div class="label">Problem Solver</div>
-          <h3>Fix the Situation</h3>
-          <ol>
-            <li>Write one apology for a wrong order.</li>
-            <li>Write one apology for a delay.</li>
-            <li>Add one solution sentence with <strong>I will...</strong></li>
-          </ol>
-          <div class="audio-slot">
-              <strong>Audio space for Problem Solver</strong>
-              <p>Reserved for a spoken correction model or teacher feedback.</p>
-              <audio controls preload="none" style="margin-top: 14px; width: 100%;">
-                <source src="audio/module2/m2_problem_solver.wav" type="audio/wav">
-                Your browser does not support the audio element.
-              </audio>
-            </div>
-        </div>
-        <div class="micro-card">
-          <div class="label">Group Order Chart</div>
-          <h3>Table of Four</h3>
-          <ol>
-            <li>Create a group order for four customers.</li>
-            <li>Include four foods and four drinks.</li>
-            <li>Read the final order as the waiter.</li>
-          </ol>
-          <div class="audio-slot">
-              <strong>Audio space for Group Order Chart</strong>
-              <p>Ready for a model group order or oral practice instructions.</p>
-              <audio controls preload="none" style="margin-top: 14px; width: 100%;">
-                <source src="audio/module2/m2_group_order_chart.wav" type="audio/wav">
-                Your browser does not support the audio element.
-              </audio>
-            </div>
-        </div>
-      </div>
-    </section>
+              </audio></div><div class="qr-panel"><a class="qr-link" href="https://jsdar.github.io/module1-vip/audio/module2/m2_d4_writing.wav" rel="noopener noreferrer" target="_blank"><img alt="QR code for audio" src="qr/module2/m2_d4_writing.png"/></a><span>Scan audio</span></div></div></div>
+<div class="block">
+<div class="label">Speaking - Role Play</div>
+<ol>
+<li>Form groups of 4 to 5 students.</li>
+<li>One waiter, the rest are customers.</li>
+<li>Simulate a real restaurant situation.</li>
+</ol>
+</div>
+<div class="audio-slot">
+<strong>Audio space for Speaking</strong>
+<p>Reserved for speaking instructions or a full model group interaction.</p>
 
-    <section class="final">
-      <h2>Final Speaking Task: Integrated Role Play</h2>
-      <p>Work in groups of 3 or 4 students and perform a complete restaurant situation with greeting, taking order, recommendation, problem, and payment.</p>
-      <div class="steps">
-        <span>Greeting</span>
-        <span>Taking order</span>
-        <span>Recommendation</span>
-        <span>Problem</span>
-        <span>Payment</span>
-      </div>
-      <div class="steps">
-        <span>Use 5 food words</span>
-        <span>Use 3 expressions</span>
-        <span>I recommend...</span>
-        <span>I&apos;m sorry...</span>
-      </div>
-    </section>
-  </div>
-</body>
+<div class="audio-media"><div class="audio-player"><audio controls="" preload="none" style="margin-top: 14px; width: 100%;">
+<source src="audio/module2/m2_d4_speaking.wav" type="audio/wav"/>
+                Your browser does not support the audio element.
+              </audio></div><div class="qr-panel"><a class="qr-link" href="https://jsdar.github.io/module1-vip/audio/module2/m2_d4_speaking.wav" rel="noopener noreferrer" target="_blank"><img alt="QR code for audio" src="qr/module2/m2_d4_speaking.png"/></a><span>Scan audio</span></div></div></div>
+<div class="block">
+<div class="label">Service Vocabulary</div>
+<div class="chips">
+<span>Burger</span>
+<span>Fries</span>
+<span>Salad</span>
+<span>Soda</span>
+<span>Pizza</span>
+<span>Juice</span>
+</div>
+<div class="print-lines print-lines-vocab"><div class="print-lines-title">Writing lines</div><span></span><span></span><span></span><span></span></div></div>
+</div>
+</div>
+</section>
+<section class="lesson-card">
+<div class="lesson-head">
+<div class="lesson-no">Vocabulary</div>
+<h2>Word Search Activity</h2>
+</div>
+<div class="meta">Students reinforce key restaurant vocabulary through reading, writing, and pronunciation.</div>
+<div class="lesson-grid">
+<div class="col stack">
+<div class="block">
+<div class="label">Reading + Vocabulary</div>
+<ol>
+<li>Find all the words in the puzzle.</li>
+<li>Circle each word.</li>
+<li>Match each word with its meaning.</li>
+</ol>
+</div>
+<div class="block">
+<div class="label">Words to Find</div>
+<div class="chips">
+<span>Menu</span>
+<span>Order</span>
+<span>Water</span>
+<span>Food</span>
+<span>Drink</span>
+<span>Table</span>
+<span>Bill</span>
+<span>Soup</span>
+<span>Rice</span>
+<span>Meat</span>
+<span>Fish</span>
+<span>Chicken</span>
+</div>
+<div class="print-lines print-lines-vocab"><div class="print-lines-title">Writing lines</div><span></span><span></span><span></span><span></span></div></div>
+<div class="block">
+<div class="label">Word Search Grid</div>
+<div class="gridbox">M E N U T A B L E<br/>O R D E R F O O D<br/>W A T E R D R I N<br/>K C H I C K E N S<br/>F I S H S O U P A<br/>R I C E B I L L T<br/>M E A T O R D E R<br/>D R I N K W A T E<br/>T A B L E F O O D<br/>S O U P M E N U R</div>
+</div>
+</div>
+<div class="col stack">
+<div class="block">
+<div class="label">Writing</div>
+<ol>
+<li>Write 5 sentences using the vocabulary.</li>
+</ol>
+</div>
+<div class="audio-slot">
+<strong>Audio space for Writing</strong>
+<p>Reserved for dictation or sentence-building support.</p>
+
+<div class="audio-media"><div class="audio-player"><audio controls="" preload="none" style="margin-top: 14px; width: 100%;">
+<source src="audio/module2/m2_wordsearch_writing.wav" type="audio/wav"/>
+                Your browser does not support the audio element.
+              </audio></div><div class="qr-panel"><a class="qr-link" href="https://jsdar.github.io/module1-vip/audio/module2/m2_wordsearch_writing.wav" rel="noopener noreferrer" target="_blank"><img alt="QR code for audio" src="qr/module2/m2_wordsearch_writing.png"/></a><span>Scan audio</span></div></div></div>
+<div class="block">
+<div class="label">Speaking</div>
+<ol>
+<li>Say each word aloud.</li>
+<li>Practice pronunciation with a partner.</li>
+</ol>
+</div>
+<div class="audio-slot">
+<strong>Audio space for Speaking</strong>
+<p>Use this box for pronunciation practice or vocabulary review.</p>
+
+<div class="audio-media"><div class="audio-player"><audio controls="" preload="none" style="margin-top: 14px; width: 100%;">
+<source src="audio/module2/m2_wordsearch_speaking.wav" type="audio/wav"/>
+                Your browser does not support the audio element.
+              </audio></div><div class="qr-panel"><a class="qr-link" href="https://jsdar.github.io/module1-vip/audio/module2/m2_wordsearch_speaking.wav" rel="noopener noreferrer" target="_blank"><img alt="QR code for audio" src="qr/module2/m2_wordsearch_speaking.png"/></a><span>Scan audio</span></div></div></div>
+</div>
+</div>
+</section>
+</div>
+<section class="practice-bank">
+<h2>Extra Dialogue Practice</h2>
+<p>These extension tasks give you more rounds of listening, writing, and role-play using the same service situations from the module.</p>
+<div class="bank-grid">
+<div class="micro-card">
+<div class="label">Listening Booster</div>
+<h3>Order Details</h3>
+<ol>
+<li>Listen again and write two drinks and two main dishes.</li>
+<li>Underline all questions you hear.</li>
+<li>Repeat the final order aloud.</li>
+</ol>
+<div class="audio-slot">
+<strong>Audio space for Listening Booster</strong>
+<p>Reserved for an extra dialogue recording or dictation.</p>
+
+<div class="audio-media"><div class="audio-player"><audio controls="" preload="none" style="margin-top: 14px; width: 100%;">
+<source src="audio/module2/m2_listening_booster.wav" type="audio/wav"/>
+                Your browser does not support the audio element.
+              </audio></div><div class="qr-panel"><a class="qr-link" href="https://jsdar.github.io/module1-vip/audio/module2/m2_listening_booster.wav" rel="noopener noreferrer" target="_blank"><img alt="QR code for audio" src="qr/module2/m2_listening_booster.png"/></a><span>Scan audio</span></div></div></div>
+</div>
+<div class="micro-card">
+<div class="label">Recommendation Lab</div>
+<h3>Special of the Day</h3>
+<ol>
+<li>Write one sentence with <strong>I recommend...</strong></li>
+<li>Write one sentence with <strong>Today's special is...</strong></li>
+<li>Ask one follow-up question about the dish.</li>
+</ol>
+<div class="audio-slot">
+<strong>Audio space for Recommendation Lab</strong>
+<p>Use this box for recommendation prompts or speaking support.</p>
+
+<div class="audio-media"><div class="audio-player"><audio controls="" preload="none" style="margin-top: 14px; width: 100%;">
+<source src="audio/module2/m2_recommendation_lab.wav" type="audio/wav"/>
+                Your browser does not support the audio element.
+              </audio></div><div class="qr-panel"><a class="qr-link" href="https://jsdar.github.io/module1-vip/audio/module2/m2_recommendation_lab.wav" rel="noopener noreferrer" target="_blank"><img alt="QR code for audio" src="qr/module2/m2_recommendation_lab.png"/></a><span>Scan audio</span></div></div></div>
+</div>
+<div class="micro-card">
+<div class="label">Problem Solver</div>
+<h3>Fix the Situation</h3>
+<ol>
+<li>Write one apology for a wrong order.</li>
+<li>Write one apology for a delay.</li>
+<li>Add one solution sentence with <strong>I will...</strong></li>
+</ol>
+<div class="audio-slot">
+<strong>Audio space for Problem Solver</strong>
+<p>Reserved for a spoken correction model or teacher feedback.</p>
+
+<div class="audio-media"><div class="audio-player"><audio controls="" preload="none" style="margin-top: 14px; width: 100%;">
+<source src="audio/module2/m2_problem_solver.wav" type="audio/wav"/>
+                Your browser does not support the audio element.
+              </audio></div><div class="qr-panel"><a class="qr-link" href="https://jsdar.github.io/module1-vip/audio/module2/m2_problem_solver.wav" rel="noopener noreferrer" target="_blank"><img alt="QR code for audio" src="qr/module2/m2_problem_solver.png"/></a><span>Scan audio</span></div></div></div>
+</div>
+<div class="micro-card">
+<div class="label">Group Order Chart</div>
+<h3>Table of Four</h3>
+<ol>
+<li>Create a group order for four customers.</li>
+<li>Include four foods and four drinks.</li>
+<li>Read the final order as the waiter.</li>
+</ol>
+<div class="audio-slot">
+<strong>Audio space for Group Order Chart</strong>
+<p>Ready for a model group order or oral practice instructions.</p>
+
+<div class="audio-media"><div class="audio-player"><audio controls="" preload="none" style="margin-top: 14px; width: 100%;">
+<source src="audio/module2/m2_group_order_chart.wav" type="audio/wav"/>
+                Your browser does not support the audio element.
+              </audio></div><div class="qr-panel"><a class="qr-link" href="https://jsdar.github.io/module1-vip/audio/module2/m2_group_order_chart.wav" rel="noopener noreferrer" target="_blank"><img alt="QR code for audio" src="qr/module2/m2_group_order_chart.png"/></a><span>Scan audio</span></div></div></div>
+</div>
+</div>
+</section>
+<section class="final">
+<h2>Final Speaking Task: Integrated Role Play</h2>
+<p>Work in groups of 3 or 4 students and perform a complete restaurant situation with greeting, taking order, recommendation, problem, and payment.</p>
+<div class="steps">
+<span>Greeting</span>
+<span>Taking order</span>
+<span>Recommendation</span>
+<span>Problem</span>
+<span>Payment</span>
+</div>
+<div class="steps">
+<span>Use 5 food words</span>
+<span>Use 3 expressions</span>
+<span>I recommend...</span>
+<span>I'm sorry...</span>
+</div>
+</section>
+<section class="download-panel"><div class="label">Print & PDF</div><h3>Module 2 Consolidated Download</h3><p>Open the A4-ready version of Module 2 and save it as PDF from the print dialog. The worksheet keeps printable writing lines and QR codes for each audio.</p><div class="download-actions"><a class="action-link download-button" href="module2_vip_workbook.html?download=1" rel="noopener noreferrer" target="_blank">Download Module 2 PDF</a></div></section></div>
+<script id="print-tools-script">
+(function () {
+  const params = new URLSearchParams(window.location.search);
+  if (params.get('download') === '1') {
+    window.addEventListener('load', function () {
+      setTimeout(function () {
+        window.print();
+      }, 700);
+    });
+  }
+})();
+</script></body>
 </html>
