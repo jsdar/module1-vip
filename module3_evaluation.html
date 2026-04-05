@@ -306,6 +306,60 @@
     border-radius: 14px;
     font-weight: 700;
   }
+  .exam-page + .exam-page {
+    margin-top: 24px;
+  }
+  .page-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-bottom: 18px;
+  }
+  .page-chip {
+    display: inline-block;
+    padding: 8px 12px;
+    border-radius: 999px;
+    background: #fce8dc;
+    color: var(--brand-dark);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  .page-lead {
+    margin: 0;
+    color: var(--muted);
+    font-weight: 600;
+  }
+  @media print {
+    body {
+      background: #ffffff;
+    }
+    .wrap {
+      max-width: none;
+      padding: 0;
+    }
+    .hero {
+      display: none;
+    }
+    .exam-page {
+      margin-top: 0 !important;
+      box-shadow: none;
+      page-break-after: always;
+      break-after: page;
+    }
+    .exam-page:last-of-type {
+      page-break-after: auto;
+      break-after: auto;
+    }
+    .final-panel {
+      box-shadow: none;
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+  }
   @media (max-width: 900px) {
     .intro,
     .criteria-grid,
@@ -326,14 +380,19 @@
         <span class="badge">Final Integrated Evaluation</span>
       </div>
       <div class="hero-copy">
-        <h1>Final Evaluation for Modules 1, 2 and 3</h1>
+        <h1>Final Exam for Modules 1, 2 and 3</h1>
         <p>Integrated assessment of greetings, protocol, orders, recommendations, problem solving, active listening, and final restaurant performance.</p>
       </div>
     </section>
 
-    <section class="exam-sheet">
-      <h2>Student Final Evaluation Format</h2>
-      <p>This final exam integrates the key contents and practical language from Modules 1, 2, and 3 in one printable evaluation sheet.</p>
+    <section class="exam-sheet exam-page">
+      <div class="page-header">
+        <div>
+          <h2>Final Exam - Page 1</h2>
+          <p class="page-lead">Module 1 synthesis: greetings, courtesy, restaurant protocol, vocabulary, and simple written responses.</p>
+        </div>
+        <span class="page-chip">Module 1 Foundations</span>
+      </div>
       <div class="exam-header">
         <p>UNIVERSIDAD ESTATAL AMAZONICA</p>
         <p>ENGLISH A1 FOR WAITERS</p>
@@ -344,38 +403,40 @@
         <div class="line-field">Date: ____________________________________</div>
         <div class="line-field">Course: English A1 for Waiters - Modules 1 to 3</div>
         <div class="line-field">Teacher: ____________________________________</div>
-        <div class="line-field">Score: __________ / 100</div>
+        <div class="line-field">Page Score: __________ / 35</div>
       </div>
       <div class="instruction-box">
         <p><strong>INSTRUCTIONS</strong></p>
-        <p>Read each section carefully and complete all the activities in English. This final exam evaluates the main contents from Modules 1, 2, and 3 through reading, writing, listening, and speaking.</p>
+        <p>Complete this page using the key language from Module 1. Use greetings, restaurant vocabulary, and simple waiter expressions correctly.</p>
       </div>
       <div class="exam-grid">
         <div class="exam-part">
-          <span class="part-chip">Part 1 - Reading (25 points)</span>
-          <h3>Restaurant Communication Review</h3>
+          <span class="part-chip">Section A - Reading and Vocabulary (15 points)</span>
+          <h3>Greetings and Restaurant Protocol</h3>
           <div class="dialogue-box">
-            <span class="subsection-title">A. Read the dialogue and answer the questions. (10 points)</span>
+            <span class="subsection-title">A. Read the short dialogue. (8 points)</span>
             <p><strong>Waiter:</strong> Good evening. Welcome to our restaurant.</p>
-            <p><strong>Customer:</strong> Good evening. I would like a table for two, please.</p>
-            <p><strong>Waiter:</strong> Of course. Here is the menu. Today&apos;s special is grilled fish with rice.</p>
-            <p><strong>Customer:</strong> That sounds good. I would like the fish and a lemonade with no sugar, please.</p>
-            <p><strong>Waiter:</strong> Perfect. So you would like grilled fish with rice and one lemonade with no sugar, correct?</p>
+            <p><strong>Customer:</strong> Good evening. Table for two, please.</p>
+            <p><strong>Waiter:</strong> Of course. Here is the menu.</p>
+            <p><strong>Customer:</strong> Thank you.</p>
+            <p><strong>Waiter:</strong> I will come back to take your order.</p>
           </div>
           <div class="question-box">
             <p>1. What greeting does the waiter use?</p>
             <span class="answer-line"></span>
-            <p>2. What is the special of the day?</p>
+            <p>2. What does the waiter give to the customer?</p>
             <span class="answer-line"></span>
-            <p>3. What special request does the customer make?</p>
+            <p>3. What does the waiter do after giving the menu?</p>
+            <span class="answer-line"></span>
+            <p>4. Write one polite expression from the dialogue.</p>
             <span class="answer-line"></span>
           </div>
           <div class="question-box">
-            <span class="subsection-title">B. Match the expression with its function. (5 points)</span>
-            <p>1. Good evening.</p>
-            <p>2. I recommend the grilled fish.</p>
-            <p>3. I&apos;m very sorry.</p>
-            <p>4. So you would like...</p>
+            <span class="subsection-title">B. Match the word with its use. (7 points)</span>
+            <p>1. Welcome</p>
+            <p>2. Menu</p>
+            <p>3. Order</p>
+            <p>4. Bill</p>
             <div class="answer-lines">
               <span></span>
               <span></span>
@@ -383,23 +444,13 @@
               <span></span>
             </div>
           </div>
-          <div class="question-box">
-            <span class="subsection-title">C. Read the order note and answer. (10 points)</span>
-            <p><strong>Table 4:</strong> one burger and fries, one salad, two still waters, one juice, allergy: peanuts.</p>
-            <p>1. How many drinks are in the order?</p>
-            <span class="answer-line"></span>
-            <p>2. Which food item must be prepared carefully?</p>
-            <span class="answer-line"></span>
-            <p>3. Write one sentence to confirm the order.</p>
-            <span class="answer-line"></span>
-          </div>
         </div>
         <div class="exam-part">
-          <span class="part-chip">Part 2 - Writing (25 points)</span>
-          <h3>Service Writing</h3>
+          <span class="part-chip">Section B - Writing and Sequence (20 points)</span>
+          <h3>Basic Service Language</h3>
           <div class="word-bank">
-            <span class="subsection-title">A. Complete the dialogue. (10 points)</span>
-            <p><strong>Word bank:</strong> menu, would like, recommend, sorry, confirm</p>
+            <span class="subsection-title">A. Complete the sentences. (8 points)</span>
+            <p><strong>Word bank:</strong> good, menu, order, bill, please, thank, table, welcome</p>
             <div class="answer-lines">
               <span></span>
               <span></span>
@@ -408,15 +459,17 @@
             </div>
           </div>
           <div class="question-box">
-            <span class="subsection-title">B. Write one recommendation and one apology. (5 points)</span>
+            <span class="subsection-title">B. Put the steps in the correct order. (6 points)</span>
+            <p>give the menu / greet the customer / take the order / bring the food / give the bill</p>
             <div class="answer-lines">
+              <span></span>
               <span></span>
               <span></span>
             </div>
           </div>
           <div class="question-box">
-            <span class="subsection-title">C. Write a short waiter response. (10 points)</span>
-            <p>Include one greeting, one order confirmation, and one polite closing sentence.</p>
+            <span class="subsection-title">C. Write a short waiter dialogue. (6 points)</span>
+            <p>Include one greeting, one polite expression, and one restaurant word.</p>
             <div class="answer-lines">
               <span></span>
               <span></span>
@@ -425,9 +478,106 @@
             </div>
           </div>
         </div>
+      </div>
+    </section>
+
+    <section class="exam-sheet exam-page">
+      <div class="page-header">
+        <div>
+          <h2>Final Exam - Page 2</h2>
+          <p class="page-lead">Module 2 synthesis: taking orders, recommendations, problem solving, and group service.</p>
+        </div>
+        <span class="page-chip">Module 2 Interaction</span>
+      </div>
+      <div class="exam-grid">
         <div class="exam-part">
-          <span class="part-chip">Part 3 - Listening (25 points)</span>
-          <h3>Orders, Requests, and Solutions</h3>
+          <span class="part-chip">Section C - Reading and Service Interaction (20 points)</span>
+          <h3>Orders and Recommendations</h3>
+          <div class="dialogue-box">
+            <span class="subsection-title">A. Read the dialogue and answer. (10 points)</span>
+            <p><strong>Customer:</strong> What do you recommend?</p>
+            <p><strong>Waiter:</strong> I recommend the grilled fish. It is fresh and delicious.</p>
+            <p><strong>Customer:</strong> Perfect. I would like the fish and a juice, please.</p>
+            <p><strong>Waiter:</strong> Excellent choice.</p>
+          </div>
+          <div class="question-box">
+            <p>1. What dish does the waiter recommend?</p>
+            <span class="answer-line"></span>
+            <p>2. Write two adjectives from the dialogue.</p>
+            <span class="answer-line"></span>
+            <p>3. What drink does the customer order?</p>
+            <span class="answer-line"></span>
+          </div>
+          <div class="question-box">
+            <span class="subsection-title">B. Choose the best answer. (5 points)</span>
+            <p>What is the best sentence for a recommendation?</p>
+            <ol class="mc-options">
+              <li>a) I recommend the grilled fish.</li>
+              <li>b) Bill table menu.</li>
+              <li>c) Goodbye order drink.</li>
+            </ol>
+            <span class="answer-line"></span>
+            <p>What is the best answer after a complaint?</p>
+            <ol class="mc-options">
+              <li>a) I&apos;m very sorry. I will fix it.</li>
+              <li>b) No menu fish.</li>
+              <li>c) Table for two bill.</li>
+            </ol>
+            <span class="answer-line"></span>
+          </div>
+          <div class="question-box">
+            <span class="subsection-title">C. Read the group order note. (5 points)</span>
+            <p><strong>Table 6:</strong> burger and soda / salad and water / pizza and juice / pasta and lemonade</p>
+            <p>Write two foods and two drinks from the note.</p>
+            <div class="answer-lines">
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+        </div>
+        <div class="exam-part">
+          <span class="part-chip">Section D - Writing and Problem Solving (15 points)</span>
+          <h3>Recommendations, Apologies, and Orders</h3>
+          <div class="question-box">
+            <span class="subsection-title">A. Write one recommendation and one special sentence. (5 points)</span>
+            <p>Use: <strong>I recommend...</strong> and <strong>Today&apos;s special is...</strong></p>
+            <div class="answer-lines">
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+          <div class="question-box">
+            <span class="subsection-title">B. Write one apology and one solution. (5 points)</span>
+            <p>Example: <strong>I&apos;m sorry. I will fix it right away.</strong></p>
+            <div class="answer-lines">
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+          <div class="question-box">
+            <span class="subsection-title">C. Write a short group order for four people. (5 points)</span>
+            <div class="answer-lines">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="exam-sheet exam-page">
+      <div class="page-header">
+        <div>
+          <h2>Final Exam - Page 3</h2>
+          <p class="page-lead">Module 3 synthesis: active listening, confirmation, integrated role play, and final assessment evidence.</p>
+        </div>
+        <span class="page-chip">Module 3 Listening and Performance</span>
+      </div>
+      <div class="exam-grid">
+        <div class="exam-part">
+          <span class="part-chip">Section E - Listening (20 points)</span>
+          <h3>Orders, Requests, and Confirmation</h3>
           <div class="question-box">
             <span class="subsection-title">A. Listen and note the key details. (10 points)</span>
             <p>Greeting: __________</p>
@@ -436,19 +586,12 @@
             <p>Special request or problem: __________</p>
           </div>
           <div class="question-box">
-            <span class="subsection-title">B. Listen and choose the correct answer. (10 points)</span>
+            <span class="subsection-title">B. Listen and choose the correct answer. (5 points)</span>
             <p>What should the waiter do after hearing the order?</p>
             <ol class="mc-options">
               <li>a) Repeat the order to confirm it.</li>
-              <li>b) Give the bill.</li>
-              <li>c) Leave the table.</li>
-            </ol>
-            <span class="answer-line"></span>
-            <p>Which expression is best for recommending a dish?</p>
-            <ol class="mc-options">
-              <li>a) I recommend the soup.</li>
-              <li>b) No problem table.</li>
-              <li>c) Menu please bill.</li>
+              <li>b) Walk away immediately.</li>
+              <li>c) Give the bill first.</li>
             </ol>
             <span class="answer-line"></span>
           </div>
@@ -461,25 +604,41 @@
             </div>
           </div>
           <div class="audio-slot">
-            <strong>Audio space for Listening Exam</strong>
-            <p>Reserved for accent-based prompts, request recordings, or evaluation audio.</p>
+            <strong>Audio space for Final Listening Exam</strong>
+            <p>Reserved for integrated listening prompts, order recordings, and confirmation tasks.</p>
             <div class="audio-placeholder"></div>
           </div>
         </div>
         <div class="exam-part">
-          <span class="part-chip">Part 4 - Speaking (25 points)</span>
+          <span class="part-chip">Section F - Speaking and Final Criteria (30 points)</span>
           <h3>Integrated Role Play</h3>
           <ul>
             <li>Greet the customer politely.</li>
             <li>Take one food and one drink order.</li>
             <li>Recommend one dish or drink.</li>
             <li>Confirm the order clearly.</li>
-            <li>Respond to one simple problem or special request.</li>
+            <li>Respond to one complaint, allergy, or special request.</li>
           </ul>
           <div class="question-box">
             <span class="subsection-title">Teacher checklist</span>
-            <p>Greeting / Order taking / Recommendation / Problem solving / Listening / Fluency</p>
+            <p>Greeting / Order taking / Recommendation / Confirmation / Problem solving / Fluency</p>
             <div class="answer-lines">
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+          <div class="question-box">
+            <span class="subsection-title">Final assessment rubric</span>
+            <p>Attendance and participation: 20%</p>
+            <p>Practical workshops and simulation: 40%</p>
+            <p>Virtual activities: 20%</p>
+            <p>Final theoretical exam: 20%</p>
+          </div>
+          <div class="question-box">
+            <span class="subsection-title">Reflection and closure</span>
+            <p>Write one strength and one area to improve after the final exam.</p>
+            <div class="answer-lines">
+              <span></span>
               <span></span>
             </div>
           </div>
@@ -487,61 +646,17 @@
       </div>
     </section>
 
-    <section class="criteria-grid">
-      <div class="criterion">
-        <span class="weight">20% Attendance and Participation</span>
-        <h3>Participation Across Modules</h3>
-        <ul>
-          <li>Participates in greetings, reading, pair work, and role plays.</li>
-          <li>Shows engagement during listening and vocabulary activities.</li>
-          <li>Contributes actively during guided speaking practice.</li>
-        </ul>
-      </div>
-      <div class="criterion">
-        <span class="weight">40% Practical Workshops and Simulation</span>
-        <h3>Integrated Practical Tasks</h3>
-        <ol>
-          <li>Greet guests and follow basic restaurant protocol.</li>
-          <li>Take orders, recommend dishes, and confirm requests.</li>
-          <li>Respond to problems, allergies, or special requests politely.</li>
-          <li>Complete one final integrated restaurant simulation.</li>
-        </ol>
-        <div class="audio-slot">
-          <strong>Audio space for Practical Assessment</strong>
-          <p>Reserved for final speaking prompts, listening clips, or oral assessment instructions.</p>
-          <div class="audio-placeholder"></div>
-        </div>
-      </div>
-      <div class="criterion">
-        <span class="weight">20% Virtual Activities</span>
-        <h3>Online Evidence</h3>
-        <ul>
-          <li>Complete workbook tasks and vocabulary practice from all modules.</li>
-          <li>Submit audio, written responses, or online activities when requested.</li>
-          <li>Finish asynchronous reviews, reflections, or reinforcement tasks.</li>
-        </ul>
-      </div>
-      <div class="criterion">
-        <span class="weight">20% Final Theoretical Exam</span>
-        <h3>Written Quiz</h3>
-        <ul>
-          <li>Answer questions about greetings, menus, recommendations, and complaints.</li>
-          <li>Recognize key restaurant vocabulary and expressions.</li>
-          <li>Apply reading, writing, and listening skills in one final exam.</li>
-        </ul>
-      </div>
-    </section>
-
     <section class="final-panel">
-      <h2>Final Integrated Evaluation Summary</h2>
-      <p>This final page now concentrates the assessment for Modules 1, 2, and 3 in one single evaluation structure with the same grading percentages.</p>
+      <h2>Integrated Final Exam Summary</h2>
+      <p>This single final exam now synthesizes the main practice and assessment evidence from Modules 1, 2, and 3 across three printable exercise pages.</p>
       <div class="steps">
-        <span>Greetings</span>
-        <span>Orders</span>
+        <span>Greetings and courtesy</span>
+        <span>Restaurant protocol</span>
+        <span>Orders and drinks</span>
         <span>Recommendations</span>
-        <span>Problem solving</span>
+        <span>Complaints and solutions</span>
         <span>Active listening</span>
-        <span>Final role play</span>
+        <span>Integrated role play</span>
       </div>
     </section>
   </div>
