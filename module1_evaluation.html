@@ -228,7 +228,7 @@
   }
   .exam-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 18px;
   }
   .exam-part {
@@ -261,6 +261,69 @@
   }
   .exam-part li + li {
     margin-top: 8px;
+  }
+  .exam-header {
+    text-align: center;
+    padding: 18px;
+    border-radius: 18px;
+    background: linear-gradient(180deg, #f7fbf8 0%, #ffffff 100%);
+    border: 1px solid var(--line);
+  }
+  .exam-header p {
+    margin: 0;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+  }
+  .instruction-box,
+  .dialogue-box,
+  .menu-box,
+  .word-bank,
+  .question-box {
+    margin-top: 14px;
+    padding: 16px;
+    border-radius: 16px;
+    border: 1px solid var(--line);
+    background: #ffffff;
+  }
+  .dialogue-box p,
+  .menu-box p,
+  .question-box p,
+  .instruction-box p,
+  .word-bank p {
+    margin: 0;
+  }
+  .dialogue-box p + p,
+  .menu-box p + p,
+  .question-box p + p {
+    margin-top: 8px;
+  }
+  .subsection-title {
+    display: block;
+    margin-bottom: 10px;
+    color: var(--brand);
+    font-weight: 800;
+  }
+  .answer-line {
+    display: block;
+    margin-top: 8px;
+    min-height: 20px;
+    border-bottom: 2px solid #d7e4da;
+  }
+  .answer-lines {
+    margin-top: 10px;
+  }
+  .answer-lines span {
+    display: block;
+    height: 18px;
+    border-bottom: 1px solid #d7e4da;
+    margin-top: 8px;
+  }
+  .mc-options {
+    margin-top: 8px;
+    padding-left: 20px;
+  }
+  .mc-options li {
+    margin-top: 6px;
   }
   .final-panel {
     background: linear-gradient(135deg, #1e5631, #2c7242);
@@ -373,7 +436,12 @@
 
     <section class="exam-sheet">
       <h2>Student Evaluation Format</h2>
-      <p>This module also includes a student-facing exam format like the final test PDF, adapted to Module 1 content.</p>
+      <p>This view now looks like a real student exam sheet, similar to the PDF model, but adapted to Module 1.</p>
+      <div class="exam-header">
+        <p>UNIVERSIDAD ESTATAL AMAZONICA</p>
+        <p>ENGLISH A1 FOR WAITERS</p>
+        <p>MODULE 1 FINAL EXAM</p>
+      </div>
       <div class="exam-meta">
         <div class="line-field">Student Name: ____________________________________</div>
         <div class="line-field">Date: ____________________________________</div>
@@ -381,34 +449,135 @@
         <div class="line-field">Teacher: ____________________________________</div>
         <div class="line-field">Score: __________ / 100</div>
       </div>
+      <div class="instruction-box">
+        <p><strong>INSTRUCTIONS</strong></p>
+        <p>Read each section carefully and complete all the activities. Use English in all answers. This exam evaluates reading, writing, listening, and speaking.</p>
+      </div>
       <div class="exam-grid">
         <div class="exam-part">
           <span class="part-chip">Part 1 - Reading (25 points)</span>
           <h3>Greetings and Basic Service</h3>
-          <ol>
-            <li>Read a short dialogue and identify the waiter&apos;s first expression.</li>
-            <li>Choose the correct answer about reservation, menu, and drink.</li>
-            <li>Match polite expressions with their meaning.</li>
-            <li>Read a mini menu and answer 5 short questions.</li>
-          </ol>
+          <div class="dialogue-box">
+            <span class="subsection-title">A. Read the dialogue and answer the questions. (10 points)</span>
+            <p><strong>Waiter:</strong> Good evening. Welcome to our restaurant.</p>
+            <p><strong>Guest:</strong> Good evening. Thank you.</p>
+            <p><strong>Waiter:</strong> Do you have a reservation?</p>
+            <p><strong>Guest:</strong> No, we don&apos;t.</p>
+            <p><strong>Waiter:</strong> No problem. Please follow me to your table.</p>
+            <p><strong>Waiter:</strong> Here is the menu. Would you like something to drink?</p>
+            <p><strong>Guest:</strong> Yes, please. I&apos;d like orange juice.</p>
+          </div>
+          <div class="question-box">
+            <p>1. What does the waiter say first?</p>
+            <ol class="mc-options">
+              <li>a) Here is your bill.</li>
+              <li>b) Good evening. Welcome to our restaurant.</li>
+              <li>c) Are you ready to order?</li>
+            </ol>
+            <span class="answer-line"></span>
+            <p>2. Does the guest have a reservation?</p>
+            <ol class="mc-options">
+              <li>a) Yes</li>
+              <li>b) No</li>
+              <li>c) Maybe</li>
+            </ol>
+            <span class="answer-line"></span>
+          </div>
+          <div class="question-box">
+            <span class="subsection-title">B. Match the expressions with their meaning. (5 points)</span>
+            <p>1. Please follow me</p>
+            <p>2. Would you like something to drink?</p>
+            <p>3. Here is the menu</p>
+            <div class="answer-lines">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+          <div class="menu-box">
+            <span class="subsection-title">C. Read the mini menu and answer. (10 points)</span>
+            <p><strong>Starters:</strong> Tomato Soup, Green Salad</p>
+            <p><strong>Main Dishes:</strong> Grilled Chicken with Rice, Fish with Vegetables, Pasta with Tomato Sauce</p>
+            <p><strong>Drinks:</strong> Water, Orange Juice, Soda</p>
+            <p><strong>Desserts:</strong> Chocolate Cake, Ice Cream</p>
+            <div class="answer-lines">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
         </div>
         <div class="exam-part">
           <span class="part-chip">Part 2 - Writing (25 points)</span>
           <h3>Courtesy and Vocabulary</h3>
-          <ol>
-            <li>Complete a short dialogue using a word bank.</li>
-            <li>Write 5 polite expressions a waiter can use.</li>
-            <li>Write a short restaurant dialogue with greeting, menu, drink, and thank-you.</li>
-          </ol>
+          <div class="word-bank">
+            <span class="subsection-title">A. Complete the dialogue. (10 points)</span>
+            <p><strong>Word Bank:</strong> welcome - table - drink - order - thank</p>
+            <p>Waiter: Good evening. __________ to our restaurant.</p>
+            <p>Guest: Good evening.</p>
+            <p>Waiter: Please follow me to your __________.</p>
+            <p>Waiter: Would you like something to __________?</p>
+            <p>Waiter: Are you ready to __________?</p>
+            <p>Waiter: __________ you very much.</p>
+          </div>
+          <div class="question-box">
+            <span class="subsection-title">B. Write 5 polite expressions a waiter can use. (5 points)</span>
+            <div class="answer-lines">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+          <div class="question-box">
+            <span class="subsection-title">C. Write a short restaurant dialogue. (10 points)</span>
+            <p>Include: greeting, offering the menu, taking a drink order, and saying thank you.</p>
+            <div class="answer-lines">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
         </div>
         <div class="exam-part">
           <span class="part-chip">Part 3 - Listening (25 points)</span>
           <h3>Comprehension of Service Steps</h3>
-          <ol>
-            <li>Listen and complete key expressions.</li>
-            <li>Choose the correct food or drink from the audio.</li>
-            <li>Mark True or False about the service situation.</li>
-          </ol>
+          <div class="question-box">
+            <span class="subsection-title">A. Listen and complete. (10 points)</span>
+            <p>1. Good __________.</p>
+            <p>2. Welcome to our __________.</p>
+            <p>3. Please __________ me to your table.</p>
+            <p>4. Here is the __________.</p>
+            <p>5. I&apos;d like __________, please.</p>
+          </div>
+          <div class="question-box">
+            <span class="subsection-title">B. Listen and choose the correct answer. (10 points)</span>
+            <p>What food does the guest order?</p>
+            <ol class="mc-options">
+              <li>a) Fish</li>
+              <li>b) Grilled chicken</li>
+              <li>c) Pasta</li>
+            </ol>
+            <span class="answer-line"></span>
+            <p>Is the guest ready to order?</p>
+            <ol class="mc-options">
+              <li>a) Yes</li>
+              <li>b) No</li>
+            </ol>
+            <span class="answer-line"></span>
+          </div>
+          <div class="question-box">
+            <span class="subsection-title">C. Listen and write True or False. (5 points)</span>
+            <div class="answer-lines">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
           <div class="audio-slot">
             <strong>Audio space for Listening Exam</strong>
             <p>Reserved for the student listening prompt or teacher recording.</p>
@@ -424,6 +593,13 @@
             <li>Ask for a drink.</li>
             <li>Take one simple order and say thank you politely.</li>
           </ul>
+          <div class="question-box">
+            <span class="subsection-title">Teacher checklist</span>
+            <p>Greeting / Courtesy / Menu / Drink order / Thank you</p>
+            <div class="answer-lines">
+              <span></span>
+            </div>
+          </div>
         </div>
       </div>
     </section>

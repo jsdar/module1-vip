@@ -199,7 +199,7 @@
   }
   .exam-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 18px;
   }
   .exam-part {
@@ -232,6 +232,66 @@
   }
   .exam-part li + li {
     margin-top: 8px;
+  }
+  .exam-header {
+    text-align: center;
+    padding: 18px;
+    border-radius: 18px;
+    background: linear-gradient(180deg, #fff9ec 0%, #ffffff 100%);
+    border: 1px solid rgba(212, 175, 55, 0.18);
+  }
+  .exam-header p {
+    margin: 0;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+  }
+  .instruction-box,
+  .dialogue-box,
+  .question-box,
+  .word-bank {
+    margin-top: 14px;
+    padding: 16px;
+    border-radius: 16px;
+    border: 1px solid rgba(212, 175, 55, 0.18);
+    background: #ffffff;
+  }
+  .dialogue-box p,
+  .question-box p,
+  .instruction-box p,
+  .word-bank p {
+    margin: 0;
+  }
+  .dialogue-box p + p,
+  .question-box p + p {
+    margin-top: 8px;
+  }
+  .subsection-title {
+    display: block;
+    margin-bottom: 10px;
+    color: var(--brand-dark);
+    font-weight: 800;
+  }
+  .answer-line {
+    display: block;
+    margin-top: 8px;
+    min-height: 20px;
+    border-bottom: 2px solid #eadca8;
+  }
+  .answer-lines {
+    margin-top: 10px;
+  }
+  .answer-lines span {
+    display: block;
+    height: 18px;
+    border-bottom: 1px solid #eadca8;
+    margin-top: 8px;
+  }
+  .mc-options {
+    margin-top: 8px;
+    padding-left: 20px;
+  }
+  .mc-options li {
+    margin-top: 6px;
   }
   .final-panel {
     background: linear-gradient(135deg, rgba(20, 26, 31, 0.92), rgba(53, 43, 12, 0.88));
@@ -334,7 +394,12 @@
 
     <section class="exam-sheet">
       <h2>Student Evaluation Format</h2>
-      <p>This module includes a student-facing evaluation structure similar to a final exam, but focused on oral interaction and service simulation.</p>
+      <p>This view now looks like a real student exam sheet, similar to the PDF model, but adapted to Module 2.</p>
+      <div class="exam-header">
+        <p>UNIVERSIDAD ESTATAL AMAZONICA</p>
+        <p>ENGLISH A1 FOR WAITERS</p>
+        <p>MODULE 2 FINAL EXAM</p>
+      </div>
       <div class="exam-meta">
         <div class="line-field">Student Name: ____________________________________</div>
         <div class="line-field">Date: ____________________________________</div>
@@ -342,35 +407,122 @@
         <div class="line-field">Teacher: ____________________________________</div>
         <div class="line-field">Score: __________ / 100</div>
       </div>
+      <div class="instruction-box">
+        <p><strong>INSTRUCTIONS</strong></p>
+        <p>Read each section carefully and complete all the activities. Use English in all answers. This exam evaluates reading, writing, listening, and speaking through restaurant interaction.</p>
+      </div>
       <div class="exam-grid">
         <div class="exam-part">
           <span class="part-chip">Part 1 - Reading (25 points)</span>
           <h3>Order Taking and Suggestions</h3>
-          <ol>
-            <li>Read a service dialogue and answer comprehension questions.</li>
-            <li>Identify the recommended dish and the special of the day.</li>
-            <li>Match recommendation expressions with their function.</li>
-            <li>Read a group order and extract food and drink details.</li>
-          </ol>
+          <div class="dialogue-box">
+            <span class="subsection-title">A. Read the dialogue and answer. (10 points)</span>
+            <p><strong>Waiter:</strong> Are you ready to order?</p>
+            <p><strong>Customer:</strong> Not yet. What do you recommend?</p>
+            <p><strong>Waiter:</strong> I recommend the grilled fish. It is very fresh and delicious.</p>
+            <p><strong>Customer:</strong> What comes with it?</p>
+            <p><strong>Waiter:</strong> It comes with salad and rice.</p>
+            <p><strong>Waiter:</strong> We also have today&apos;s special: beef soup.</p>
+          </div>
+          <div class="question-box">
+            <p>1. What dish does the waiter recommend?</p>
+            <span class="answer-line"></span>
+            <p>2. What is the special of the day?</p>
+            <span class="answer-line"></span>
+            <p>3. Write two adjectives from the dialogue.</p>
+            <span class="answer-line"></span>
+          </div>
+          <div class="question-box">
+            <span class="subsection-title">B. Match the expression with its function. (5 points)</span>
+            <p>1. I recommend the grilled fish.</p>
+            <p>2. What comes with it?</p>
+            <p>3. Great choice!</p>
+            <div class="answer-lines">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+          <div class="question-box">
+            <span class="subsection-title">C. Read the group order and answer. (10 points)</span>
+            <p>Customer 1 orders a burger and fries with soda.</p>
+            <p>Customer 2 orders salad and still water.</p>
+            <p>Customer 3 orders pizza and juice.</p>
+            <div class="answer-lines">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
         </div>
         <div class="exam-part">
           <span class="part-chip">Part 2 - Writing (25 points)</span>
           <h3>Restaurant Interaction</h3>
-          <ol>
-            <li>Complete a dialogue about taking an order.</li>
-            <li>Write two recommendations using <strong>I recommend...</strong></li>
-            <li>Write one apology and one solution for a restaurant problem.</li>
-            <li>Create a short group-order script.</li>
-          </ol>
+          <div class="word-bank">
+            <span class="subsection-title">A. Complete the dialogue. (10 points)</span>
+            <p><strong>Word Bank:</strong> recommend - drink - order - sorry - special</p>
+            <p>Waiter: Are you ready to __________?</p>
+            <p>Customer: What do you __________?</p>
+            <p>Waiter: Today&apos;s __________ is beef soup.</p>
+            <p>Waiter: Would you like something to __________?</p>
+            <p>Waiter: I&apos;m __________ for the delay.</p>
+          </div>
+          <div class="question-box">
+            <span class="subsection-title">B. Write two recommendations. (5 points)</span>
+            <div class="answer-lines">
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+          <div class="question-box">
+            <span class="subsection-title">C. Write one apology and one solution. (5 points)</span>
+            <div class="answer-lines">
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+          <div class="question-box">
+            <span class="subsection-title">D. Write a short group order. (5 points)</span>
+            <div class="answer-lines">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
         </div>
         <div class="exam-part">
           <span class="part-chip">Part 3 - Listening (25 points)</span>
           <h3>Service Comprehension</h3>
-          <ol>
-            <li>Listen and identify the food, drink, and recommendation.</li>
-            <li>Choose the correct answer about a problem or solution.</li>
-            <li>Write short details from a group-service dialogue.</li>
-          </ol>
+          <div class="question-box">
+            <span class="subsection-title">A. Listen and identify the details. (10 points)</span>
+            <p>1. Recommended dish: __________</p>
+            <p>2. Drink ordered: __________</p>
+            <p>3. Problem in the dialogue: __________</p>
+          </div>
+          <div class="question-box">
+            <span class="subsection-title">B. Listen and choose the correct answer. (10 points)</span>
+            <p>What does the waiter say to solve the problem?</p>
+            <ol class="mc-options">
+              <li>a) I will fix it right away.</li>
+              <li>b) Please pay now.</li>
+              <li>c) The kitchen is closed.</li>
+            </ol>
+            <span class="answer-line"></span>
+            <p>How many people are in the group order?</p>
+            <ol class="mc-options">
+              <li>a) Two</li>
+              <li>b) Three</li>
+              <li>c) Five</li>
+            </ol>
+            <span class="answer-line"></span>
+          </div>
+          <div class="question-box">
+            <span class="subsection-title">C. Listen and write one final order. (5 points)</span>
+            <div class="answer-lines">
+              <span></span>
+              <span></span>
+            </div>
+          </div>
           <div class="audio-slot">
             <strong>Audio space for Listening Exam</strong>
             <p>Reserved for order-taking, recommendation, or problem-solving audio prompts.</p>
@@ -386,6 +538,13 @@
             <li>Recommend one dish.</li>
             <li>Respond to one simple problem politely.</li>
           </ul>
+          <div class="question-box">
+            <span class="subsection-title">Teacher checklist</span>
+            <p>Reception / Order / Recommendation / Problem solving / Courtesy</p>
+            <div class="answer-lines">
+              <span></span>
+            </div>
+          </div>
         </div>
       </div>
     </section>

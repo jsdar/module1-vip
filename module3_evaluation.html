@@ -199,7 +199,7 @@
   }
   .exam-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 18px;
   }
   .exam-part {
@@ -232,6 +232,66 @@
   }
   .exam-part li + li {
     margin-top: 8px;
+  }
+  .exam-header {
+    text-align: center;
+    padding: 18px;
+    border-radius: 18px;
+    background: linear-gradient(180deg, #fff8f3 0%, #ffffff 100%);
+    border: 1px solid rgba(211, 84, 0, 0.16);
+  }
+  .exam-header p {
+    margin: 0;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+  }
+  .instruction-box,
+  .dialogue-box,
+  .question-box,
+  .word-bank {
+    margin-top: 14px;
+    padding: 16px;
+    border-radius: 16px;
+    border: 1px solid rgba(211, 84, 0, 0.16);
+    background: #ffffff;
+  }
+  .dialogue-box p,
+  .question-box p,
+  .instruction-box p,
+  .word-bank p {
+    margin: 0;
+  }
+  .dialogue-box p + p,
+  .question-box p + p {
+    margin-top: 8px;
+  }
+  .subsection-title {
+    display: block;
+    margin-bottom: 10px;
+    color: var(--brand-dark);
+    font-weight: 800;
+  }
+  .answer-line {
+    display: block;
+    margin-top: 8px;
+    min-height: 20px;
+    border-bottom: 2px solid #efcfbf;
+  }
+  .answer-lines {
+    margin-top: 10px;
+  }
+  .answer-lines span {
+    display: block;
+    height: 18px;
+    border-bottom: 1px solid #efcfbf;
+    margin-top: 8px;
+  }
+  .mc-options {
+    margin-top: 8px;
+    padding-left: 20px;
+  }
+  .mc-options li {
+    margin-top: 6px;
   }
   .final-panel {
     background: linear-gradient(135deg, rgba(30, 30, 50, 0.92), rgba(109, 47, 5, 0.9));
@@ -334,7 +394,12 @@
 
     <section class="exam-sheet">
       <h2>Student Evaluation Format</h2>
-      <p>This module also presents a student-facing exam layout similar to the PDF, but adapted to listening comprehension and final integrated evaluation.</p>
+      <p>This view now looks like a real student exam sheet, similar to the PDF model, but adapted to Module 3.</p>
+      <div class="exam-header">
+        <p>UNIVERSIDAD ESTATAL AMAZONICA</p>
+        <p>ENGLISH A1 FOR WAITERS</p>
+        <p>MODULE 3 FINAL EXAM</p>
+      </div>
       <div class="exam-meta">
         <div class="line-field">Student Name: ____________________________________</div>
         <div class="line-field">Date: ____________________________________</div>
@@ -342,33 +407,103 @@
         <div class="line-field">Teacher: ____________________________________</div>
         <div class="line-field">Score: __________ / 100</div>
       </div>
+      <div class="instruction-box">
+        <p><strong>INSTRUCTIONS</strong></p>
+        <p>Read each section carefully and complete all the activities. Use English in all answers. This exam evaluates reading, writing, listening, and speaking with a focus on active listening.</p>
+      </div>
       <div class="exam-grid">
         <div class="exam-part">
           <span class="part-chip">Part 1 - Reading (25 points)</span>
           <h3>Listening Support Texts</h3>
-          <ol>
-            <li>Read a short service transcript and answer comprehension questions.</li>
-            <li>Identify the request, the confirmation phrase, and the solution.</li>
-            <li>Match active listening expressions with their purpose.</li>
-          </ol>
+          <div class="dialogue-box">
+            <span class="subsection-title">A. Read the service transcript. (10 points)</span>
+            <p><strong>Guest:</strong> Excuse me, I would like fish and still water, please.</p>
+            <p><strong>Waiter:</strong> So you would like fish and still water, correct?</p>
+            <p><strong>Guest:</strong> Yes, that&apos;s right.</p>
+            <p><strong>Waiter:</strong> Thank you. I will bring your order shortly.</p>
+          </div>
+          <div class="question-box">
+            <p>1. What food does the guest order?</p>
+            <span class="answer-line"></span>
+            <p>2. What confirmation phrase does the waiter use?</p>
+            <span class="answer-line"></span>
+            <p>3. Why is confirmation important?</p>
+            <span class="answer-line"></span>
+          </div>
+          <div class="question-box">
+            <span class="subsection-title">B. Match the active listening expression with its purpose. (5 points)</span>
+            <p>1. Could you repeat that?</p>
+            <p>2. So you would like...</p>
+            <p>3. Let me confirm</p>
+            <div class="answer-lines">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
         </div>
         <div class="exam-part">
           <span class="part-chip">Part 2 - Writing (25 points)</span>
           <h3>Confirmation and Response</h3>
-          <ol>
-            <li>Write two confirmation sentences using <strong>So you would like...</strong></li>
-            <li>Write one polite clarification question.</li>
-            <li>Write a short reflection about a listening task or simulation.</li>
-          </ol>
+          <div class="word-bank">
+            <span class="subsection-title">A. Write two confirmation sentences. (10 points)</span>
+            <p>Use: <strong>So you would like...</strong></p>
+            <div class="answer-lines">
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+          <div class="question-box">
+            <span class="subsection-title">B. Write one polite clarification question. (5 points)</span>
+            <div class="answer-lines">
+              <span></span>
+            </div>
+          </div>
+          <div class="question-box">
+            <span class="subsection-title">C. Write a short response to a customer request. (10 points)</span>
+            <p>Include one polite expression and one confirmation phrase.</p>
+            <div class="answer-lines">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
         </div>
         <div class="exam-part">
           <span class="part-chip">Part 3 - Listening (25 points)</span>
           <h3>Orders and Requests</h3>
-          <ol>
-            <li>Listen and note the food, drink, and special request.</li>
-            <li>Identify whether the service response is correct or incorrect.</li>
-            <li>Write True or False about a practical listening scenario.</li>
-          </ol>
+          <div class="question-box">
+            <span class="subsection-title">A. Listen and note the key details. (10 points)</span>
+            <p>Food: __________</p>
+            <p>Drink: __________</p>
+            <p>Special request: __________</p>
+          </div>
+          <div class="question-box">
+            <span class="subsection-title">B. Listen and choose the correct answer. (10 points)</span>
+            <p>What should the waiter do first?</p>
+            <ol class="mc-options">
+              <li>a) Repeat the order to confirm it.</li>
+              <li>b) Give the bill.</li>
+              <li>c) Leave the table.</li>
+            </ol>
+            <span class="answer-line"></span>
+            <p>What expression shows active listening?</p>
+            <ol class="mc-options">
+              <li>a) Goodbye.</li>
+              <li>b) Let me confirm.</li>
+              <li>c) Here is your bill.</li>
+            </ol>
+            <span class="answer-line"></span>
+          </div>
+          <div class="question-box">
+            <span class="subsection-title">C. Listen and write True or False. (5 points)</span>
+            <div class="answer-lines">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
           <div class="audio-slot">
             <strong>Audio space for Listening Exam</strong>
             <p>Reserved for accent-based prompts, request recordings, or evaluation audio.</p>
@@ -383,6 +518,13 @@
             <li>Repeat the key information correctly.</li>
             <li>Respond as the waiter using one confirmation phrase and one polite expression.</li>
           </ul>
+          <div class="question-box">
+            <span class="subsection-title">Teacher checklist</span>
+            <p>Listening / Confirmation / Courtesy / Accuracy / Fluency</p>
+            <div class="answer-lines">
+              <span></span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
