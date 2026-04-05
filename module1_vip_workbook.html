@@ -295,6 +295,52 @@
     display: block;
     object-fit: cover;
   }
+  .resource-card {
+    margin-top: 28px;
+    padding: 18px;
+    background: var(--surface);
+    border-radius: 24px;
+    border: 1px solid var(--line);
+    box-shadow: var(--shadow);
+  }
+  .resource-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    flex-wrap: wrap;
+  }
+  .resource-copy {
+    max-width: none;
+  }
+  .resource-copy p {
+    margin: 0;
+    color: var(--muted);
+  }
+  .embed-frame {
+    position: relative;
+    min-height: 900px;
+    margin-top: 14px;
+    background: linear-gradient(135deg, #f4faf6, #ffffff);
+    border: 1px solid var(--line);
+    border-radius: 22px;
+    overflow: hidden;
+  }
+  .genially-shell {
+    position: relative;
+    width: 100%;
+    min-height: 900px;
+  }
+  .genially-shell iframe,
+  .embed-frame iframe {
+    width: 100%;
+    height: 100%;
+    min-height: 900px;
+    border: 0;
+    display: block;
+    position: absolute;
+    inset: 0;
+  }
   .highlight-card {
     border: 1px solid var(--line);
     background: linear-gradient(135deg, #f7fbf8, #ffffff);
@@ -401,6 +447,11 @@
     .page-actions {
       margin-left: 0;
     }
+    .embed-frame,
+    .genially-shell,
+    .genially-shell iframe {
+      min-height: 620px;
+    }
   }
 </style>
 </head>
@@ -448,6 +499,28 @@
           <span>What is on the table?</span>
           <span>What greeting can you hear?</span>
           <span>What happens next?</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="resource-card">
+      <div class="resource-top">
+        <div class="resource-copy">
+          <div class="label">Interactive Resource</div>
+          <h3 style="margin: 0 0 10px; font-family: Georgia, 'Times New Roman', serif; color: var(--brand);">Genially Fruits and Vegetables Presentation</h3>
+          <p>This interactive presentation supports <strong>Module 1</strong> because students practice basic food vocabulary, descriptive adjectives, and simple restaurant language that later connects with menu and dish description tasks.</p>
+        </div>
+        <a class="action-link" href="https://view.genially.com/6074e4625409ca0d64fc8d07/presentation-fruits-and-vegetables" target="_blank" rel="noopener noreferrer">Open Genially</a>
+      </div>
+      <div class="chips" style="margin-top: 14px;">
+        <span>Name the fruit</span>
+        <span>Describe the vegetable</span>
+        <span>Use food adjectives</span>
+        <span>Practice menu vocabulary</span>
+      </div>
+      <div class="embed-frame">
+        <div class="genially-shell">
+          <iframe title="Fruits and Vegetables" frameborder="0" width="1200" height="675" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://view.genially.com/6074e4625409ca0d64fc8d07/presentation-fruits-and-vegetables" type="text/html" allowscriptaccess="always" allowfullscreen="true" scrolling="yes" allownetworking="all"></iframe>
         </div>
       </div>
     </section>
