@@ -211,6 +211,48 @@
     padding: 28px;
     border: 1px solid rgba(223, 173, 19, 0.26);
   }
+  .section-mini-header {
+    margin: 0 0 14px;
+    padding: 8px 12px;
+    border-radius: 12px;
+    border: 1px solid rgba(223, 173, 19, 0.3);
+    background: linear-gradient(135deg, #fff7d8 0%, #ffefbf 100%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .section-mini-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .section-mini-brand img {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid rgba(223, 173, 19, 0.4);
+    background: #ffffff;
+    box-shadow: 0 4px 8px rgba(73, 50, 0, 0.15);
+  }
+  .section-mini-brand span {
+    font-size: 12px;
+    line-height: 1.25;
+    font-weight: 700;
+    color: #7b5900;
+    letter-spacing: 0.35px;
+    text-transform: uppercase;
+  }
+  .section-mini-header small {
+    font-size: 11px;
+    line-height: 1.2;
+    font-weight: 700;
+    color: #8d6a09;
+    text-transform: uppercase;
+    letter-spacing: 0.45px;
+  }
   .lesson-head {
     display: flex;
     align-items: center;
@@ -657,6 +699,10 @@
     .visual-photo {
       min-height: 260px;
     }
+    .section-mini-header {
+      align-items: flex-start;
+      gap: 6px;
+    }
     .embed-frame,
     .genially-shell,
     .genially-shell iframe {
@@ -799,6 +845,11 @@
     page-break-inside: avoid;
     box-shadow: none !important;
   }
+  .lesson-card,
+  .practice-bank {
+    break-inside: auto !important;
+    page-break-inside: auto !important;
+  }
   .intro,
   .lesson-grid,
   .section-grid,
@@ -829,6 +880,42 @@
   }
   .audio-slot {
     min-height: auto;
+  }
+  .section-mini-header {
+    padding: 6px 8px;
+    margin-bottom: 10px;
+    box-shadow: none !important;
+  }
+  .section-mini-brand img {
+    width: 20px;
+    height: 20px;
+  }
+  .section-mini-brand span {
+    font-size: 9px;
+  }
+  .section-mini-header small {
+    font-size: 8px;
+  }
+  .lesson-visual {
+    display: block !important;
+  }
+  .lesson-visual > * {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+  .visual-note {
+    margin-top: 10px;
+  }
+  .visual-photo::after {
+    display: none !important;
+  }
+  .visual-photo figcaption {
+    position: static !important;
+    color: #6f5a1d !important;
+    text-shadow: none !important;
+    background: #fff6d8;
+    padding: 8px 10px;
+    font-size: 12px;
   }
   .audio-media {
     grid-template-columns: 110px;
@@ -1479,6 +1566,18 @@
 </section>
 
 <section class="download-panel"><div class="label">Print & PDF</div><h3>Module 2 Consolidated Download</h3><p>Open the A4-ready version of Module 2 and save it as PDF from the print dialog. The worksheet keeps printable writing lines and QR codes for each audio.</p><div class="download-actions"><a class="action-link download-button" href="module2_vip_workbook.html?download=1" rel="noopener noreferrer" target="_blank">Download Module 2 PDF</a></div></section></div>
+<script>
+(function () {
+  const sections = document.querySelectorAll(".lesson-card, .practice-bank");
+  sections.forEach((section) => {
+    if (section.querySelector(".section-mini-header")) return;
+    const mini = document.createElement("div");
+    mini.className = "section-mini-header";
+    mini.innerHTML = '<div class="section-mini-brand"><img alt="UEA logo" src="UEA%20logo.jpg"/><span>Universidad Estatal Amazonica</span></div><small>Module 2 | Oral Interaction</small>';
+    section.insertAdjacentElement("afterbegin", mini);
+  });
+}());
+</script>
 <script>
 (function () {
   const instructionMap = {
