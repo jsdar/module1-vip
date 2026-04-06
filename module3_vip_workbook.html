@@ -367,6 +367,108 @@
     font-family: Georgia, "Times New Roman", serif;
     color: var(--brand-dark);
   }
+  .vip-gallery {
+    margin-top: 28px;
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 20px;
+  }
+  .gallery-stack {
+    display: grid;
+    gap: 20px;
+  }
+  .premium-photo-card {
+    position: relative;
+    overflow: hidden;
+    min-height: 260px;
+    border-radius: 28px;
+    background: #ffffff;
+    border: 1px solid rgba(211, 84, 0, 0.12);
+    box-shadow: var(--shadow);
+  }
+  .premium-photo-card.feature {
+    min-height: 420px;
+  }
+  .premium-photo-card.small {
+    min-height: 240px;
+  }
+  .premium-photo-card img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+  }
+  .premium-photo-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(24, 18, 14, 0.02) 25%, rgba(24, 18, 14, 0.24) 58%, rgba(24, 18, 14, 0.78) 100%);
+  }
+  .premium-photo-card figcaption {
+    position: absolute;
+    left: 18px;
+    right: 18px;
+    bottom: 18px;
+    z-index: 2;
+    padding: 16px 18px;
+    border-radius: 18px;
+    background: rgba(16, 18, 19, 0.42);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    backdrop-filter: blur(6px);
+    color: #ffffff;
+  }
+  .premium-photo-card figcaption strong {
+    display: block;
+    margin: 8px 0 4px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 22px;
+  }
+  .premium-photo-card figcaption span:last-child {
+    display: block;
+    color: rgba(255, 255, 255, 0.84);
+    font-size: 14px;
+    line-height: 1.45;
+  }
+  .photo-chip {
+    display: inline-block;
+    padding: 7px 11px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.16);
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  .editorial-frame {
+    background: linear-gradient(180deg, #fffdfc 0%, #ffffff 100%);
+    border: 1px solid rgba(211, 84, 0, 0.12);
+    border-radius: 28px;
+    padding: 12px;
+    box-shadow: var(--shadow);
+  }
+  .editorial-frame img {
+    width: 100%;
+    display: block;
+    border-radius: 20px;
+    object-fit: cover;
+    aspect-ratio: 4 / 3;
+  }
+  .frame-copy {
+    padding: 14px 10px 8px;
+  }
+  .frame-copy strong {
+    display: block;
+    margin: 8px 0 6px;
+    font-family: Georgia, "Times New Roman", serif;
+    color: var(--brand-dark);
+    font-size: 22px;
+  }
+  .frame-copy p {
+    margin: 0;
+    color: var(--muted);
+    line-height: 1.55;
+  }
   .practice-bank {
     margin-top: 28px;
     padding: 26px;
@@ -599,7 +701,11 @@
     .section-grid,
     .visual-strip,
     .scene-lab,
-    .exercise-deck {
+    .exercise-deck,
+    .vip-gallery {
+      grid-template-columns: 1fr;
+    }
+    .gallery-stack {
       grid-template-columns: 1fr;
     }
     .exercise-card.full {
@@ -744,7 +850,9 @@
   .lesson-grid,
   .section-grid,
   .visual-strip,
-  .bank-grid {
+  .bank-grid,
+  .vip-gallery,
+  .gallery-stack {
     display: block !important;
     grid-template-columns: 1fr !important;
   }
@@ -752,7 +860,9 @@
   .lesson-grid > *,
   .section-grid > *,
   .visual-strip > *,
-  .bank-grid > * {
+  .bank-grid > *,
+  .vip-gallery > *,
+  .gallery-stack > * {
     margin-bottom: 14px !important;
   }
   .audio-slot,
@@ -761,6 +871,8 @@
   .qr-panel,
   .block,
   .micro-card,
+  .premium-photo-card,
+  .editorial-frame,
   .scene-brief,
   .scene-preview,
   .exercise-card,
@@ -828,7 +940,7 @@
 </section>
 <section class="visual-strip">
 <div class="image-card">
-<img alt="Restaurant listening context for Subtopic 1.3.1" src="assets/module3-scene.svg"/>
+<img alt="Premium hospitality scene with waitress serving coffee and dessert" src="assets/module3-coffee-service.jpg"/>
 </div>
 <div class="panel highlight-card">
 <h3>Photo-Based Listening Lab</h3>
@@ -838,6 +950,22 @@
 <span>What drink do you hear?</span>
 <span>What request changes the order?</span>
 <span>How does the waiter confirm?</span>
+</div>
+</div>
+</section>
+<section class="vip-gallery">
+<figure class="premium-photo-card feature">
+<img alt="Waiter serving burgers to a cheerful group in a restaurant" src="assets/module3-group-service.jpg"/>
+<figcaption><span class="photo-chip">VIP Service Scene</span><strong>Dynamic Group Service</strong><span>Use this visual to discuss fast delivery, table coordination, and the kind of details a waiter must hear correctly during peak service.</span></figcaption>
+</figure>
+<div class="gallery-stack">
+<figure class="premium-photo-card small">
+<img alt="Waitress serving dessert to restaurant guests" src="assets/module3-dessert-service.jpg"/>
+<figcaption><span class="photo-chip">Dessert Moment</span><strong>Careful Final Delivery</strong><span>Observe tray balance, table approach, and guest reaction during a calm service moment.</span></figcaption>
+</figure>
+<div class="editorial-frame">
+<img alt="Two hospitality staff holding cakes in a cafe" src="assets/module3-team-desserts.jpg"/>
+<div class="frame-copy"><span class="photo-chip" style="background: rgba(211, 84, 0, 0.12); color: var(--brand-dark);">Presentation</span><strong>Premium Team Presence</strong><p>This editorial-style frame brings a polished hospitality mood to the module and reinforces image, posture, and product presentation.</p></div>
 </div>
 </div>
 </section>
@@ -877,7 +1005,7 @@
 </div>
 </div>
 <div class="scene-preview">
-<img alt="Restaurant listening scene based on the provided photograph" src="assets/module3-scene.svg"/>
+<img alt="Listening comprehension visual with waiter taking an order in a premium restaurant" src="assets/module3-cover-listening.jpg"/>
 <div class="scene-overlay">
 <strong>Listening Snapshot</strong>
 <p>A waiter is writing the order while guests speak in a warm, busy restaurant. Use this image as the visual anchor for the five listening exercises below.</p>
@@ -1015,6 +1143,10 @@
               </audio></div><div class="qr-panel"><a class="qr-link" href="https://jsdar.github.io/module1-vip/audio/module3/m3_real_life_listening.wav" rel="noopener noreferrer" target="_blank"><img alt="QR code for audio" src="qr/module3/m3_real_life_listening.png"/></a><span>Scan audio</span></div></div></div>
 </div>
 <div class="col stack">
+<div class="editorial-frame">
+<img alt="Asian waiter making a recommendation to a young couple" src="assets/module3-recommendation.jpg"/>
+<div class="frame-copy"><span class="photo-chip" style="background: rgba(211, 84, 0, 0.12); color: var(--brand-dark);">Active Listening</span><strong>Recommendation with Attention</strong><p>This visual supports Subtopic 1.3.2 by showing a waiter listening, explaining, and adapting language while guests ask questions at the table.</p></div>
+</div>
 <div class="block">
 <div class="label">Useful Expressions</div>
 <div class="chips">
