@@ -9,6 +9,7 @@
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>Module 2: Oral Interaction and Service Simulation</title>
 <style>
+  @import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap");
   :root {
     --bg: #fff6cf;
     --surface: #ffffff;
@@ -30,7 +31,7 @@
       radial-gradient(circle at top left, rgba(223, 173, 19, 0.2), transparent 30%),
       linear-gradient(180deg, #fffef7 0%, #fff6cf 100%);
     color: var(--text);
-    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    font-family: "Manrope", "Trebuchet MS", "Lucida Sans", sans-serif;
     line-height: 1.6;
   }
   .wrap {
@@ -91,7 +92,7 @@
   .hero h1 {
     margin: 0 0 15px auto;
     max-width: 850px;
-    font-family: Georgia, "Times New Roman", serif;
+    font-family: "Fraunces", Georgia, "Times New Roman", serif;
     font-size: clamp(38px, 6vw, 62px);
     line-height: 1.1;
     font-weight: 700;
@@ -119,7 +120,7 @@
   .lesson-card h2,
   .final h2 {
     margin: 0 0 16px;
-    font-family: Georgia, "Times New Roman", serif;
+    font-family: "Fraunces", Georgia, "Times New Roman", serif;
   }
   .topic-panel h2 {
     font-size: 32px;
@@ -191,7 +192,7 @@
   .panel h3 {
     margin: 0 0 10px;
     color: var(--ink);
-    font-family: Georgia, "Times New Roman", serif;
+    font-family: "Fraunces", Georgia, "Times New Roman", serif;
   }
   .panel p,
   .panel ul {
@@ -233,6 +234,95 @@
     margin: 10px 0 18px;
     color: var(--muted);
     font-weight: 600;
+  }
+  .lesson-visual {
+    margin: 6px 0 20px;
+    padding: 14px;
+    border-radius: 22px;
+    border: 1px solid rgba(223, 173, 19, 0.32);
+    background: linear-gradient(135deg, #fff9e6 0%, #ffefbf 100%);
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 280px;
+    gap: 14px;
+    align-items: stretch;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.75);
+  }
+  .visual-photo {
+    position: relative;
+    margin: 0;
+    min-height: 220px;
+    border-radius: 16px;
+    overflow: hidden;
+    background: #2f2a1f;
+    box-shadow: 0 14px 30px rgba(72, 51, 0, 0.18);
+  }
+  .visual-photo::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 44%, rgba(0, 0, 0, 0.68) 100%);
+  }
+  .visual-photo img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    filter: saturate(1.05) contrast(1.05);
+    transform: scale(1.01);
+  }
+  .visual-photo figcaption {
+    position: absolute;
+    left: 14px;
+    right: 14px;
+    bottom: 12px;
+    z-index: 1;
+    margin: 0;
+    color: #fff8e8;
+    font-size: 14px;
+    line-height: 1.35;
+    font-weight: 600;
+    text-shadow: 0 3px 14px rgba(0, 0, 0, 0.45);
+  }
+  .visual-note {
+    padding: 16px 14px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.72);
+    border: 1px solid rgba(223, 173, 19, 0.33);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+  }
+  .visual-note-title {
+    margin: 0;
+    font-family: "Fraunces", Georgia, "Times New Roman", serif;
+    color: var(--brand-dark);
+    font-size: 20px;
+    line-height: 1.2;
+  }
+  .visual-note p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  .visual-tags {
+    display: flex;
+    gap: 7px;
+    flex-wrap: wrap;
+  }
+  .visual-tags span {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 10px;
+    border-radius: 999px;
+    border: 1px solid rgba(133, 100, 8, 0.3);
+    background: linear-gradient(180deg, #fff6d4 0%, #ffebb0 100%);
+    color: #7f5b00;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.45px;
+    text-transform: uppercase;
   }
   .lesson-grid {
     display: grid;
@@ -332,10 +422,27 @@
   }
   .audio-slot {
     min-height: 96px;
+    position: relative;
+    overflow: hidden;
     border: 2px dashed rgba(223, 173, 19, 0.62);
     border-radius: 18px;
     padding: 16px;
     background: linear-gradient(180deg, #fff8d8 0%, #ffebb0 100%);
+  }
+  .audio-slot::before {
+    content: "";
+    position: absolute;
+    width: 138px;
+    height: 138px;
+    border-radius: 50%;
+    right: -56px;
+    top: -64px;
+    background: radial-gradient(circle at center, rgba(223, 173, 19, 0.34), rgba(223, 173, 19, 0));
+    pointer-events: none;
+  }
+  .audio-slot > * {
+    position: relative;
+    z-index: 1;
   }
   .audio-slot strong {
     display: block;
@@ -429,7 +536,7 @@
   .practice-bank h2,
   .micro-card h3 {
     margin: 0 0 10px;
-    font-family: Georgia, "Times New Roman", serif;
+    font-family: "Fraunces", Georgia, "Times New Roman", serif;
     color: var(--brand-dark);
     min-height: 62px;
     display: flex;
@@ -544,6 +651,12 @@
     .visual-strip {
       grid-template-columns: 1fr;
     }
+    .lesson-visual {
+      grid-template-columns: 1fr;
+    }
+    .visual-photo {
+      min-height: 260px;
+    }
     .embed-frame,
     .genially-shell,
     .genially-shell iframe {
@@ -618,7 +731,7 @@
 }
 .download-panel h3 {
   margin: 0 0 10px;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Fraunces", Georgia, "Times New Roman", serif;
   color: var(--brand);
 }
 .download-panel p {
@@ -651,6 +764,7 @@
   .section-card,
   .practice-bank,
   .micro-card,
+  .lesson-visual,
   .audio-slot,
   .block {
     overflow: visible !important;
@@ -671,6 +785,7 @@
   .section-card,
   .practice-bank,
   .micro-card,
+  .lesson-visual,
   .block,
   .panel,
   .final,
@@ -700,6 +815,7 @@
     margin-bottom: 14px !important;
   }
   .audio-slot,
+  .lesson-visual,
   .audio-media,
   .audio-player,
   .qr-panel,
@@ -770,11 +886,11 @@
 </section>
 <section class="visual-strip">
 <div class="image-card">
-<img alt="Illustration of a waiter taking an order and serving food" src="assets/module2-scene.svg"/>
+<img alt="Waitress taking an order while guests review the menu in a modern restaurant." src="assets/module2-dialogue2-recommendations.jpg"/>
 </div>
 <div class="panel highlight-card">
 <h3>Visual Warm-Up</h3>
-<p>Use the illustration to activate speaking before students read the dialogues. They can describe the waiter, predict the order, and identify recommendation language from the scene.</p>
+<p>Use the real service photo to activate speaking before students read the dialogues. They can describe guest needs, predict recommendations, and connect the scene with the listening audios in each exercise.</p>
 <div class="chips" style="margin-top: 14px;">
 <span>What is the customer ordering?</span>
 <span>What would you recommend?</span>
@@ -787,7 +903,7 @@
 <div class="resource-top">
 <div class="resource-copy">
 <div class="label">Interactive Resource</div>
-<h3 style="margin: 0 0 10px; font-family: Georgia, 'Times New Roman', serif; color: var(--brand-dark);">Genially Drinks Presentation</h3>
+<h3 style="margin: 0 0 10px; font-family: 'Fraunces', Georgia, 'Times New Roman', serif; color: var(--brand-dark);">Genially Drinks Presentation</h3>
 <p>This interactive presentation fits best in <strong>Module 2</strong> because students are already taking drink orders, identifying beverage vocabulary, and making simple recommendations. Use it before Dialogue 1 or Dialogue 2 as a warm-up, vocabulary review, or guided speaking prompt.</p>
 </div>
 <a class="action-link" href="https://view.genially.com/64a5804432c2ff001a1ddb3c/presentation-drinks" rel="noopener noreferrer" target="_blank">Open Genially</a>
@@ -805,6 +921,17 @@
 <h2>Reception and Taking Orders</h2>
 </div>
 <div class="meta">Students practice greetings, drinks, and basic restaurant orders.</div>
+<div class="lesson-visual">
+<figure class="visual-photo">
+<img alt="Waiter serving guests at an outdoor terrace restaurant." src="assets/module2-dialogue1-reception.jpg"/>
+<figcaption>Reception in action: greeting guests, seating, and opening the order.</figcaption>
+</figure>
+<div class="visual-note">
+<h3 class="visual-note-title">Scene Brief</h3>
+<p>Observe posture, tray handling, and table approach. Listen to the audio below and identify the greeting and the first drink order.</p>
+<div class="visual-tags"><span>Greeting</span><span>Drinks</span><span>Audio + QR</span></div>
+</div>
+</div>
 <div class="lesson-grid">
 <div class="col stack">
 <div class="block">
@@ -902,6 +1029,17 @@
 <h2>Recommendations and Suggestions</h2>
 </div>
 <div class="meta">Students recommend dishes and react to suggestions using simple adjectives.</div>
+<div class="lesson-visual">
+<figure class="visual-photo">
+<img alt="Waitress presenting options while the guest checks the menu." src="assets/module2-dialogue2-recommendations.jpg"/>
+<figcaption>Recommendation moment: guiding the guest, checking the menu, and confirming choices.</figcaption>
+</figure>
+<div class="visual-note">
+<h3 class="visual-note-title">Recommendation Focus</h3>
+<p>Before listening, predict what the server will recommend and what question the guest may ask about the dish.</p>
+<div class="visual-tags"><span>Recommend</span><span>Menu Talk</span><span>Guest Questions</span></div>
+</div>
+</div>
 <div class="lesson-grid">
 <div class="col stack">
 <div class="block">
@@ -993,6 +1131,17 @@
 <h2>Problems and Solutions</h2>
 </div>
 <div class="meta">Students respond politely to mistakes and offer simple solutions.</div>
+<div class="lesson-visual">
+<figure class="visual-photo">
+<img alt="Restaurant staff preparing a drink with precise service technique." src="assets/module2-dialogue3-problem-solving.jpg"/>
+<figcaption>Precision and control under pressure: service quality during problem-solving situations.</figcaption>
+</figure>
+<div class="visual-note">
+<h3 class="visual-note-title">Service Recovery Focus</h3>
+<p>Use the scene to practice calm language: apologize clearly, offer a solution, and confirm guest satisfaction.</p>
+<div class="visual-tags"><span>Apology</span><span>Fix It</span><span>Polite Tone</span></div>
+</div>
+</div>
 <div class="lesson-grid">
 <div class="col stack">
 <div class="block">
@@ -1082,6 +1231,17 @@
 <h2>Group Service</h2>
 </div>
 <div class="meta">Students simulate restaurant service with several customers and different orders.</div>
+<div class="lesson-visual">
+<figure class="visual-photo">
+<img alt="Waiter carrying a tray with multiple drinks ready for a group service." src="assets/module2-dialogue4-group-service.jpg"/>
+<figcaption>Group scenario: handling multiple drinks and keeping confident body language.</figcaption>
+</figure>
+<div class="visual-note">
+<h3 class="visual-note-title">Group Simulation Focus</h3>
+<p>Analyze tray balance and order sequencing. Then complete the audio tasks and recreate the full interaction in teams.</p>
+<div class="visual-tags"><span>Team Service</span><span>Multi-Order</span><span>Role Play</span></div>
+</div>
+</div>
 <div class="lesson-grid">
 <div class="col stack">
 <div class="block">
@@ -1172,6 +1332,17 @@
 <h2>Word Search Activity</h2>
 </div>
 <div class="meta">Students reinforce key restaurant vocabulary through reading, writing, and pronunciation.</div>
+<div class="lesson-visual">
+<figure class="visual-photo">
+<img alt="Elegant table setup with plates, flowers, glasses, and service details." src="assets/module2-wordsearch-table-setup.jpg"/>
+<figcaption>Vocabulary in context: identify table objects and link them to the puzzle words.</figcaption>
+</figure>
+<div class="visual-note">
+<h3 class="visual-note-title">Vocabulary Context</h3>
+<p>Use the visual as a reference before solving the word search. Name objects aloud and connect them to the speaking audio.</p>
+<div class="visual-tags"><span>Table Setup</span><span>Restaurant Terms</span><span>Pronunciation</span></div>
+</div>
+</div>
 <div class="lesson-grid">
 <div class="col stack">
 <div class="block">
