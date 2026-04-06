@@ -806,128 +806,65 @@
     max-width: none;
     padding: 0;
   }
-  .lesson-card,
-  .section-card,
-  .practice-bank,
-  .micro-card,
-  .lesson-visual,
-  .audio-slot,
-  .block {
-    overflow: visible !important;
-  }
+  .hero,
+  .topic-panel,
+  .intro,
+  .visual-strip,
   .resource-card,
   .page-switcher,
   .evaluation-panel,
-  .download-panel {
+  .download-panel,
+  .lesson-visual,
+  .section-mini-header,
+  .final {
     display: none !important;
   }
   .audio-player {
     display: none !important;
   }
   .print-lines {
-    display: block !important;
+    display: none !important;
+  }
+  .lessons,
+  .practice-bank {
+    margin-top: 0 !important;
   }
   .lesson-card,
-  .section-card,
   .practice-bank,
   .micro-card,
-  .lesson-visual,
   .block,
-  .panel,
-  .final,
-  .topic-panel,
-  .outcome-panel,
-  .exam-sheet,
-  .criterion,
-  .rubric-panel,
-  .final-panel {
-    break-inside: avoid;
-    page-break-inside: avoid;
+  .audio-slot,
+  .col,
+  .stack,
+  .exercise-stack {
+    break-inside: auto !important;
+    page-break-inside: auto !important;
+    overflow: visible !important;
     box-shadow: none !important;
   }
   .lesson-card,
   .practice-bank {
-    break-inside: auto !important;
-    page-break-inside: auto !important;
+    margin: 0 0 10px !important;
+    padding: 12px !important;
   }
-  .intro,
   .lesson-grid,
-  .section-grid,
-  .visual-strip,
   .bank-grid {
     display: block !important;
     grid-template-columns: 1fr !important;
   }
-  .intro > *,
   .lesson-grid > *,
-  .section-grid > *,
-  .visual-strip > *,
   .bank-grid > * {
-    margin-bottom: 14px !important;
-  }
-  .audio-slot,
-  .lesson-visual,
-  .audio-media,
-  .audio-player,
-  .qr-panel,
-  .block,
-  .micro-card,
-  .col,
-  .stack,
-  .exercise-stack {
-    break-inside: avoid !important;
-    page-break-inside: avoid !important;
+    margin-bottom: 10px !important;
   }
   .audio-slot {
     min-height: auto;
-  }
-  .section-mini-header {
-    padding: 6px 8px;
-    margin-bottom: 10px;
-    box-shadow: none !important;
-  }
-  .section-mini-brand img {
-    width: 20px;
-    height: 20px;
-  }
-  .section-mini-brand span {
-    font-size: 9px;
-  }
-  .section-mini-header small {
-    font-size: 8px;
-  }
-  .lesson-visual {
-    display: block !important;
-  }
-  .lesson-visual > * {
-    break-inside: avoid !important;
-    page-break-inside: avoid !important;
-  }
-  .visual-note {
-    margin-top: 10px;
-  }
-  .visual-photo::after {
-    display: none !important;
-  }
-  .visual-photo figcaption {
-    position: static !important;
-    color: #6f5a1d !important;
-    text-shadow: none !important;
-    background: #fff6d8;
-    padding: 8px 10px;
-    font-size: 12px;
+    padding: 10px !important;
   }
   .audio-media {
-    grid-template-columns: 110px;
-    justify-content: end;
+    display: none !important;
   }
   .qr-panel {
-    width: 110px;
-    min-width: 110px;
-  }
-  .qr-panel img {
-    width: 90px;
-    height: 90px;
+    display: none !important;
   }
 }
 </style></head>
