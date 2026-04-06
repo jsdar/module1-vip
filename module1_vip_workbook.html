@@ -399,6 +399,9 @@
     margin: 0 0 10px;
     font-family: Georgia, "Times New Roman", serif;
     color: var(--brand);
+    min-height: 62px;
+    display: flex;
+    align-items: flex-end;
   }
   .practice-bank {
     margin-top: 28px;
@@ -412,23 +415,32 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 16px;
+    align-items: stretch;
   }
   .micro-card {
     background: var(--surface-soft);
     border: 1px solid var(--line);
     border-radius: 18px;
     padding: 18px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
   }
   .micro-card ol,
   .micro-card ul {
     margin: 0;
     padding-left: 20px;
   }
+  .micro-card .exercise-instruction {
+    min-height: 92px;
+    display: flex;
+    align-items: flex-start;
+  }
   .micro-card li + li {
     margin-top: 8px;
   }
   .micro-card .audio-slot {
-    margin-top: 14px;
+    margin-top: auto;
   }
   .evaluation-panel {
     margin-top: 28px;
