@@ -7,7 +7,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>Module 3: Applied Listening Comprehension and Comprehensive Evaluation</title>
+<title>Module 3: Comprensi&oacute;n Auditiva Aplicada y Evaluaci&oacute;n Integral del Servicio Gastron&oacute;mico</title>
 <style>
   :root {
     --bg: #fffaf6;
@@ -398,6 +398,139 @@
   .micro-card .audio-slot {
     margin-top: 14px;
   }
+  .scene-lab {
+    display: grid;
+    grid-template-columns: 1.02fr 0.98fr;
+    gap: 18px;
+    margin-bottom: 18px;
+  }
+  .scene-brief,
+  .scene-preview,
+  .exercise-card {
+    border-radius: 22px;
+    border: 1px solid var(--line);
+    background: linear-gradient(180deg, #fffdfc 0%, #fff3ea 100%);
+  }
+  .scene-brief,
+  .exercise-card {
+    padding: 20px;
+  }
+  .scene-brief h3,
+  .exercise-card h3 {
+    margin: 0 0 10px;
+    font-family: Georgia, "Times New Roman", serif;
+    color: var(--brand-dark);
+  }
+  .scene-brief p,
+  .scene-brief ul,
+  .exercise-card p,
+  .exercise-card ol,
+  .exercise-card ul {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .scene-brief ul,
+  .exercise-card ol,
+  .exercise-card ul {
+    padding-left: 20px;
+  }
+  .scene-brief li + li,
+  .exercise-card li + li {
+    margin-top: 8px;
+  }
+  .scene-preview {
+    position: relative;
+    overflow: hidden;
+    min-height: 352px;
+  }
+  .scene-preview img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+  }
+  .scene-overlay {
+    position: absolute;
+    left: 18px;
+    right: 18px;
+    bottom: 18px;
+    padding: 16px 18px;
+    border-radius: 18px;
+    background: rgba(23, 33, 29, 0.72);
+    color: #ffffff;
+    backdrop-filter: blur(3px);
+  }
+  .scene-overlay strong {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 18px;
+    font-family: Georgia, "Times New Roman", serif;
+  }
+  .scene-overlay p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.86);
+    font-size: 14px;
+    line-height: 1.45;
+  }
+  .exercise-deck {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+  .exercise-card.full {
+    grid-column: 1 / -1;
+  }
+  .prompt-box,
+  .dialogue-box,
+  .gap-box,
+  .ticket-box {
+    margin-top: 12px;
+    padding: 14px 16px;
+    border-radius: 16px;
+    background: #ffffff;
+    border: 1px solid rgba(211, 84, 0, 0.16);
+  }
+  .prompt-box strong,
+  .dialogue-box strong,
+  .ticket-box strong {
+    color: var(--brand-dark);
+  }
+  .dialogue-box p + p,
+  .ticket-box p + p {
+    margin-top: 6px;
+  }
+  .response-lines {
+    margin-top: 12px;
+  }
+  .response-lines span {
+    display: block;
+    height: 20px;
+    border-bottom: 1px solid rgba(109, 47, 5, 0.26);
+    margin-top: 8px;
+  }
+  .gap-box {
+    display: grid;
+    gap: 10px;
+  }
+  .gap-row {
+    padding: 10px 12px;
+    border-radius: 14px;
+    border: 1px dashed rgba(211, 84, 0, 0.3);
+    background: #fffdfa;
+    color: var(--text);
+    font-weight: 600;
+  }
+  .ticket-fields {
+    display: grid;
+    gap: 10px;
+    margin-top: 12px;
+  }
+  .ticket-fields div {
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(109, 47, 5, 0.24);
+    color: var(--muted);
+    font-weight: 700;
+  }
   .evaluation-panel {
     margin-top: 28px;
     padding: 24px;
@@ -464,8 +597,13 @@
     }
     .intro,
     .section-grid,
-    .visual-strip {
+    .visual-strip,
+    .scene-lab,
+    .exercise-deck {
       grid-template-columns: 1fr;
+    }
+    .exercise-card.full {
+      grid-column: auto;
     }
   }
 </style>
@@ -623,6 +761,9 @@
   .qr-panel,
   .block,
   .micro-card,
+  .scene-brief,
+  .scene-preview,
+  .exercise-card,
   .col,
   .stack,
   .exercise-stack {
@@ -651,19 +792,19 @@
 <section class="hero">
 <div class="hero-top">
 <img alt="UEA logo" class="logo" src="https://res.cloudinary.com/du4lciu5v/image/upload/q_auto/f_auto/v1775258231/UEA_logo_jpwwmc.png"/>
-<span class="badge">UEA-EC-2026-044 • Vinculacion con la Colectividad</span>
+<span class="badge">UEA-EC-2026-044 &bull; Vinculacion con la Colectividad</span>
 </div>
 <div class="hero-copy">
-<h1>Module 3: Applied Listening Comprehension and Comprehensive Evaluation</h1>
-<p>Strengthening attentive listening, integrated food service performance, and final oral evaluation in authentic hospitality contexts.</p>
+<h1>Comprensi&oacute;n Auditiva Aplicada y Evaluaci&oacute;n Integral del Servicio Gastron&oacute;mico</h1>
+<p>Fortaleciendo la escucha activa, la comprensi&oacute;n de pedidos y la evaluaci&oacute;n oral del servicio en contextos gastron&oacute;micos aut&eacute;nticos.</p>
 </div>
 </section>
 <section class="topic-panel">
-<h2>Topic 1.3 Applied Listening Comprehension and Comprehensive Evaluation - 15h</h2>
+<h2>Topic 1.3 Comprensi&oacute;n Auditiva Aplicada y Evaluaci&oacute;n Integral del Servicio Gastron&oacute;mico - 15h</h2>
 <div class="mode-chip">Mode: Virtual synchronous with asynchronous support</div>
 <p class="outcome-note"><strong>You will be able to...</strong> understand customer orders and requests more accurately, use active listening strategies, confirm information clearly, integrate service language in realistic simulations, and respond more confidently during individual assessment.</p>
 <ul>
-<li><span><strong>Subtopic 1.3.1:</strong> Listening comprehension of orders and requests with different accents.</span></li>
+<li><span><strong>Subtopic 1.3.1:</strong> Comprensi&oacute;n auditiva de &oacute;rdenes y solicitudes con distintos acentos en ingl&eacute;s.</span></li>
 <li><span><strong>Subtopic 1.3.2:</strong> Active listening in real-life settings.</span></li>
 <li><span><strong>Subtopic 1.3.3:</strong> Integration of skills in the final food service simulation.</span></li>
 <li><span><strong>Subtopic 1.3.4:</strong> Individual practical assessment.</span></li>
@@ -687,16 +828,16 @@
 </section>
 <section class="visual-strip">
 <div class="image-card">
-<img alt="Illustration of listening practice with audio waves and service notes" src="assets/module3-scene.svg"/>
+<img alt="Restaurant listening context for Subtopic 1.3.1" src="assets/module3-scene.svg"/>
 </div>
 <div class="panel highlight-card">
-<h3>Listening Activation</h3>
-<p>Use the image to introduce the listening focus of the module. Students can predict what they will hear, identify service vocabulary, and describe how they would respond in a real restaurant setting.</p>
+<h3>Photo-Based Listening Lab</h3>
+<p>This opening visual prepares students for the first five listening exercises of Subtopic 1.3.1. They observe the restaurant scene, anticipate possible orders, and listen for the exact details that matter in real gastronomic service.</p>
 <div class="chips" style="margin-top: 14px;">
-<span>What request do you hear?</span>
-<span>What should the waiter confirm?</span>
-<span>What details are important?</span>
-<span>How do you respond politely?</span>
+<span>Who is ordering?</span>
+<span>What drink do you hear?</span>
+<span>What request changes the order?</span>
+<span>How does the waiter confirm?</span>
 </div>
 </div>
 </section>
@@ -712,55 +853,133 @@
 <section class="section-card">
 <div class="section-head">
 <div class="section-no">Subtopic 1.3.1</div>
-<h2>Listening Comprehension of Orders and Requests with Different Accents</h2>
+<h2>Comprensi&oacute;n auditiva de &oacute;rdenes y solicitudes con distintos acentos en ingl&eacute;s</h2>
 </div>
-<div class="meta">Students identify key information from restaurant orders, requests, and pronunciation variations.</div>
-<div class="section-grid">
-<div class="col stack">
-<div class="block">
-<div class="label">Focus</div>
-<ul>
-<li>Understand food and drink orders from different speakers.</li>
-<li>Recognize requests, quantities, and preferences.</li>
-<li>Practice noting essential details accurately.</li>
+<div class="meta">Students listen to realistic restaurant exchanges, identify key order details, and respond accurately to requests from different English-speaking voices.</div>
+<div class="scene-lab">
+<div class="scene-brief">
+<div class="label">Photo-Based Context</div>
+<p class="exercise-instruction">Observe the restaurant scene first. Predict what customers may order, what details the waiter must hear clearly, and what extra requests could appear in a busy dining room.</p>
+<h3>Service in Action</h3>
+<p>This subtopic is built around the restaurant photograph: a waiter taking notes, a couple making requests, and several tables speaking at the same time. Students use the scene to prepare for realistic listening tasks with varied voices and service needs.</p>
+<ul style="margin-top: 14px;">
+<li>Identify the main dish, drink, and table request.</li>
+<li>Listen for polite variations such as <em>Could I have...</em>, <em>Can I get...</em>, and <em>I'd like...</em>.</li>
+<li>Notice modifications like <em>no sugar</em>, <em>without onions</em>, or <em>sparkling water</em>.</li>
+<li>Practice confirming the order before the waiter leaves the table.</li>
 </ul>
+<div class="chips" style="margin-top: 14px;">
+<span>main order</span>
+<span>drink choice</span>
+<span>extra request</span>
+<span>special modification</span>
+<span>confirmation</span>
 </div>
-<div class="block">
-<div class="label">Suggested Activities</div>
-<ol>
-<li>Listen to short order recordings two or three times.</li>
-<li>Write down the food, drink, and special request.</li>
-<li>Compare answers with a partner and justify your choices.</li>
+</div>
+<div class="scene-preview">
+<img alt="Restaurant listening scene based on the provided photograph" src="assets/module3-scene.svg"/>
+<div class="scene-overlay">
+<strong>Listening Snapshot</strong>
+<p>A waiter is writing the order while guests speak in a warm, busy restaurant. Use this image as the visual anchor for the five listening exercises below.</p>
+</div>
+</div>
+</div>
+<div class="exercise-deck">
+<article class="exercise-card">
+<div class="label">Exercise 1</div>
+<p class="exercise-instruction">Listen to Audio 1 two times. Identify the main order, the drink choice, and the extra item requested for the table.</p>
+<h3>Scene Order Snapshot</h3>
+<div class="prompt-box"><strong>Listening goal:</strong> catch the dish, the drink, and one additional table request.</div>
+<ol style="margin-top: 14px;">
+<li>What main dish does the woman order?</li>
+<li>What drink does the man choose?</li>
+<li>What extra item do they ask for the table?</li>
 </ol>
-</div>
+<div class="response-lines"><span></span><span></span><span></span></div>
 <div class="audio-slot">
-<strong>Audio space for Listening Practice</strong>
-<p>Reserved area for accent-based order recordings or teacher guidance.</p>
-<div class="audio-media"><div class="audio-player"><audio controls="" preload="none" style="margin-top: 14px; width: 100%;">
-<source src="audio/module3/m3_listening_practice.wav" type="audio/wav"/>
-                Your browser does not support the audio element.
-              </audio></div><div class="qr-panel"><a class="qr-link" href="https://jsdar.github.io/module1-vip/audio/module3/m3_listening_practice.wav" rel="noopener noreferrer" target="_blank"><img alt="QR code for audio" src="qr/module3/m3_listening_practice.png"/></a><span>Scan audio</span></div></div></div>
+<strong>Audio 1: Scene Order Snapshot</strong>
+<p>Focus on the first complete order from the table and write the key details.</p>
+<div class="audio-media"><div class="audio-player"><audio controls="" preload="none" style="margin-top: 14px; width: 100%;"><source src="audio/module3/m3_s131_ex1_scene_order.wav" type="audio/wav"/>Your browser does not support the audio element.</audio></div><div class="qr-panel"><a class="qr-link" href="https://jsdar.github.io/module1-vip/audio/module3/m3_s131_ex1_scene_order.wav" rel="noopener noreferrer" target="_blank"><img alt="QR code for audio 1" src="qr/module3/m3_s131_ex1_scene_order.png"/></a><span>Scan audio</span></div></div></div>
+</article>
+<article class="exercise-card">
+<div class="label">Exercise 2</div>
+<p class="exercise-instruction">Listen to Audio 2 and write the food, the drink modification, and the service item mentioned by the customer.</p>
+<h3>Different Speaker, Same Service</h3>
+<div class="dialogue-box">
+<p><strong>Listen for:</strong> a food order, a drink change, and one table-service request.</p>
+<p><strong>Service phrase:</strong> Can I get... ?</p>
 </div>
-<div class="col stack">
-<div class="block">
-<div class="label">Evidence of Learning</div>
-<ul>
-<li>Accurate note-taking of menu items and customer preferences.</li>
-<li>Correct identification of key service vocabulary.</li>
-<li>Improved listening confidence with varied pronunciation.</li>
-</ul>
+<ol style="margin-top: 14px;">
+<li>Food ordered:</li>
+<li>Drink with modification:</li>
+<li>Extra service item:</li>
+</ol>
+<div class="response-lines"><span></span><span></span><span></span></div>
+<div class="audio-slot">
+<strong>Audio 2: Different Speaker</strong>
+<p>Listen for the natural customer request and write the full service details.</p>
+<div class="audio-media"><div class="audio-player"><audio controls="" preload="none" style="margin-top: 14px; width: 100%;"><source src="audio/module3/m3_s131_ex2_guest_order.wav" type="audio/wav"/>Your browser does not support the audio element.</audio></div><div class="qr-panel"><a class="qr-link" href="https://jsdar.github.io/module1-vip/audio/module3/m3_s131_ex2_guest_order.wav" rel="noopener noreferrer" target="_blank"><img alt="QR code for audio 2" src="qr/module3/m3_s131_ex2_guest_order.png"/></a><span>Scan audio</span></div></div></div>
+</article>
+<article class="exercise-card">
+<div class="label">Exercise 3</div>
+<p class="exercise-instruction">Listen to Audio 3 and complete the missing word in each sentence. Write only the word you hear.</p>
+<h3>Complete the Missing Word</h3>
+<div class="gap-box">
+<div class="gap-row">a. We'd like ______ pasta.</div>
+<div class="gap-row">b. Please add one ______ salad.</div>
+<div class="gap-row">c. Bring two ______.</div>
+<div class="gap-row">d. No ______ in the salad.</div>
 </div>
-<div class="block">
-<div class="label">Key Vocabulary</div>
-<div class="chips">
-<span>Order</span>
-<span>Request</span>
-<span>Still water</span>
-<span>No sugar</span>
-<span>With rice</span>
+<div class="audio-slot" style="margin-top: 14px;">
+<strong>Audio 3: Gap-Fill Listening</strong>
+<p>Pause after each line if students need time to complete the missing word.</p>
+<div class="audio-media"><div class="audio-player"><audio controls="" preload="none" style="margin-top: 14px; width: 100%;"><source src="audio/module3/m3_s131_ex3_gap_fill.wav" type="audio/wav"/>Your browser does not support the audio element.</audio></div><div class="qr-panel"><a class="qr-link" href="https://jsdar.github.io/module1-vip/audio/module3/m3_s131_ex3_gap_fill.wav" rel="noopener noreferrer" target="_blank"><img alt="QR code for audio 3" src="qr/module3/m3_s131_ex3_gap_fill.png"/></a><span>Scan audio</span></div></div></div>
+</article>
+<article class="exercise-card">
+<div class="label">Exercise 4</div>
+<p class="exercise-instruction">Listen to Audio 4 and complete the order ticket. Pay attention to the starter, main dish, drink, and special modification.</p>
+<h3>Special Request Ticket</h3>
+<div class="ticket-box">
+<strong>Order ticket</strong>
+<div class="ticket-fields">
+<div>Starter: __________________________</div>
+<div>Main dish: ________________________</div>
+<div>Drink: ___________________________</div>
+<div>Special request: __________________</div>
 </div>
-<div class="print-lines print-lines-vocab"><div class="print-lines-title">Writing lines</div><span></span><span></span><span></span><span></span></div></div>
 </div>
+<div class="audio-slot" style="margin-top: 14px;">
+<strong>Audio 4: Request and Modification</strong>
+<p>Listen for the sequence of courses and the special request that changes the final order.</p>
+<div class="audio-media"><div class="audio-player"><audio controls="" preload="none" style="margin-top: 14px; width: 100%;"><source src="audio/module3/m3_s131_ex4_special_request.wav" type="audio/wav"/>Your browser does not support the audio element.</audio></div><div class="qr-panel"><a class="qr-link" href="https://jsdar.github.io/module1-vip/audio/module3/m3_s131_ex4_special_request.wav" rel="noopener noreferrer" target="_blank"><img alt="QR code for audio 4" src="qr/module3/m3_s131_ex4_special_request.png"/></a><span>Scan audio</span></div></div></div>
+</article>
+<article class="exercise-card full">
+<div class="label">Exercise 5</div>
+<p class="exercise-instruction">Listen to Audio 5. First complete the final order note. Then write the confirmation question used by the waiter and practice saying it aloud.</p>
+<h3>Confirmation Chain</h3>
+<div class="dialogue-box">
+<p><strong>Listening goal:</strong> hear how the waiter repeats the full order and checks if everything is correct.</p>
+<p><strong>After listening:</strong> read the confirmation sentence aloud with a partner.</p>
+</div>
+<div class="ticket-box">
+<strong>Final order note</strong>
+<div class="ticket-fields">
+<div>Soup: _____________________________</div>
+<div>Main dish: ________________________</div>
+<div>Salad modification: _______________</div>
+<div>Drinks: ___________________________</div>
+</div>
+</div>
+<ol style="margin-top: 14px;">
+<li>Write the confirmation question the waiter uses.</li>
+<li>What should the waiter do next after the customer says yes?</li>
+</ol>
+<div class="response-lines"><span></span><span></span><span></span></div>
+<div class="audio-slot" style="margin-top: 14px;">
+<strong>Audio 5: Confirmation Chain</strong>
+<p>Use this audio to practice order confirmation and final service follow-up.</p>
+<div class="audio-media"><div class="audio-player"><audio controls="" preload="none" style="margin-top: 14px; width: 100%;"><source src="audio/module3/m3_s131_ex5_confirmation.wav" type="audio/wav"/>Your browser does not support the audio element.</audio></div><div class="qr-panel"><a class="qr-link" href="https://jsdar.github.io/module1-vip/audio/module3/m3_s131_ex5_confirmation.wav" rel="noopener noreferrer" target="_blank"><img alt="QR code for audio 5" src="qr/module3/m3_s131_ex5_confirmation.png"/></a><span>Scan audio</span></div></div></div>
+</article>
 </div>
 </section>
 <section class="section-card">
